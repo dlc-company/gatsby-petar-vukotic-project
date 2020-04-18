@@ -13,7 +13,7 @@ export default [
     },
     {
         path: '/energetskaEfikasnost',
-        text: 'energetskaEfikasnost'
+        text: 'energetska Efikasnost'
     },
     {
         path: '/contact',
