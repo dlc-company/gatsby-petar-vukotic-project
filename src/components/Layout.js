@@ -1,8 +1,8 @@
 import React from 'react'
 import Navbar from "./Navbar"
 import Footer from "./Footer"
-
-const Layout = ({children}) => {
+import './layout.css'
+const Layout = ({children}) => { // Probaj sa Micom bez children
     return (
         // <> je skraceno od <React.Fragment>
         <>
