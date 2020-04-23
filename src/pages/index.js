@@ -13,7 +13,6 @@ export default () => (
             <Banner title="radni naslov" info="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id.">
                 <Link to="/" className="btn-white">link text</Link>
             </Banner>
-            <p>lorem</p>
         </SimpleHero>
         <About/>
         <Services/>
