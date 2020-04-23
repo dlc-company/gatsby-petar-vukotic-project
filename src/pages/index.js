@@ -1,9 +1,21 @@
 import React from "react"
 import { Link } from 'gatsby'
 import Layout from "../components/Layout"
-import { FaAdobe } from 'react-icons/fa'
+import SimpleHero from '../components/SimpleHero'
+import Banner from '../components/Banner'
+import About from '../components/Home/About'
+import Services from '../components/Home/Services'
+
+
 export default () => (
     <Layout>
-   <div>pocetna page</div>
+        <SimpleHero>
+            <Banner title="radni naslov" info="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id.">
+                <Link to="/" className="btn-white">link text</Link>
+            </Banner>
+            <p>lorem</p>
+        </SimpleHero>
+        <About/>
+        <Services/>
     </Layout>
 )
