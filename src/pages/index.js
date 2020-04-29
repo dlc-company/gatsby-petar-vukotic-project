@@ -6,6 +6,8 @@ import Banner from '../components/Banner'
 import About from '../components/Home/About'
 import Services from '../components/Home/Services'
 
+import PartnerLogos from '../components/Home/PartnerLogos'
+
 
 export default () => (
     <Layout>
@@ -14,7 +16,12 @@ export default () => (
                 <Link to="/" className="btn-white">link text</Link>
             </Banner>
         </SimpleHero>
-        <About/>
+       
         <Services/>
+
+        <About/>
+
+        <PartnerLogos/>
+
     </Layout>
 )

@@ -1,30 +1,36 @@
 import React from 'react'
-import { FaWallet, FaTree, FaSocks, FaRecycle } from 'react-icons/fa'
+import {  FaTree,  FaRecycle } from 'react-icons/fa'
 import { GiSprout } from 'react-icons/gi'
-
+import { TiTree } from 'react-icons/ti'
+ 
 // import img from '../images/jude-beck-syPEv7Xzn4w-unsplash.jpg'  img: <img src={img}/>,
 
 export default [
     {
-        icon: <GiSprout/>,
+        icon: <TiTree/>,
         title: "biomasa",
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         button: 'read more',
-        href: "/biomasa"
+        href: "/biomasa",
+        image: <img src={require("../images/adobestock_108028733_billionphotos (2).jpeg")}  style={{width:"100%"}}/>
+        // image:  background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.5)),
+        // url("../images/adobestock_108028733_billionphotos.jpeg") center/cover no-repeat;
     },
     {
         icon: <FaRecycle/>,
         title: "reciklaza",
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         button: 'read more',
-        href: "/reciklaza"
+        href: "/reciklaza",
+        image: <img src={require("../images/Image20200429205350.jpg")}  style={{width:"100%"}}/>
     },
     {
         icon: <FaTree/>,
         title: "energetska efikasnost",
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         button: 'read more',
-        href: "/contact"
+        href: "/contact",
+        image: <img src={require("../images/gustavo-quepon-pF_2lrjWiJE-unsplash (1).jpg")}  style={{width:"100%"}}/>
     },
 
 ]

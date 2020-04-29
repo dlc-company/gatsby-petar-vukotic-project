@@ -9,13 +9,17 @@ const Services = () => {
             <div className={styles.center}>
                 {
                     services.map((item,index)=>{
-                        return <article key={index} className={styles.service}>
-                            <span>{item.icon}</span>
-                            <h4>{item.title}</h4>
-                            <p>{item.text}</p>
-                            <a href={item.href}><button>{item.button}</button></a>                          
+                        return (
+                        <a href={item.href}>
+                            <article key={index} className={styles.service}>
+                            {/* <span>{item.icon}</span> */}
+                            {/* <h4>{item.title}</h4> */}
+                            {/* <p>{item.text}</p> */}
+                            <div>{item.image}</div>
+                            {/* <a href={item.href}><button>{item.button}</button></a>                           */}
                         </article>
-                    })
+                        </a>
+                    )})
                 }
             </div>
         </section>
