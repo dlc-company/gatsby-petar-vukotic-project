@@ -3,7 +3,7 @@
 }
 
 .center {
-  width: 50vw;
+  width: 65vw;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -41,3 +41,4 @@
   0% {opacity:0;}
   100% {opacity:1;}
   }
+
