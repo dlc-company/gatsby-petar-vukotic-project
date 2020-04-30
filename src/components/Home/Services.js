@@ -15,7 +15,7 @@ const Services = () => {
                             {/* <span>{item.icon}</span> */}
                             {/* <h4>{item.title}</h4> */}
                             {/* <p>{item.text}</p> */}
-                            <div>{item.image}</div>
+                            <div className={styles.imagebox}>{item.image}</div>
                             {/* <a href={item.href}><button>{item.button}</button></a>                           */}
                         </article>
                         </a>

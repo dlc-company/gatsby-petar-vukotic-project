@@ -1,4 +1,5 @@
 .about {
+  background: var(--mainGrey);
   padding: 4rem 0;
 }
 .about-center {
