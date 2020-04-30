@@ -1,9 +1,9 @@
 *.partners {  
-  padding: 4rem 0;
+  padding: 2rem 0;
 }
 
 .center {
-  width: 80vw;
+  width: 50vw;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

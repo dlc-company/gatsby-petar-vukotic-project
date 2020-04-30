@@ -12,7 +12,7 @@ export default [
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         button: 'read more',
         href: "/biomasa",
-        image: <img src={require("../images/adobestock_108028733_billionphotos (2).jpeg")}  style={{width:"100%"}}/>
+        image: <img src={require("../images/biomasa.jpg")}  style={{width:"100%"}}/>
         // image:  background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.5)),
         // url("../images/adobestock_108028733_billionphotos.jpeg") center/cover no-repeat;
     },
@@ -22,7 +22,7 @@ export default [
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         button: 'read more',
         href: "/reciklaza",
-        image: <img src={require("../images/Image20200429205350.jpg")}  style={{width:"100%"}}/>
+        image: <img src={require("../images/reciklaza.jpg")}  style={{width:"100%"}}/>
     },
     {
         icon: <FaTree/>,
@@ -30,7 +30,7 @@ export default [
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         button: 'read more',
         href: "/contact",
-        image: <img src={require("../images/gustavo-quepon-pF_2lrjWiJE-unsplash (1).jpg")}  style={{width:"100%"}}/>
+        image: <img src={require("../images/energetska_efikasnost.jpg")}  style={{width:"100%"}}/>
     },
 
 ]
