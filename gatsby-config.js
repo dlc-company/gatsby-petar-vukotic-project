@@ -25,6 +25,7 @@ module.exports = {
         host: process.env.CONTENTFUL_HOST || 'cdn.contentful.com'
       },
     },
+    
     `gatsby-transformer-sharp`, 
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
