@@ -1,5 +1,5 @@
 import React, {useState} from 'react' // importujemo useState za toggle i koristimo React Hook
-import { Link } from 'gatsby'
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 import styles from '../css/navbar.module.css'
 import { FaAlignRight } from 'react-icons/fa'
 import links from '../constants/links'
@@ -24,9 +24,9 @@ const Navbar = () => {
                 <ul className={isOpen?`${styles.navLinks} ${styles.showNav}`:`${styles.navLinks}`}> 
                     {links.map((item, index) => { {/* u map func kao drugi param stavljamo index jer renderujemo List */}
                         return (<li key={index}> {/* u return odredjujemo u kom html elementu zelimo da renderujemo(prikazemo) podatke, u nasem slucaju nav linkove */}
-                            <Link to={item.path}>{/* Link je objekat i objekat ima property path - pogledaj u link.js fajlu */}
+                            <AniLink fade to={item.path}>{/* Link je objekat i objekat ima property path - pogledaj u link.js fajlu */}
                                 {item.text} {/* ista logika, pristupamo drugom property -> text - pogledaj u link.js fajlu */}
-                                </Link> 
+                                </AniLink> 
                         </li>)
                     })}
                 </ul> {/* koristimo ternary operator(shorthand za if i ako je true koristimo jedan css class, ako je false drugi) */}

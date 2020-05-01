@@ -1,12 +1,27 @@
 import React, {Component} from 'react'
 import Layout from "../components/Layout"
 
-const biomasa = () => {
+import StyledHero from '../components/StyledHero'
+import {graphql} from 'gatsby'
+
+const biomasa = ({data}) => {
     return (
         <Layout>
-            biomasa page
+            <StyledHero img={data.blogBcg.childImageSharp.fluid} />
         </Layout>
     )
 }
+
+export const query = graphql`
+query{
+    blogBcg:file(relativePath:{eq:"biomassBcg.jpg"}){
+      childImageSharp{
+        fluid(quality:90, maxWidth:4160){
+            ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`
 
 export default biomasa
