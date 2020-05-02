@@ -1,13 +1,13 @@
 import React, {Component} from 'react'
 import Layout from "../components/Layout"
-
 import StyledHero from '../components/StyledHero'
-import {graphql} from 'gatsby'
-
-const biomasa = ({data}) => {
+import { graphql } from 'gatsby'
+import BlogList from '../components/Blog/BlogList'
+const biomasa = ({ data }) => {
     return (
         <Layout>
             <StyledHero img={data.blogBcg.childImageSharp.fluid} />
+            <BlogList />
         </Layout>
     )
 }
