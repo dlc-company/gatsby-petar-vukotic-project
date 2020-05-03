@@ -1,0 +1,13 @@
+.about {
+    background: var(--mainGrey);
+    padding: 4rem 1rem;
+    width: 80vw;
+    margin: 0 auto;
+    margin-top: 3rem;
+    
+    
+    font-size: 1rem;
+    text-transform: capitalize;
+    text-align: left;
+}
+
