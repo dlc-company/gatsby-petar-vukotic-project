@@ -1,12 +1,12 @@
 import React from 'react'
-import BlogCard from './BlogCard'
+import BlogCardRecycle from './BlogCardRecycle'
 import Title from '../Title'
 import { useStaticQuery, graphql } from 'gatsby'
 import styles from '../../css/blog.module.css'
 
-const getPosts = graphql`
+const getRecyclePosts = graphql`
 query{
-    posts:allContentfulReciklaza(sort:{fields:published,order:DESC}){
+    recycleposts:allContentfulReciklaza(sort:{fields:published,order:DESC}){
       edges{
         node{
           published(formatString:"MMMM Do, YYYY")
@@ -24,19 +24,19 @@ query{
   }
 `
 
-const BlogList = () => {
-    const {posts} = useStaticQuery(getPosts);
+const BlogListRecycle = () => {
+    const {recycleposts} = useStaticQuery(getRecyclePosts)
     
     return (
         <section className={styles.blog}>
-            
+            <Title title="o" subtitle="reciklazi" />
             <div className={styles.center}>
-                {posts.edges.map(({ node }) =>{
-                    return <BlogCard key={node.id} blog={node} />
+                {recycleposts.edges.map(({node})=>{
+                    return <BlogCardRecycle key={node.id} blog={node} />
                 })}
             </div>
         </section>
     )
 }
 
-export default BlogList
+export default BlogListRecycle

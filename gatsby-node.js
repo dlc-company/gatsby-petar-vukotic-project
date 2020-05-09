@@ -12,16 +12,14 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
-    
-    recycleposts: allContentfulReciklaza {
-      edges {
-        node {
+    recycleposts:allContentfulReciklaza{
+      edges{
+        node{
           slug
         }
       }
     }
   }
-  
   `)
 
   data.posts.edges.forEach(({ node }) => {
@@ -33,16 +31,13 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
-
-
-  data.posts.edges.forEach(({ node }) => {
+  data.recycleposts.edges.forEach(({ node }) => {
     createPage({
-      path: `reciklaza/${node.slug}`,
-      component: path.resolve("./src/templates/blog-template-recycle.js"),
-      context: {
-        slug: node.slug,
+      path:`reciklaza/${node.slug}`,
+      component: path.resolve("./src/templates/blog-recycle-template.js"),
+      context:{
+        slug:node.slug,
       },
     })
   })
-
 }
