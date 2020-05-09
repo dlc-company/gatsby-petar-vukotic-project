@@ -3,10 +3,12 @@ import Layout from "../components/Layout"
 import StyledHero from '../components/StyledHero'
 import {graphql} from 'gatsby'
 import BloglistRecycle from '../components/BlogRecycle/BlogListRecycle'
+import ReciklazaAbout from '../components/Home/ReciklazaAbout'
 const reciklaza = ({data}) => {
     return (
         <Layout>
              <StyledHero img={data.blogBcg.childImageSharp.fluid} />
+             <ReciklazaAbout />
              <BloglistRecycle />
         </Layout>
     )

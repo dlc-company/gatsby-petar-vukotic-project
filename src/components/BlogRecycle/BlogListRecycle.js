@@ -29,7 +29,7 @@ const BlogListRecycle = () => {
     
     return (
         <section className={styles.blog}>
-            <Title title="o" subtitle="reciklazi" />
+            
             <div className={styles.center}>
                 {recycleposts.edges.map(({node})=>{
                     return <BlogCardRecycle key={node.id} blog={node} />

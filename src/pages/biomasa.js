@@ -4,10 +4,12 @@ import StyledHero from '../components/StyledHero'
 import { graphql } from 'gatsby'
 import BlogList from '../components/Blog/BlogList'
 import BiomasAbout from '../components/Home/BiomasaAbout'
+import NavbarBiomasa from '../components/NavbarBiomasa'
 const biomasa = ({ data }) => {
     return (
         <Layout>
             <StyledHero img={data.blogBcg.childImageSharp.fluid} />
+            <NavbarBiomasa/>
             <BiomasAbout/>
             <BlogList />
         </Layout>

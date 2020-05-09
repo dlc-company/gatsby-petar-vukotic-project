@@ -1,3 +1,6 @@
+.navbar{
+  background: var(--mainBlack);
+}
 .nav-header {
   display: flex;
   justify-content: space-between;
@@ -31,7 +34,7 @@
   padding: 0.7rem 1.25rem;
   text-decoration: none;
   text-transform: capitalize;
-  color: var(--mainBlack);
+  color: var(--mainWhite);
   transition: var(--mainTransition);
   font-weight: bold;
   letter-spacing: var(--mainSpacing);
@@ -45,6 +48,7 @@
 @media screen and (min-width: 576px) {
   .navbar {
     padding: 0 2rem;
+
   }
 }
 
@@ -68,13 +72,13 @@
     line-height: 0;
   }
   .nav-social-links a {
-    color: var(--primaryColor);
+    color: green;
     margin: 0 0.5rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     transition: var(--mainTransition);
   }
   .nav-social-links a:hover {
-    color: var(--mainBlack);
+    color: red;
     transform: translateY(-5px);
   }
 }
