@@ -8,6 +8,8 @@ import StyledHero from '../components/StyledHero'
 import {graphql} from 'gatsby'
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 
+import Survey from '../components/Home/Survey'
+
 export default ({data}) => (
 
     <Layout>
@@ -18,9 +20,10 @@ export default ({data}) => (
         </StyledHero>
        
         <Services/>
-
-
+      
         <PartnerLogos/>
+
+        <Survey/>
 
     </Layout>
 )

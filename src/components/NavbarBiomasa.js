@@ -4,9 +4,9 @@ import styles from '../css/navbar.module.css'
 import { FaAlignRight } from 'react-icons/fa'
 import links from '../constants/biomasa-links'
 const Navbar = () => {
-    const [isOpen, setNav] = (useState(false)) // useState(React Hook) prima dva params: 1. true/false (false je default) 2. funkciju koja upravlja sa toggle
+    const [isOpen, setNav] = (useState(true)) // useState(React Hook) prima dva params: 1. true/false (false je default) 2. funkciju koja upravlja sa toggle
     const toggleNav = () => {
-        setNav(isOpen => !isOpen) // ako je toggle bio false (zatvoren) onda ce funkcija setNav promeniti vrednost u true(otvoren) preko !isOpen sto vraca true
+        setNav(isOpen => isOpen) // ako je toggle bio false (zatvoren) onda ce funkcija setNav promeniti vrednost u true(otvoren) preko !isOpen sto vraca true
     }
     console.log(isOpen); // testiramo u Chrome Inspect(CTRL+Shift+I) da li je isOpen(true||false)
     
@@ -14,12 +14,7 @@ const Navbar = () => {
         <nav className={styles.navbar}>
             <div className={styles.navCenter}>
                 <div className={styles.navHeader}>
-                    
-                    <button type="button" className={styles.logoBtn} onClick={toggleNav}> 
-                        <FaAlignRight className={styles.logoIcon}/>
-                    </button> 
-                </div>
-                <ul className={isOpen?`${styles.navLinks} ${styles.showNav}`:`${styles.navLinks}`}> 
+                <ul className={`${styles.navLinks} ${styles.showNav}`}> 
                     {links.map((item, index) => { {/* u map func kao drugi param stavljamo index jer renderujemo List */}
                         return (<li key={index}> {/* u return odredjujemo u kom html elementu zelimo da renderujemo(prikazemo) podatke, u nasem slucaju nav linkove */}
                             <AniLink fade to={item.path}>{/* Link je objekat i objekat ima property path - pogledaj u link.js fajlu */}
@@ -27,7 +22,9 @@ const Navbar = () => {
                                 </AniLink> 
                         </li>)
                     })}
-                </ul> {/* koristimo ternary operator(shorthand za if i ako je true koristimo jedan css class, ako je false drugi) */}
+                </ul> {/* koristimo ternary operator(shorthand za if i ako je true koristimo jedan css class, ako je false drugi) */}      
+                </div>
+                
             
             </div>
         </nav>
