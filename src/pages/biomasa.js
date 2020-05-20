@@ -17,15 +17,15 @@ const biomasa = ({ data }) => {
 }
 
 export const query = graphql`
-query{
-    blogBcg:file(relativePath:{eq:"biomassBcg.jpg"}){
-      childImageSharp{
-        fluid(quality:90, maxWidth:4160){
-            ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
-`
+         query {
+           blogBcg: file(relativePath: { eq: "Bio masa 1920x1080.jpg" }) {
+             childImageSharp {
+               fluid(quality: 90, maxWidth: 4160) {
+                 ...GatsbyImageSharpFluid_withWebp
+               }
+             }
+           }
+         }
+       `
 
 export default biomasa

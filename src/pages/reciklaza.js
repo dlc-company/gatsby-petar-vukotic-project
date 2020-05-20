@@ -15,15 +15,15 @@ const reciklaza = ({data}) => {
 }
 
 export const query = graphql`
-query{
-    blogBcg:file(relativePath:{eq:"recyclingBcg2.jpg"}){
-      childImageSharp{
-        fluid(quality:90, maxWidth:4160){
-            ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
-`
+         query {
+           blogBcg: file(relativePath: { eq: "Reciklaza 1920x1080.jpg" }) {
+             childImageSharp {
+               fluid(quality: 90, maxWidth: 4160) {
+                 ...GatsbyImageSharpFluid_withWebp
+               }
+             }
+           }
+         }
+       `
 
 export default reciklaza

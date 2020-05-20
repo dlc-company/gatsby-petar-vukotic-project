@@ -15,7 +15,7 @@ export default ({data}) => (
     <Layout>
         <StyledHero home="true" img={data.defaultBcg.childImageSharp.fluid} >
             <Banner title="radni naslov" info="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id.">
-                <AniLink fade to="/" className="btn-white">link text</AniLink>
+                
             </Banner>
         </StyledHero>
        
@@ -29,13 +29,13 @@ export default ({data}) => (
 )
 
 export const query = graphql`
-query{
-    defaultBcg:file(relativePath:{eq:"octavian-dan-b21Ty33CqVs-unsplash.jpg"}){
-      childImageSharp{
-        fluid(quality:90, maxWidth:4160){
-            ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
-`
+         query {
+           defaultBcg: file(relativePath: { eq: "Naslovna 1920x1080.jpg" }) {
+             childImageSharp {
+               fluid(quality: 90, maxWidth: 4160) {
+                 ...GatsbyImageSharpFluid_withWebp
+               }
+             }
+           }
+         }
+       `

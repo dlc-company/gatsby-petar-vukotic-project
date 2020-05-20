@@ -13,15 +13,17 @@ const energetskaEfikasnost = ({data}) => {
 }
 
 export const query = graphql`
-query{
-    blogBcg:file(relativePath:{eq:"energyEfficiencyBcg.jpg"}){
-      childImageSharp{
-        fluid(quality:90, maxWidth:4160){
-            ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
-`
+         query {
+           blogBcg: file(
+             relativePath: { eq: "Energetska efikasnost 1920x1080.jpg" }
+           ) {
+             childImageSharp {
+               fluid(quality: 90, maxWidth: 4160) {
+                 ...GatsbyImageSharpFluid_withWebp
+               }
+             }
+           }
+         }
+       `
 
 export default energetskaEfikasnost

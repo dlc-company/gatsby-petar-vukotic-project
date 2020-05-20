@@ -53,7 +53,7 @@ p {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: var(--mainSpacing);
-  color: var(--mainWhite);
+  color: teal;
   border: 2px solid var(--mainWhite);
   padding: 0.9rem 1.6rem;
   display: inline-block;

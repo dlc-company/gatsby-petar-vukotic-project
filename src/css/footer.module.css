@@ -21,14 +21,14 @@
   display: inline-block;
   margin: 1rem;
   font-size: 1.3rem;
-  color: var(--mainWhite);
+  color: teal;
   transition: var(--mainTransition);
 }
 .icons a:hover {
-  color: var(--primaryColor);
+  color: turquoise;
 }
 .copyright {
-  text-transform: capitalize;
+  text-transform: uppercase;
   letter-spacing: var(--mainSpacing);
   line-height: 2;
 }

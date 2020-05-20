@@ -55,3 +55,14 @@
   display: inline-block;
   font-size: 16px;
 }
+.btn-white, .btn-primary {
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: var(--mainSpacing);
+    color: #7f0f0f;
+    border: 2px solid var(--mainWhite);
+    padding: 0.9rem 1.6rem;
+    display: inline-block;
+    transition: var(--mainTransition);
+    cursor: pointer;
+}

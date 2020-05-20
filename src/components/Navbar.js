@@ -4,7 +4,7 @@ import styles from '../css/navbar.module.css'
 import { FaAlignRight } from 'react-icons/fa'
 import links from '../constants/links'
 import socialIcons from '../constants/social-icons'
-import logo from '../images/rra-logo.jpg'
+import logo from '../images/er.png'
 const Navbar = () => {
     const [isOpen, setNav] = (useState(false)) // useState(React Hook) prima dva params: 1. true/false (false je default) 2. funkciju koja upravlja sa toggle
     const toggleNav = () => {
