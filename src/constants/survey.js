@@ -1,5 +1,4 @@
 export default {
- title: "Anketa",
  completedHtml: "<h1>Hvala!</h1>",
  pages: [{
    name: "page1",
