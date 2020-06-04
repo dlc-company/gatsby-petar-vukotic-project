@@ -19,6 +19,13 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
+    projectitemposts:allContentfulProjectItem{
+    edges{
+      node{
+        slug
+        }
+      }
+    }
   }
   `)
 
@@ -38,6 +45,15 @@ exports.createPages = async ({ graphql, actions }) => {
       context:{
         slug:node.slug,
       },
+    })
+  })
+  data.projectitemposts.edges.forEach(({ node })=>{
+    createPage({
+      path: `projekat/${node.slug}`,
+      component: path.resolve("./src/templates/blog-project-template.js"),
+      context: {
+        slug:node.slug
+      }
     })
   })
 }

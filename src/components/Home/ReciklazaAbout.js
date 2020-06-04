@@ -11,7 +11,7 @@ const About = () => {
             <div className={styles.aboutCenter}>
                
                 <article className={styles.aboutInfo}>
-                <Title title="text o" subtitle="reciklazi"/>
+                <Title title="text o" subtitle="upravljanju otpadom"/>
                     <p>
                         Cum horribilem resurgere de sepulcris creaturis, sicut de iride et serpens.
                         Pestilentia, ipsa screams. Pestilentia est haec ambulabat mortuos. Sicut malus voodoo.
