@@ -6,7 +6,11 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink'
 const BlogCardProject = ({ blog }) => {
  const { slug, title, image, published } = blog
  return (
+
+
+
   <article className={styles.blog}>
+
    <div className={styles.imgContainer}>
     <Image fluid={image.fluid} className={styles.img} alt="single post" />
     <AniLink fade className={styles.link} to={`/projekat/${slug}`}>
@@ -17,7 +21,11 @@ const BlogCardProject = ({ blog }) => {
    <div className={styles.footer}>
     <h4>{title}</h4>
    </div>
+   
   </article>
+
+
+
  )
 }
 

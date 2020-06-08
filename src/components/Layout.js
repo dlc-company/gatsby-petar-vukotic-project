@@ -1,6 +1,8 @@
 import React from 'react'
 import Navbar from "./Navbar"
 import Footer from "./Footer"
+
+import './bootstrap.min.css'
 import './layout.css'
 const Layout = ({children}) => { // Probaj sa Micom bez children
     return (
