@@ -10,6 +10,8 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 import Survey from '../components/Home/Survey'
 
+// import Map from '../components/Map'
+
 export default ({data}) => (
     <Layout>
         <StyledHero home="true" img={data.defaultBcg.childImageSharp.fluid} >
@@ -23,7 +25,7 @@ export default ({data}) => (
         <PartnerLogos/>
   
           <Survey/>
-        
+
     </Layout>
 )
 

@@ -4,6 +4,10 @@ export default [
     text: "home",
   },
   {
+    path: "/projekat",
+    text: "projekat",
+  },
+  {
     path: "/biomasa",
     text: "biomasa",
   },

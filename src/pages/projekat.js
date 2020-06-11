@@ -1,0 +1,44 @@
+import React from 'react'
+import Layout from "../components/Layout"
+import StyledHero from '../components/StyledHero'
+import { graphql } from 'gatsby'
+import BlogListProject from '../components/BlogProject/BlogListProject'
+import Menu from '../components/Home/Menu'
+
+const projekat = ({data}) => {
+ return (
+  <Layout>
+   <StyledHero img={data.projectbcg.childImageSharp.fluid} />
+   <Menu items={data.menu} />
+   <BlogListProject />
+  </Layout>
+ )
+}
+
+export const query = graphql`
+query{
+  projectbcg:file(relativePath:{eq:"octavian-dan-b21Ty33CqVs-unsplash.jpg"}){
+    childImageSharp{
+      fluid(quality:90, maxWidth:4160){
+        src
+      }
+    }
+  }
+  menu:allContentfulProjectItem{
+    edges{
+      node{
+        id
+        title
+        category
+        image{
+          fluid{
+            ...GatsbyContentfulFluid
+        }
+      }
+    }
+  }
+}
+}
+`
+
+export default projekat
