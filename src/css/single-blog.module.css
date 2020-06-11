@@ -1,16 +1,55 @@
 .blog {
   padding: 4rem 0;
+  display: flex;
+  flex:1;  
+  justify-content: center;
+  flex-direction: row;
 }
 .center {
-  width: 80vw;
-  margin: 0 auto;
+  width: 700px; 
 }
+
+.title{
+  text-align: center;
+}
+
+.published{
+  text-align: center;
+}
+
+.image{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.video{
+  display: flex;
+  align-content: center;
+  align-self: center;
+}
+
+.questionSection{
+  display: flex;  
+  margin-bottom: 25px;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.allBlogsButton{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
 .blog h1,
 .blog h4 {
   text-transform: capitalize;
 }
 .post {
-  margin: 2rem 0;
+  margin: 2rem 0;  
 }
 .post img {
   max-width: 70vw;

@@ -12,9 +12,26 @@ const {title,published,text:{json},} = data.recyclepost
 const options = {
     renderNode:{
         "embedded-asset-block":(node) =>{
-            return <div>
-                <img width="400" src={node.data.target.fields.file['en-US'].url} />
-            </div>
+            if (node.data.target.fields.file['en-US'].contentType == 'image/jpeg') {
+                return <div>
+                    <h1>promena</h1>
+                    <img width="400" src={node.data.target.fields.file['en-US'].url} />
+                </div>
+            }
+            else if (node.data.target.fields.file['en-US'].contentType == 'application/pdf') {
+                return <div>
+                    <div>
+                        <h3>{node.data.target.fields.title['en-US']}</h3>
+                        <button className='btn-primary'><a href={node.data.target.fields.file['en-US'].url} target="_blank">Open document</a></button>
+                    </div>
+                </div>
+            }
+            else if (node.data.target.fields.file['en-US'].contentType == 'text/html; charset=utf-8') {
+                return <div>
+                    <h3>{node.data.target.fields.title['en-US']}</h3>
+                    <button className='btn-primary'><a href={node.data.target.fields.file['en-US'].url} target="_blank">Open video</a></button>
+                </div>
+            }                
         },
     },
 }
@@ -22,8 +39,8 @@ const options = {
         <Layout>
             <section className={styles.blog}>
                 <div className={styles.center}>
-                    <h1>{title}</h1>
-                    <h4>published at : {published}</h4>
+                    <h1 className={styles.title}>{title}</h1>
+                    <h4 className={styles.published}>published at : {published}</h4>
                     <article className={styles.post}>
                         {documentToReactComponents(json,options)}
                     </article>
