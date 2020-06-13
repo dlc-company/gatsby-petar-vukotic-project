@@ -22,7 +22,7 @@ const options = {
                 return <div>
                     <div>
                         <h3>{node.data.target.fields.title['en-US']}</h3>
-                        <button className='btn-primary'><a href={node.data.target.fields.file['en-US'].url} target="_blank">Open document</a></button>
+                        <button className='btn-primary'><a href={node.data.target.fields.file['en-US'].url} target="_blank">Open</a></button>
                     </div>
                 </div>
             }
