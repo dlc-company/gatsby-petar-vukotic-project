@@ -50,10 +50,7 @@
 .rounded-button {
   background-color: rgba(130,47,47,1); /* Green */
   border: none;  
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -78,11 +75,16 @@
   display: flex;
   flex:1;
   color: white;
-  text-decoration: none;
+  text-decoration: none;  
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px; 
 }
 
 .document-button:hover{
     text-decoration: none;
+    color: yellow;
 }
 
 .video{

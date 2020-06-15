@@ -22,6 +22,13 @@ const options = {
                         <button className={styles.roundedButton}><a className={styles.documentButton} href={node.data.target.fields.file['en-US'].url} target="_blank">Otvori</a></button>
                     </div>
                 </div>
+            }
+            else{
+                console.log(node.data.target.fields.file['en-US'].url);
+                return (
+                    <div >                       
+                        <iframe className={styles.video} src={node.data.target.fields.file['en-US'].url} frameBorder="0" allowFullScreen></iframe>
+                    </div>)
             }                                      
         },
         "paragraph": (node) => {                       
@@ -39,7 +46,7 @@ const options = {
                     for (let index = 0; index < node.content.length; index++) {
                         if (node.content[index].marks.length != 0){
                             if (node.content[index].marks[0].type == 'bold'){
-                                text += '<strong>' + node.content[index].value + '</strong>';
+                                text += '<b>' + node.content[index].value + '</b>';
                             }                            
                         }
                         else{
@@ -48,7 +55,7 @@ const options = {
                     }
                     return (
                         <div className={styles.text}>
-                            <h7>{text}</h7>
+                            <h7 dangerouslySetInnerHTML={{ __html: text }}/>
                         </div>
                     )
                 }
