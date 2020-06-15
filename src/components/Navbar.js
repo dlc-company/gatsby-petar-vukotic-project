@@ -18,7 +18,7 @@ const Navbar = () => {
                 <div className={styles.navHeader}>
                     <img src={logo} alt="rra logo" />
                     <button type="button" className={styles.logoBtn} onClick={toggleNav}> 
-                        <FaAlignRight className={styles.logoIcon}/>
+                        <FaAlignRight  className={styles.logoIcon}/>
                     </button> 
                 </div>
                 <ul className={isOpen?`${styles.navLinks} ${styles.showNav}`:`${styles.navLinks}`}> 
