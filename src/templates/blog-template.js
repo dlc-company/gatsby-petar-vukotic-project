@@ -4,6 +4,8 @@ import Layout from '../components/Layout'
 import styles from '../css/single-blog.module.css'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import Modal from 'react-modal';
+
 
 const Blog = ({data}) => {
 const {title,published,text:{json}} = data.post
@@ -18,9 +20,10 @@ const options = {
             else if (node.data.target.fields.file['en-US'].contentType === 'application/pdf') {
                 return <div>
                     <div className = {styles.document}>
-                        <h7 className = {styles.documentName}>{node.data.target.fields.title['en-US']}</h7>
-                        <button className={styles.roundedButton}><a className={styles.documentButton} href={node.data.target.fields.file['en-US'].url} target="_blank">Otvori</a></button>
+                        <h7 className = {styles.documentName}>{node.data.target.fields.title['en-US']}</h7>                        
+                        <button className={styles.roundedButton}><a className={styles.documentButton} href={node.data.target.fields.file['en-US'].url} target="_blank">Otvori</a></button>                        
                     </div>
+                    <object width="100%" height="400" data="https://www.introprogramming.info/wp-content/uploads/2013/07/Books/CSharpEn/Fundamentals-of-Computer-Programming-with-CSharp-Nakov-eBook-v2013.pdf" type="application/pdf"></object>
                 </div>
             }
             else{
@@ -72,7 +75,7 @@ const options = {
 }
     return (
         <Layout>
-            <section className={styles.blog}>
+            <section id = "modal" className={styles.blog}>
                 <div className={styles.center}>
                     <h1 className={styles.title}>{title}</h1>
                     <h5 className={styles.published}>Objavljeno : {published}</h5>
@@ -83,8 +86,7 @@ const options = {
                         <AniLink fade to='/biomasa' className='btn-primary'>
                             svi clanci
                     </AniLink>
-                    </div>
-                    
+                    </div>                   
                 </div>
             </section>
         </Layout>
