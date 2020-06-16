@@ -49,55 +49,14 @@ const options = {
                 </div>)
             }                                    
         },
-        "paragraph": (node) => {                       
-            if (node.content[1] != undefined){
-                // Embedded video
-                if (node.content[1].nodeType === "hyperlink") {
+        "hyperlink": (node) => {  
                     return(
                         <div className={styles.questionSection}>
-                            <p>{node.content[1].content[0].value}</p>
-                            <iframe className ={styles.video} src={node.content[1].data.uri} frameBorder="0" allowFullScreen></iframe>
-                        </div> )
-                }
-                // Text with marks (bold, italic ...)
-                else
-                {
-                    let text = ``;
-                    for (let index = 0; index < node.content.length; index++) {
-                        if (node.content[index].marks.length != 0){
-                            if (node.content[index].marks[0].type == 'bold'){
-                                text += '<b>' + node.content[index].value + '</b>';
-                            }                            
-                        }
-                        else{
-                            text += node.content[index].value;
-                        }
-                    }
-                    return (
-                        <div className={styles.text}>
-                            <p dangerouslySetInnerHTML={{ __html: text }}/>
-                        </div>
-                    )
-                }
-            }  
-            // Simple text
-            else{  
-                if (node.content[0].marks.length != 0) {     
-                    return (
-                        <div className={styles.text}>
-                            <p><b>{node.content[0].value}</b></p>
-                        </div>
-                    )
-                   }  
-                   else{
-                    return (
-                        <div className={styles.text}>
                             <p>{node.content[0].value}</p>
-                        </div>
-                    ) 
-                   }                           
-            }                     
-        }
+                            <iframe className ={styles.video} src={node.data.uri} frameBorder="0" allowFullScreen></iframe>
+                        </div> )
+        }                   
+        
     }
 }
     return (
