@@ -2,6 +2,7 @@
  display: flex; 
  flex-direction: column;
  justify-content: center;
+ background-color: #fafafa;
 }
 
 .title{   
@@ -10,6 +11,7 @@
   font-size:1.5rem;
   text-transform: uppercase;
   margin-bottom:2rem;
+  margin-top:2rem;
 }
 
 .text{

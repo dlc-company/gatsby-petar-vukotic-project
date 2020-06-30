@@ -20,16 +20,17 @@ const Navbar = () => {
                     <button type="button" className={styles.logoBtn} onClick={toggleNav}> 
                         <FaAlignRight  className={styles.logoIcon}/>
                     </button> 
-                </div>
-                <ul className={isOpen?`${styles.navLinks} ${styles.showNav}`:`${styles.navLinks}`}> 
-                    {links.map((item, index) => { {/* u map func kao drugi param stavljamo index jer renderujemo List */}
-                        return (<li key={index}> {/* u return odredjujemo u kom html elementu zelimo da renderujemo(prikazemo) podatke, u nasem slucaju nav linkove */}
-                            <AniLink fade to={item.path}>{/* Link je objekat i objekat ima property path - pogledaj u link.js fajlu */}
-                                {item.text} {/* ista logika, pristupamo drugom property -> text - pogledaj u link.js fajlu */}
-                                </AniLink> 
-                        </li>)
-                    })}
-                </ul> {/* koristimo ternary operator(shorthand za if i ako je true koristimo jedan css class, ako je false drugi) */}
+                </div>                
+                    <ul className={isOpen ? `${styles.navLinks} ${styles.showNav}` : `${styles.navLinks}`}>
+                        {links.map((item, index) => {
+                            {/* u map func kao drugi param stavljamo index jer renderujemo List */ }
+                            return (<li key={index}> {/* u return odredjujemo u kom html elementu zelimo da renderujemo(prikazemo) podatke, u nasem slucaju nav linkove */}
+                                <AniLink  fade to={item.path}>{/* Link je objekat i objekat ima property path - pogledaj u link.js fajlu */}
+                                    {item.text} {/* ista logika, pristupamo drugom property -> text - pogledaj u link.js fajlu */}
+                                </AniLink>
+                            </li>)
+                        })}
+                    </ul> {/* koristimo ternary operator(shorthand za if i ako je true koristimo jedan css class, ako je false drugi) */}                            
             <div className={styles.navSocialLinks}>
                     {socialIcons.map((item, index)=>{ {/* React trazi da u map func koristimo key={} i zbog toga u map() prosledjujemo index property, url je property objekta social-links kome pristupamo, a _blank nam otvara link na novoj strani, noopener i noreferrer su zbog security-a - pogledaj social-icons.js; icon je naravno drugi property i social icon se nece videti na manjem prozoru - - pogledaj social-icons.js */}
                         return ( 

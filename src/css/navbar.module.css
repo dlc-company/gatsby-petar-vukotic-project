@@ -21,11 +21,18 @@
 }
 
 .nav-links {
-  list-style-type: none;
-  transition: var(--mainTransition);
+  display: flex;  
+  transition: var(--mainTransition); 
   height: 0;
+  text-decoration: none;
   overflow: hidden; /* height i overflow su default i omogucavaju da nam toggle radi - probaj da comment height i overflow i pritisnini toggle icon da vidis sta ce biti  */
 }
+
+.nav-links a{
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+}
+
 .show-nav {
   height: 216px; /* .show-nav nam omogucuje da vidimo/klikcemo :-) na toggle */
 }
@@ -57,7 +64,6 @@
     display: none;
   }
   .nav-center {
-    max-width: 1170px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;

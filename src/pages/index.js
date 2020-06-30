@@ -22,9 +22,11 @@ export default ({data}) => (
        
         <Services/>
       
+        <Survey />
+    
         <PartnerLogos/>
   
-          <Survey/>
+         
 
     </Layout>
 )
