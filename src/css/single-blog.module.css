@@ -37,7 +37,7 @@
   display: flex;
   flex:1;
   flex-direction: column;
-  border-radius: 5px;
+  border-radius: 0px;
   background-color: #BDBDBD;
   /* background: rgb(130,47,47);
   background: linear-gradient(90deg, rgba(130,47,47,1) 17%, rgba(203,37,37,1) 46%, rgba(236,21,21,1) 67%); */
@@ -57,8 +57,7 @@
 .document-window{
   display: flex;
   flex-direction: column;
-  border-radius: 5px;
-  padding: 5px;
+  border-radius: 5px;  
 }
 
 .object-pdf{
@@ -83,14 +82,20 @@
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 5px;
-  padding-bottom: 5px; 
-  border-radius: 5px;
+  padding-bottom: 5px;   
 }
 
 .pdf-icon{  
   display: flex;
   flex: 1;  
   color: #F44336;
+  align-self: center;
+}
+
+.word-icon{  
+  display: flex;
+  flex: 1;  
+  color: #1e88e5;
   align-self: center;
 }
 

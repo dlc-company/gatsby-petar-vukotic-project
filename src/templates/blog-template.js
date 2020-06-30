@@ -8,6 +8,9 @@ import { FaChevronDown } from 'react-icons/fa'
 import { FaChevronUp } from 'react-icons/fa'
 import { FaClone } from 'react-icons/fa'
 import { FaFilePdf } from 'react-icons/fa'
+import { FaDownload } from 'react-icons/fa'
+import { FaFile } from 'react-icons/fa'
+
 
 const Blog = ({data}) => {
 const {title,published,text:{json}} = data.post
@@ -47,14 +50,30 @@ const options = {
                             <object className={styles.objectPdf} data={documentUrl} type="application/pdf"></object>                           
                         </div>                                                                     
                 </div>)
-            }                                    
+            }
+            else if (node.data.target.fields.file['en-US'].contentType === 'application/CDFV2')  {
+                const documentUrl = node.data.target.fields.file['en-US'].url;  
+                return(
+                    <div className={styles.document}>
+                        <div className={styles.documentControls}>
+                            <FaFile size={35} className={styles.wordIcon} />
+                            <p className={styles.documentName}>{node.data.target.fields.title['en-US']}</p>                            
+                            <button type="button" className={styles.roundedButton} >
+                                <a className={styles.documentButton} href={documentUrl} ><FaDownload /></a>
+                            </button>
+                        </div>
+                    </div>
+                )
+            }                                
         },
         "hyperlink": (node) => {  
+            if (node.data.uri.includes('https://www.youtube.com/embed/')){
                     return(
                         <div className={styles.questionSection}>
                             <p>{node.content[0].value}</p>
                             <iframe className ={styles.video} src={node.data.uri} frameBorder="0" allowFullScreen></iframe>
                         </div> )
+            }
         }                   
         
     }

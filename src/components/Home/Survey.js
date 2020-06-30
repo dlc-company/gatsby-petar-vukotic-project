@@ -10,14 +10,16 @@ const SurveyComponent = () => {
 var model = new Survey.Model(surveyJson);
  return (
    <div className={styles.main}>
-     <h1 className={styles.title} >Anketa</h1>  
-    
+     <p className={styles.title} >Anketa</p>      
      <div id='surveySection' className={styles.surveySection}>   
         <div className = {styles.surveyImage}>
-         <img src={image}></img>
+         <img id='surveyPlaceholder' src={image}></img>
+         <div className={styles.survey} id='survey'>
+           < Survey.Survey model={model} onComplete={sendDataToServer} />
+         </div>           
         </div>
        <div className={styles.surveyTextButton}>
-         <h4 className={styles.text} >Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores corporis, distinctio perspiciatis rem cupiditate nobis, commodi similique sed consectetur minima eos fugit quo? Assumenda, ducimus?</h4>  
+         <h6 className={styles.text} >Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores corporis, distinctio perspiciatis rem cupiditate nobis, commodi similique sed consectetur minima eos fugit quo? Assumenda, ducimus?</h6>  
          <button onClick={showSurvey} type="button" className="btn-primary">
            Popuni Anketu
         </button> 
@@ -26,9 +28,7 @@ var model = new Survey.Model(surveyJson);
  
       <h1 className={styles.completedText} id='completed'>Hvala!</h1>    
        
-     <div style={{ display: 'none'}} id='survey'>
-        < Survey.Survey model={model} onComplete={sendDataToServer} />
-      </div>    
+       
    </div>
  )
 }
@@ -39,9 +39,9 @@ var model = new Survey.Model(surveyJson);
    document.getElementById("completed").style.display = "block";
  }
 
-function showSurvey() {
-  document.getElementById("surveySection").style.display = "none";
-  document.getElementById("survey").style.display = "block";  
+function showSurvey() {  
+  document.getElementById("survey").style.display = "block"; 
+  document.getElementById("surveyPlaceholder").style.display = "none";  
 }
 
 export default SurveyComponent
