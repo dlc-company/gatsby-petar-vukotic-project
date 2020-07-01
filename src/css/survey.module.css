@@ -28,7 +28,7 @@
   display: flex;
   flex:3;     
   justify-content: center;
-  padding: 30px;
+  padding: 15px;
 }
 
 .survey{
@@ -37,7 +37,8 @@
 }
 
 .survey-image img{  
-  object-fit: none ;  
+  object-fit: none ; 
+  flex: 1; 
 }
 
 .survey-text-button{ 

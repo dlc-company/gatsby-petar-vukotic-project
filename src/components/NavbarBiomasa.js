@@ -1,7 +1,6 @@
 import React, {useState} from 'react' // importujemo useState za toggle i koristimo React Hook
 import AniLink from "gatsby-plugin-transition-link/AniLink";
-import styles from '../css/navbar.module.css'
-import { FaAlignRight } from 'react-icons/fa'
+import styles from '../css/navbarbiomasa.module.css'
 import links from '../constants/biomasa-links'
 const Navbar = () => {
     const [isOpen, setNav] = (useState(true)) // useState(React Hook) prima dva params: 1. true/false (false je default) 2. funkciju koja upravlja sa toggle
@@ -19,7 +18,7 @@ const Navbar = () => {
                         return (<li key={index}> {/* u return odredjujemo u kom html elementu zelimo da renderujemo(prikazemo) podatke, u nasem slucaju nav linkove */}
                             <AniLink fade to={item.path}>{/* Link je objekat i objekat ima property path - pogledaj u link.js fajlu */}
                                 {item.text} {/* ista logika, pristupamo drugom property -> text - pogledaj u link.js fajlu */}
-                                </AniLink> 
+                            </AniLink> 
                         </li>)
                     })}
                 </ul> {/* koristimo ternary operator(shorthand za if i ako je true koristimo jedan css class, ako je false drugi) */}      
