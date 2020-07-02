@@ -1,61 +1,65 @@
-.navbar{
+.navbar {
   background: var(--mainBlack);
 }
+
 .nav-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.25rem;
 }
+
 .logo-btn {
   background: transparent;
   border: none;
   outline: none;
 }
+
 .logo-btn:hover {
   cursor: pointer;
 }
+
 .logo-icon {
   color: var(--primaryColor);
   font-size: 1.5rem;
 }
 
 .nav-links {
-  display: flex;  
-  transition: var(--mainTransition); 
+  list-style-type: none;
+  transition: var(--mainTransition);
   height: 0;
-  text-decoration: none;
-  overflow: hidden; /* height i overflow su default i omogucavaju da nam toggle radi - probaj da comment height i overflow i pritisnini toggle icon da vidis sta ce biti  */
-}
-
-.nav-links a{
-  text-transform: uppercase !important;
-  text-decoration: none !important;
+  overflow: hidden;
+  /* height i overflow su default i omogucavaju da nam toggle radi - probaj da comment height i overflow i pritisnini toggle icon da vidis sta ce biti  */
 }
 
 .show-nav {
-  height: 216px; /* .show-nav nam omogucuje da vidimo/klikcemo :-) na toggle */
+  height: 216px;
+  /* .show-nav nam omogucuje da vidimo/klikcemo :-) na toggle */
 }
+
 .nav-links a {
   display: block;
   padding: 0.7rem 1.25rem;
-  text-decoration: none;
-  text-transform: capitalize;
+  text-decoration: none !important;
+  text-transform: uppercase;  
   color: var(--mainWhite);
   transition: var(--mainTransition);
   font-weight: bold;
   letter-spacing: var(--mainSpacing);
+
 }
+
 .nav-links a:hover {
   color: var(--primaryColor);
 }
+
 .nav-social-links {
   display: none;
 }
+
 @media screen and (min-width: 576px) {
   .navbar {
     padding: 0 2rem;
-
   }
 }
 
@@ -64,6 +68,7 @@
     display: none;
   }
   .nav-center {
+    
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -78,13 +83,13 @@
     line-height: 0;
   }
   .nav-social-links a {
-    color: teal;
+    color: green;
     margin: 0 0.5rem;
     font-size: 1.5rem;
     transition: var(--mainTransition);
   }
   .nav-social-links a:hover {
-    color: turquoise;
+    color: red;
     transform: translateY(-5px);
   }
 }
