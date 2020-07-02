@@ -10,7 +10,7 @@ const projekat = ({data}) => {
   <Layout>
    <StyledHero img={data.projectbcg.childImageSharp.fluid} />
    <Menu items={data.menu} />
-   <BlogListProject />
+   {/* <BlogListProject /> */}
   </Layout>
  )
 }
@@ -27,6 +27,7 @@ query{
   menu:allContentfulProjectItem{
     edges{
       node{
+        slug
         id
         title
         category

@@ -8,13 +8,29 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 const BlogProject = ({data}) => {
  const { title, published, text: { json } } = data.projectitempost
  const options = {
-  renderNode: {
-   "embedded-asset-block": (node) => {
-    return <div>
-     <img width="400" src={node.data.target.fields.file['en-US'].url} />
-    </div>
-   }
-  }
+   renderNode: {
+     "embedded-asset-block": node => {
+       return (
+         <div>
+           <img width="400" src={node.data.target.fields.file["en-US"].url} />
+         </div>
+       )
+     },
+     "embedded-entry-block": node => {
+       console.log(node);
+       
+       const {title, image, text} = node.data.target.fields
+       
+       return (
+         <div>
+           <h1>Naziv posta : {title['en-US']}</h1>
+           <img width="400" src={image['en-US'].fields.file['en-US'].url} alt=""/>
+           {documentToReactComponents(text['en-US'])}
+           
+         </div>
+       )
+     },
+   },
  }
 
  return (
@@ -27,7 +43,7 @@ const BlogProject = ({data}) => {
       {documentToReactComponents(json, options)}
      </article>
      <AniLink fade to='/projekat' className="btn-primary">
-      svi clanci
+      svi projekti
      </AniLink>
     </div>
    </section>

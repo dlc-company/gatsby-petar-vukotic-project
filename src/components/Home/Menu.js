@@ -1,6 +1,9 @@
 import React, { Component } from "react"
 import Title from '../Title'
 import Img from "gatsby-image"
+import styles from '../../css/blog-card.module.css'
+import { Link } from 'gatsby'
+import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 
 const getCategories = items => {
  let tempItems = items.map(items => {
@@ -67,9 +70,13 @@ export default class Menu extends Component {
           key={node.id}
           className="col-11 col-md-6 my-3  mx-auto"//d-flex deleted
          >
-          <div>
-           <Img fluid={node.image.fluid} />
+          <div className={styles.imgContainer}>
+           <Img fluid={node.image.fluid} className={styles.img} />
+           <Link className={styles.link} to={`/projekat/${node.slug}`}>
+            procitajte vise
+          </Link>
           </div>
+          
           {/* item text */}
           <div className="flex-grow-1 px-3">
            <div className="d-flex justify-content-between">
