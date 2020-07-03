@@ -12,7 +12,7 @@ export default [
         text: 'udruzenja sumovlasnika'
     },
     {
-        path: '/mapa',
+        path: '/map',
         text: 'mapa'
     },
     {

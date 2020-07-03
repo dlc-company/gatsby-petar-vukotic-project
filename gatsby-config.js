@@ -5,10 +5,16 @@
  */
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+}),
+// require('leaflet.control.layers.tree').config({
+//   path: `leaflet.control.layers.tree.${process.leaflet.control.layers.tree.NODE_ENV}`
+// })
 module.exports = {
   /* Your site config here */
   plugins: [
+    {
+      resolve: `leaflet-sidebar-v2`
+    },
     {
       resolve: 'gatsby-plugin-react-leaflet',
       options: {

@@ -8498,6 +8498,16 @@ lcid@^2.0.0:
   dependencies:
     invert-kv "^2.0.0"
 
+leaflet-sidebar-v2@^3.2.3:
+  version "3.2.3"
+  resolved "https://registry.yarnpkg.com/leaflet-sidebar-v2/-/leaflet-sidebar-v2-3.2.3.tgz#73bb949d7d4f51f22cbda875806b9aa804d31717"
+  integrity sha512-narzdn81Y/8YpgHR3jhs93LhrLq0AGSRo7CXHEICHfMeK6IHSbtFOF9CTSfueaumRK0TgvHkiiYJb9dTKta6ZQ==
+
+leaflet.control.layers.tree@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/leaflet.control.layers.tree/-/leaflet.control.layers.tree-1.0.0.tgz#52c2ba1776113a1efa7ee8c8091e263d9a6cf156"
+  integrity sha512-ZAm/dfe+Ju+wq6VKomiDWAM2kG33dcOa9NuA0al7fUqlnYI1hD98RD4mchrF3rL8rH1giviJySJOK/joAgubLA==
+
 leaflet@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/leaflet/-/leaflet-1.6.0.tgz#aecbb044b949ec29469eeb31c77a88e2f448f308"

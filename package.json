@@ -32,6 +32,8 @@
     "gatsby-transformer-sharp": "^2.5.0",
     "gsap": "^3.2.6",
     "leaflet": "^1.6.0",
+    "leaflet-sidebar-v2": "^3.2.3",
+    "leaflet.control.layers.tree": "^1.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-icons": "^3.9.0",
