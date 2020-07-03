@@ -15,7 +15,7 @@ import Survey from '../components/Home/Survey'
 export default ({data}) => (
     <Layout>
         <StyledHero home="true" img={data.defaultBcg.childImageSharp.fluid} >
-            <Banner title="radni naslov" info="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id.">
+            <Banner title="energetski održivi region" info="">
                 
             </Banner>
         </StyledHero>

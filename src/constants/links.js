@@ -1,7 +1,7 @@
 export default [
   {
     path: "/",
-    text: "home",
+    text: "početna",
   },
   {
     path: "/projekat",
@@ -21,6 +21,6 @@ export default [
   },
   {
     path: "/contact",
-    text: "contact",
+    text: "kontakt",
   },
 ]

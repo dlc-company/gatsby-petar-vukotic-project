@@ -32,14 +32,14 @@ const Footer = () => {
           })}
         </div>
         <div className={styles.copyright}>
-          [Naziv platforme] je podržano od strane program Razvoj održivog tržišta bioenergije u
-          Srbiji (DKTI) kao rezultata bilateralne saradnje između Republike
+          Platforma znanja je podržana od strane programa Razvoj održivog tržišta bioenergije u
+          Srbiji (DKTI) kao rezultat bilateralne saradnje između Republike
           Srbije i Savezne Republike Nemačke. Sprovodi se u saradnji sa Deutsche
           Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH (tehnička
           podrška) i KfW – Razvojnom bankom (finansijska podrška). DKTI program
           je finansiran od strane nemačkog Saveznog ministarstva za ekonomsku
           saradnju i razvoj (BMZ) kao deo Nemačke klimatske i tehnološke
-          inicijative (DKTI) <br/> Sva prava zadrzana &copy; {new Date().getFullYear()} <br />
+          inicijative (DKTI) <br/> Sva prava zadržana &copy; {new Date().getFullYear()} <br />
         </div>
       </footer>
     )

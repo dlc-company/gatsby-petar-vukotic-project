@@ -6,7 +6,7 @@ import partners from '../../constants/partners'
 const PartnerLogos = () => {
     return (
       <section className={styles.partners}>
-      <Title title="nasi" subtitle="partneri"/>
+      <Title title="naši" subtitle="partneri"/>
       <div className={styles.center}>
           {
               partners.map((item,index)=>{
