@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 .navbar {
-  background: var(--mainBlack);
+  background: white;
+  font-family: 'Roboto', sans-serif;
 }
 
 .nav-header {
@@ -24,16 +26,16 @@
   font-size: 1.5rem;
 }
 
-.nav-links {
+.nav-links {  
   list-style-type: none;
   transition: var(--mainTransition);
-  height: 0;
+  height: 0;  
   overflow: hidden;
   /* height i overflow su default i omogucavaju da nam toggle radi - probaj da comment height i overflow i pritisnini toggle icon da vidis sta ce biti  */
 }
 
 .show-nav {
-  height: 216px;
+  height: 326px;
   /* .show-nav nam omogucuje da vidimo/klikcemo :-) na toggle */
 }
 
@@ -42,7 +44,7 @@
   padding: 0.7rem 1.25rem;
   text-decoration: none !important;
   text-transform: uppercase;  
-  color: var(--mainWhite);
+  color: #212121;
   transition: var(--mainTransition);
   font-weight: bold;
   letter-spacing: var(--mainSpacing);
@@ -50,7 +52,7 @@
 }
 
 .nav-links a:hover {
-  color: var(--primaryColor);
+  color: teal;
 }
 
 .nav-social-links {
@@ -76,20 +78,20 @@
   }
   .nav-links {
     height: auto;
-    display: flex;
+    display: flex;    
   }
   .nav-social-links {
     display: flex;
     line-height: 0;
   }
   .nav-social-links a {
-    color: green;
+    color: teal;
     margin: 0 0.5rem;
     font-size: 1.5rem;
     transition: var(--mainTransition);
   }
   .nav-social-links a:hover {
-    color: red;
+    color: green;
     transform: translateY(-5px);
   }
 }

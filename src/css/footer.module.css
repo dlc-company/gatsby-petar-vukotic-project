@@ -30,5 +30,6 @@
 .copyright {
   text-transform: uppercase;
   letter-spacing: var(--mainSpacing);
+  font-size: xx-small;
   line-height: 2;
 }

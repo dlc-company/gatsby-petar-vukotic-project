@@ -32,10 +32,14 @@ const Footer = () => {
           })}
         </div>
         <div className={styles.copyright}>
-          copyright &copy; {new Date().getFullYear()} <br/>
-          Izradu ovog sajta omogućio je ____ posredstvom ___. Regionalna
-          razvojna agencija Uzice je u potpunosti odgovorna za sadržaj
-          ovog sajta, koji ne mora nužno odražavati stavove ___ ili ___.
+          [Naziv platforme] je podržano od strane program Razvoj održivog tržišta bioenergije u
+          Srbiji (DKTI) kao rezultata bilateralne saradnje između Republike
+          Srbije i Savezne Republike Nemačke. Sprovodi se u saradnji sa Deutsche
+          Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH (tehnička
+          podrška) i KfW – Razvojnom bankom (finansijska podrška). DKTI program
+          je finansiran od strane nemačkog Saveznog ministarstva za ekonomsku
+          saradnju i razvoj (BMZ) kao deo Nemačke klimatske i tehnološke
+          inicijative (DKTI) <br/> Sva prava zadrzana &copy; {new Date().getFullYear()} <br />
         </div>
       </footer>
     )
