@@ -229,11 +229,12 @@ const BlogProject = ({data}) => {
          )
        }
      },
-     "embedded-entry-block": node => {
-       console.log(node)
-
+     "embedded-entry-block": node => {      
        const { title, image, text } = node.data.target.fields
         const post = title["en-US"]
+       console.log(node.data.target.sys.contentType.sys.contentful_id);
+       var slug = node.data.target.sys.contentType.sys.contentful_id+ '/'+ node.data.target.fields.slug["en-US"];
+       
        return (
          <div className={styles.embeddedBlog}>
            <div className={styles.embeddedBlogControls}>
@@ -243,14 +244,17 @@ const BlogProject = ({data}) => {
                src={image["en-US"].fields.file["en-US"].url}
                alt=""
              />
-             <p className={styles.embeddedBlogName}>{title["en-US"]}</p>
-             <button
+             <p className={styles.embeddedBlogName}>{title["en-US"]}</p>             
+             <AniLink target="_blank" fade to={slug} className="btn-primary small">
+               procitaj vise
+              </AniLink>
+             {/* <button
                type="button"
                className={styles.embeddedBlogExpandButton}
                onClick={() => showHideBlog(post)}
              >
                {showBlog == post ? <FaChevronUp /> : <FaChevronDown />}
-             </button>
+             </button> */}
            </div>
            <div
              className={
