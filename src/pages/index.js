@@ -15,7 +15,7 @@ import Survey from '../components/Home/Survey'
 export default ({data}) => (
     <Layout>
         <StyledHero home="true" img={data.defaultBcg.childImageSharp.fluid} >
-            <Banner title="energetski održivi region" info="">
+            <Banner title="energetski održiv region" info="">
                 
             </Banner>
         </StyledHero>
@@ -33,7 +33,7 @@ export default ({data}) => (
 
 export const query = graphql`
          query {
-           defaultBcg: file(relativePath: { eq: "home.jpg" }) {
+           defaultBcg: file(relativePath: { eq: "home2.jpg" }) {
              childImageSharp {
                fluid(quality: 90, maxWidth: 4160) {
                  ...GatsbyImageSharpFluid_withWebp
