@@ -2,6 +2,7 @@ import React from "react"
 import styles from "../../css/pdf.module.css"
 import { FaFilePdf } from "react-icons/fa"
 import { graphql, useStaticQuery } from "gatsby"
+import Title from "../../components/Title"
 
 const Pdf = () => {
   const data = useStaticQuery(graphql`
@@ -23,7 +24,7 @@ const Pdf = () => {
   return (
     <section className={styles.main}>
       <div className={styles.center}>
-        <h4 className={styles.title}>PDF Dokumenta</h4>
+        <Title subtitle="PDF Dokumenta" />
         {data.pdf.edges.map((article, index) => {
           return (
             <div className={styles.document}>
@@ -43,7 +44,8 @@ const Pdf = () => {
             </div>
           )
         })}
-      </div>
+        <hr></hr>
+      </div>     
     </section>
   )
 }
