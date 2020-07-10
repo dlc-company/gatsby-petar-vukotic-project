@@ -19,8 +19,7 @@ const Audio = () => {
         }
       }
     }
-  `)
-  console.log(data);
+  `) 
   return (
     <section className={styles.main}>
       <div className={styles.center}>

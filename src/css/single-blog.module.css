@@ -38,7 +38,7 @@
   flex:1;
   flex-direction: column;
   border-radius: 0px;
-  background-color: #d32f2f; 
+  background-color: #D32F2F; 
   padding: 5px; 
   text-align: center;
   margin-left: 20px; 
@@ -80,12 +80,16 @@
   display: none;
 } 
 
+.rounded-button:hover{
+  color: wheat;
+}
+
 .rounded-button {
-  background-color: white; /* Green */
+  background-color: #F44336; /* Green */
   border: none;  
   text-align: center;
   text-decoration: none;
-  color: #F44336;
+  color: white;
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
@@ -124,13 +128,13 @@
 .document-button{
   display: flex;
   flex:1;
-  color: #F44336;
+  color: white;
   text-decoration: none;  
 }
 
 .document-button:hover{
     text-decoration: none;
-    color: #F44336;
+    color: wheat;
 }
 
 .video{
