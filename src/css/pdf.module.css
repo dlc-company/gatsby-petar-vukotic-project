@@ -1,0 +1,86 @@
+.main{
+ display: flex;
+ flex: 1; 
+ align-content: center;
+ justify-content: center;   
+}
+
+.center{
+  display: flex;  
+  width: 700px; 
+  align-self: center;  
+  flex-direction: column;  
+  text-align: center;
+  padding: 10px;
+}
+
+.title{
+ margin-bottom: 30px;
+}
+
+.document{
+  display: flex;   
+  flex:1;
+  flex-direction: column;
+  border-radius: 0px;
+  background-color: #D32F2F;
+  padding: 5px; 
+  text-align: center;
+  margin-left: 20px; 
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+
+.document-controls{
+  display: flex;
+  flex:1;
+  flex-direction: row;
+}
+
+.document-name{
+  display: flex;
+  flex:7;
+  color: #eaeaea;  
+  padding-left: 15px;
+  margin-top: auto;
+  margin-bottom: auto;
+  align-content: center;
+  justify-content: flex-start;
+}
+
+.document-button{
+  display: flex;
+  flex:1;
+  color: white;
+  text-decoration: none !important;  
+   padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px; 
+  cursor: pointer;  
+}
+
+.open-button :hover{
+ background-color: #F44336;
+ color: wheat;
+ 
+}
+
+.open-button {
+  background-color: #F44336; /* Green */
+  border: none;  
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;  
+}
+
+.pdf-icon{  
+  display: flex;
+  flex: 1;  
+  color: white;
+  align-self: center;
+}

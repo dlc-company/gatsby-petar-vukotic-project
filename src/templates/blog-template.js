@@ -54,7 +54,7 @@ const options = {
             else if (node.data.target.fields.file['en-US'].contentType === 'application/CDFV2')  {
                 const documentUrl = node.data.target.fields.file['en-US'].url;  
                 return(
-                    <div className={styles.document}>
+                    <div className={styles.documentWord}>
                         <div className={styles.documentControls}>
                             <FaFile size={35} className={styles.wordIcon} />
                             <p className={styles.documentName}>{node.data.target.fields.title['en-US']}</p>                            
@@ -66,6 +66,7 @@ const options = {
                 )
             }                                
         },
+        // EMBEDDED VIDEO
         "hyperlink": (node) => {  
             if (node.data.uri.includes('https://www.youtube.com/embed/')){
                     return(
