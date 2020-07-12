@@ -13,8 +13,8 @@ const Navbar = () => {
     }
     console.log(isOpen); // testiramo u Chrome Inspect(CTRL+Shift+I) da li je isOpen(true||false)
     
-       const url = 
-       console.log(url)
+      //  const url = 
+      //  console.log(url)
     
     return (
       <nav
