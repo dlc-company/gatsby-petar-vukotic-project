@@ -43,7 +43,7 @@ const options = {
                                 {showDocument == documentUrl ? <FaChevronUp /> : <FaChevronDown />}
                             </button>  
                             <button type="button" className={styles.roundedButton} >
-                                <a className={styles.documentButton} href={documentUrl} target="_blank"><FaClone /></a>                                
+                                <a className={styles.documentButton} href={documentUrl} target="_blank" rel="noopener noreferrer"><FaClone /></a>                                
                             </button>                      
                     </div>
                         <div className={showDocument == documentUrl ? `${styles.documentWindow}`:`${styles.documentWindowHidden}`}>

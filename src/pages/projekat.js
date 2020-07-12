@@ -4,6 +4,7 @@ import StyledHero from '../components/StyledHero'
 import { graphql } from 'gatsby'
 import BlogListProject from '../components/BlogProject/BlogListProject'
 import Menu from '../components/Home/Menu'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const projekat = ({data}) => {
  return (
