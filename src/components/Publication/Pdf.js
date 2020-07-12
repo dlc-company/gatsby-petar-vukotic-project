@@ -100,3 +100,14 @@
 // }
 
 // export default Pdf
+import React from 'react'
+
+const Pdf = () => {
+ return (
+  <div>
+   PDF
+  </div>
+ )
+}
+
+export default Pdf
