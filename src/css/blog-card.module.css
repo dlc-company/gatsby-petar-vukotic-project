@@ -59,3 +59,43 @@
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
+
+.selected-category{
+  background-color: teal;
+    background-repeat:no-repeat;
+    color: white;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    margin: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 15px;
+    text-align: center;
+    outline:none;
+}
+
+.category{
+  background-color: transparent;
+    background-repeat:no-repeat;
+    color: var(--mainBlack);
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    margin: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 15px;
+    text-align: center;
+    outline:none;
+}
+
+*:focus {
+    outline: 0 !important;
+}
