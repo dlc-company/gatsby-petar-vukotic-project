@@ -21,7 +21,6 @@ const showHideDocument = (id) => {
     }
     setShowDocument(showDocument => id)
 }
-console.log(showDocument);
 const options = {
     renderNode:{
         "embedded-asset-block":(node)=>{
@@ -102,16 +101,16 @@ const options = {
 
 
 export const query = graphql`
-query getPost($slug:String!){
-    post:contentfulBiomasa(slug:{eq: $slug}){
-      title
-      published(formatString:"MMMM Do, YYYY")
-      text{
-        json
-      }
-    }
-  }
-`
+         query getPost($slug: String!) {
+           post: contentfulBiomasa(slug: { eq: $slug }) {
+             title
+             published(formatString: "DD.MM.YYYY")
+             text {
+               json
+             }
+           }
+         }
+       `
 
 
 export default Blog

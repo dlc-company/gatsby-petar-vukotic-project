@@ -23,115 +23,6 @@ const BlogProject = ({data}) => {
    setShowDocument(showDocument => id)
  }
 
-  const [showBlog, setShowBlog] = React.useState("")
-  const showHideBlog = id => {
-    if (showBlog == id) {
-      id = ""
-    }
-    setShowBlog(showDocument => id)
-  }
-
-
- ///EMBEDDED ENTRY BLOCK OPTIONS
- const embeddedentryblockoptions = {
-   renderNode: {
-     "embedded-asset-block": node => {
-       //Image
-       if (node.data.target.fields.file["en-US"].contentType === "image/jpeg") {
-         return (
-           <div className={styles.image}>
-             <img width="490" src={node.data.target.fields.file["en-US"].url} />
-           </div>
-         )
-       }
-       //PDF
-       else if (
-         node.data.target.fields.file["en-US"].contentType === "application/pdf"
-       ) {
-         const documentUrl = node.data.target.fields.file["en-US"].url
-         return (
-           <div className={styles.document}>
-             <div className={styles.documentControls}>
-               <FaFilePdf size={35} className={styles.pdfIcon} />
-               <p className={styles.documentName}>
-                 {node.data.target.fields.title["en-US"]}
-               </p>
-               <button
-                 type="button"
-                 className={styles.roundedButton}
-                 onClick={() => showHideDocument(documentUrl)}
-               >
-                 {showDocument == documentUrl ? (
-                   <FaChevronUp />
-                 ) : (
-                   <FaChevronDown />
-                 )}
-               </button>
-               <button type="button" className={styles.roundedButton}>
-                 <a
-                   className={styles.documentButton}
-                   href={documentUrl}
-                   target="_blank"
-                 >
-                   <FaClone />
-                 </a>
-               </button>
-             </div>
-             <div
-               className={
-                 showDocument == documentUrl
-                   ? `${styles.documentWindow}`
-                   : `${styles.documentWindowHidden}`
-               }
-             >
-               <object
-                 className={styles.objectPdf}
-                 data={documentUrl}
-                 type="application/pdf"
-               ></object>
-             </div>
-           </div>
-         )
-       } else if (
-         node.data.target.fields.file["en-US"].contentType ===
-         "application/CDFV2"
-       ) {
-         const documentUrl = node.data.target.fields.file["en-US"].url
-         return (
-           <div className={styles.document}>
-             <div className={styles.documentControls}>
-               <FaFile size={35} className={styles.wordIcon} />
-               <p className={styles.documentName}>
-                 {node.data.target.fields.title["en-US"]}
-               </p>
-               <button type="button" className={styles.roundedButton}>
-                 <a className={styles.documentButton} href={documentUrl}>
-                   <FaDownload />
-                 </a>
-               </button>
-             </div>
-           </div>
-         )
-       }
-     },
-     hyperlink: node => {
-       if (node.data.uri.includes("https://www.youtube.com/embed/")) {
-         return (
-           <div className={styles.questionSection}>
-             <p>{node.content[0].value}</p>
-             <iframe
-               className={styles.video}
-               src={node.data.uri}
-               frameBorder="0"
-               allowFullScreen
-             ></iframe>
-           </div>
-         )
-       }
-     },
-   },
- }
-
  ///MAIN OPTIONS
  const options = {
    renderNode: {
@@ -230,9 +121,7 @@ const BlogProject = ({data}) => {
        }
      },
      "embedded-entry-block": node => {      
-       const { title, image, text } = node.data.target.fields
-        const post = title["en-US"]
-       console.log(node.data.target.sys.contentType.sys.contentful_id);
+       const { title, image, text } = node.data.target.fields         
        var slug = node.data.target.sys.contentType.sys.contentful_id+ '/'+ node.data.target.fields.slug["en-US"];
        
        return (
@@ -247,43 +136,9 @@ const BlogProject = ({data}) => {
              <p className={styles.embeddedBlogName}>{title["en-US"]}</p>             
              <AniLink target="_blank" fade to={slug} className="btn-primary small">
                procitaj vise
-              </AniLink>
-             {/* <button
-               type="button"
-               className={styles.embeddedBlogExpandButton}
-               onClick={() => showHideBlog(post)}
-             >
-               {showBlog == post ? <FaChevronUp /> : <FaChevronDown />}
-             </button> */}
+              </AniLink>           
            </div>
-           <div
-             className={
-               showBlog == post
-                 ? `${styles.documentWindow} ${styles.text}`
-                 : `${styles.documentWindowHidden}`
-             }
-           >
-             {documentToReactComponents(
-               text["en-US"],
-               embeddedentryblockoptions
-             )}
-           </div>
-         </div>
-
-         //  <div>
-         //    <h1>Naziv posta : {title["en-US"]}</h1>
-         //    <img
-         //      width="400"
-         //      src={image["en-US"].fields.file["en-US"].url}
-         //      alt=""
-         //    />
-         //    <div className={styles.embeddedEntryBlock}>
-         //      {documentToReactComponents(
-         //        text["en-US"],
-         //        embeddedentryblockoptions
-         //      )}
-         //    </div>
-         //  </div>
+         </div>   
        )
      },
    },
@@ -298,9 +153,11 @@ const BlogProject = ({data}) => {
      <article className={styles.post}>
       {documentToReactComponents(json, options)}
      </article>
+     <div className={styles.allBlogsButton}>
      <AniLink fade to='/projekat' className="btn-primary">
       svi projekti
      </AniLink>
+     </div>
     </div>
    </section>
   </Layout>
@@ -311,7 +168,7 @@ export const query = graphql`
          query getProjectItemPost($slug: String!) {
            projectitempost: contentfulProjectItem(slug: { eq: $slug }) {
              title
-             published(formatString: "MMMM Do, YYYY")
+             published(formatString: "DD.MM.YYYY")
              text {
                json
                content {

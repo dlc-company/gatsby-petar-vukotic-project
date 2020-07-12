@@ -1,8 +1,8 @@
 export default [
-    {
-        path: '/projekti',
-        text: 'projekti'
-    },
+    // {
+    //     path: '/projekti',
+    //     text: 'projekti'
+    // },
     {
         path: '/radnaGrupaZaBiomasu',
         text: 'radna grupa za biomasu'

@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 .navbar {
-  background: white;
-  font-family: 'Roboto', sans-serif;
+ background-color: white;
+ font-family: 'Roboto', sans-serif;
+}
+
+.navbarHome{
+  background-image: linear-gradient(white,rgba(63,208,212,0.7));
+ font-family: 'Roboto', sans-serif;
 }
 
 .nav-header {

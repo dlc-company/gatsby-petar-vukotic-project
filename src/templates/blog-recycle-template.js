@@ -3,53 +3,140 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import styles from '../css/single-blog.module.css'
 import AniLink from 'gatsby-plugin-transition-link/AniLink' 
+import { FaChevronDown } from "react-icons/fa"
+import { FaChevronUp } from "react-icons/fa"
+import { FaClone } from "react-icons/fa"
+import { FaFilePdf } from "react-icons/fa"
+import { FaDownload } from "react-icons/fa"
+import { FaFile } from "react-icons/fa"
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 
 const BlogRecycle = ({ data }) => {
 const {title,published,text:{json},} = data.recyclepost
-
+const [showDocument, setShowDocument] = React.useState("")
+const showHideDocument = id => {
+  if (showDocument == id) {
+    id = ""
+  }
+  setShowDocument(showDocument => id)
+}
 const options = {
-    renderNode:{
-        "embedded-asset-block":(node) =>{
-            if (node.data.target.fields.file['en-US'].contentType == 'image/jpeg') {
-                return <div>
-                    <h1>promena</h1>
-                    <img width="400" src={node.data.target.fields.file['en-US'].url} />
-                </div>
-            }
-            else if (node.data.target.fields.file['en-US'].contentType == 'application/pdf') {
-                return <div>
-                    <div>
-                        <h3>{node.data.target.fields.title['en-US']}</h3>
-                        <button className='btn-primary'><a href={node.data.target.fields.file['en-US'].url} target="_blank">Open</a></button>
-                    </div>
-                </div>
-            }
-            else if (node.data.target.fields.file['en-US'].contentType == 'text/html; charset=utf-8') {
-                return <div>
-                    <h3>{node.data.target.fields.title['en-US']}</h3>
-                    <button className='btn-primary'><a href={node.data.target.fields.file['en-US'].url} target="_blank">Open video</a></button>
-                </div>
-            }                
-        },
+  renderNode: {
+    "embedded-asset-block": node => {
+      //Image
+      if (node.data.target.fields.file["en-US"].contentType === "image/jpeg") {
+        return (
+          <div className={styles.image}>
+            <img width="490" src={node.data.target.fields.file["en-US"].url} />
+          </div>
+        )
+      }
+      //PDF
+      else if (
+        node.data.target.fields.file["en-US"].contentType === "application/pdf"
+      ) {
+        const documentUrl = node.data.target.fields.file["en-US"].url
+        return (
+          <div className={styles.document}>
+            <div className={styles.documentControls}>
+              <FaFilePdf size={35} className={styles.pdfIcon} />
+              <p className={styles.documentName}>
+                {node.data.target.fields.title["en-US"]}
+              </p>
+              <button
+                type="button"
+                className={styles.roundedButton}
+                onClick={() => showHideDocument(documentUrl)}
+              >
+                {showDocument == documentUrl ? (
+                  <FaChevronUp />
+                ) : (
+                  <FaChevronDown />
+                )}
+              </button>
+              <button type="button" className={styles.roundedButton}>
+                <a
+                  className={styles.documentButton}
+                  href={documentUrl}
+                  target="_blank"
+                >
+                  <FaClone />
+                </a>
+              </button>
+            </div>
+            <div
+              className={
+                showDocument == documentUrl
+                  ? `${styles.documentWindow}`
+                  : `${styles.documentWindowHidden}`
+              }
+            >
+              <object
+                className={styles.objectPdf}
+                data={documentUrl}
+                type="application/pdf"
+              ></object>
+            </div>
+          </div>
+        )
+      } else if (
+        node.data.target.fields.file["en-US"].contentType ===
+        "application/CDFV2"
+      ) {
+        const documentUrl = node.data.target.fields.file["en-US"].url
+        return (
+          <div className={styles.documentWord}>
+            <div className={styles.documentControls}>
+              <FaFile size={35} className={styles.wordIcon} />
+              <p className={styles.documentName}>
+                {node.data.target.fields.title["en-US"]}
+              </p>
+              <button type="button" className={styles.roundedButton}>
+                <a className={styles.documentButton} href={documentUrl}>
+                  <FaDownload />
+                </a>
+              </button>
+            </div>
+          </div>
+        )
+      }
     },
+    // EMBEDDED VIDEO
+    hyperlink: node => {
+      if (node.data.uri.includes("https://www.youtube.com/embed/")) {
+        return (
+          <div className={styles.questionSection}>
+            <p>{node.content[0].value}</p>
+            <iframe
+              className={styles.video}
+              src={node.data.uri}
+              frameBorder="0"
+              allowFullScreen
+            ></iframe>
+          </div>
+        )
+      }
+    },
+  },
 }
     return (
-        <Layout>
-            <section className={styles.blog}>
-                <div className={styles.center}>
-                    <h1 className={styles.title}>{title}</h1>
-                    <h4 className={styles.published}>published at : {published}</h4>
-                    <article className={styles.post}>
-                        {documentToReactComponents(json,options)}
-                    </article>
-                    <AniLink fade to='/reciklaza' className="btn-primary">
-                        svi clanci
-                    </AniLink>
-                </div>
-            </section>
-        </Layout>
+      <Layout>
+        <section className={styles.blog}>
+          <div className={styles.center}>
+            <h1 className={styles.title}>{title}</h1>
+            <h5 className={styles.published}>Objavljeno : {published}</h5>
+            <article className={styles.post}>
+              {documentToReactComponents(json, options)}
+            </article>
+            <div className={styles.allBlogsButton}>
+              <AniLink fade to="/reciklaza" className="btn-primary">
+                svi clanci
+              </AniLink>
+            </div>
+          </div>
+        </section>
+      </Layout>
     )
 }
 
@@ -58,7 +145,7 @@ export const query = graphql`
 query getRecyclePost($slug: String!) {
     recyclepost: contentfulReciklaza(slug: {eq: $slug}) {
       title
-      published(formatString:"MMMM Do, YYYY")
+      published(formatString:"DD.MM.YYYY")
       text {
         json
       }

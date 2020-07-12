@@ -2,6 +2,12 @@
  background: var(--mainBlack);
 }
 
+ .nav-center {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+ }
+
 .nav-header {
  display: flex;
  justify-content: space-between;
@@ -69,8 +75,7 @@
  .nav-center {
   max-width: 1170px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+  display: flex; 
   align-items: center;
  }
  .nav-links {
