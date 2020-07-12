@@ -17,9 +17,10 @@ const Navbar = () => {
       //  console.log(url)
     
     return (
-      <nav
-        className={window.location.pathname == '/' ? `${styles.navbarHome}`: `${styles.navbar}`}       
-      >
+      <nav className={styles.navbar}>
+      {/* // <nav */}
+      {/* //   className={window.location.pathname == '/' ? `${styles.navbarHome}`: `${styles.navbar}`}        */}
+      {/* // > */}
         <div className={styles.navCenter}>
           <div className={styles.navHeader}>
             <img src={logo} alt="rra logo" />
