@@ -1,0 +1,111 @@
+.blog-cards{
+ margin: auto;
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: center;
+}
+
+.blog {
+  box-shadow: var(--lightShadow);
+  transition: var(--mainTransition);
+  margin: 10px;  
+}
+.blog:hover {
+  box-shadow: var(--darkShadow);
+}
+
+.img-container {
+  position: relative;
+  background: var(--primaryColor);
+  transition: var(--mainTransition);
+}
+.img {
+  transition: var(--mainTransition);
+}
+.img-container:hover .img {
+  opacity: 0.3;
+}
+
+.link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  color: var(--mainWhite);
+  border: 2px solid var(--mainWhite);
+  padding: 0.5rem 0.7rem;
+  display: inline-block;
+  transition: var(--mainTransition);
+  cursor: pointer;
+  text-decoration: none;
+}
+.link:hover {
+  background: var(--mainWhite);
+  color: var(--primaryColor);
+}
+.img-container:hover .link {
+  opacity: 1;
+}
+
+.footer {
+  padding: 1rem;
+  text-align: left;
+}
+.footer h4 {
+  text-transform: capitalize;
+  margin-bottom: 0;
+}
+.date {
+  position: absolute;
+  left: 0;
+  top: 75%;
+  background: var(--primaryColor);
+  color:  var(--primaryBlack);
+  padding: 0.3rem 0.5rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.selected-category{
+  background-color: teal;
+    background-repeat:no-repeat;
+    color: white;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    margin: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 15px;
+    text-align: center;
+    outline:none;
+}
+
+.category{
+  background-color: transparent;
+    background-repeat:no-repeat;
+    color: var(--mainBlack);
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    margin: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 15px;
+    text-align: center;
+    outline:none;
+}
+
+*:focus {
+    outline: 0 !important;
+}

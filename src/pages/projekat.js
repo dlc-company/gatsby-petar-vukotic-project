@@ -17,30 +17,33 @@ const projekat = ({data}) => {
 }
 
 export const query = graphql`
-query{
-  projectbcg:file(relativePath:{eq:"octavian-dan-b21Ty33CqVs-unsplash.jpg"}){
-    childImageSharp{
-      fluid(quality:90, maxWidth:4160){
-        src
-      }
-    }
-  }
-  menu:allContentfulProjectItem{
-    edges{
-      node{
-        slug
-        id
-        title
-        category
-        image{
-          fluid{
-            ...GatsbyContentfulFluid
-        }
-      }
-    }
-  }
-}
-}
-`
+         query {
+           projectbcg: file(
+             relativePath: { eq: "octavian-dan-b21Ty33CqVs-unsplash.jpg" }
+           ) {
+             childImageSharp {
+               fluid(quality: 90, maxWidth: 4160) {
+                 src
+               }
+             }
+           }
+           menu: allContentfulProjectItem {
+             edges {
+               node {
+                 slug
+                 id
+                 title
+                 category
+                 published(formatString: "DD.MM.YYYY")
+                 image {
+                   fluid {
+                     ...GatsbyContentfulFluid
+                   }
+                 }
+               }
+             }
+           }
+         }
+       `
 
 export default projekat
