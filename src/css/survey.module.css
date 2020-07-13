@@ -1,9 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
 .main{
  display: flex; 
  flex-direction: column;
  justify-content: center;
  background-color: whitesmoke;
  padding-bottom: 40px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .title{   

@@ -24,11 +24,11 @@ var model = new Survey.Model(surveyJson);
          </h1>
        </div>
        <div className={styles.surveyTextButton}>
-         <h6 className={styles.text}>
+         <p className={styles.text}>
            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
            corporis, distinctio perspiciatis rem cupiditate nobis, commodi
            similique sed consectetur minima eos fugit quo? Assumenda, ducimus?
-         </h6>
+         </p>
          <button onClick={showSurvey} type="button" className="btn-primary">
            Popuni Anketu
          </button>
