@@ -16,7 +16,7 @@ const reciklaza = ({data}) => {
 
 export const query = graphql`
          query {
-           blogBcg: file(relativePath: { eq: "Reciklaza 1920x1080.jpg" }) {
+           blogBcg: file(relativePath: { eq: "Zelena oblast - RECIKLAZA 1519x438.jpg" }) {
              childImageSharp {
                fluid(quality: 90, maxWidth: 4160) {
                  ...GatsbyImageSharpFluid_withWebp

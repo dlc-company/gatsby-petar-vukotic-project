@@ -18,7 +18,7 @@ const energetskaEfikasnost = ({data}) => {
 export const query = graphql`
          query {
            blogBcg: file(
-             relativePath: { eq: "Energetska efikasnost 1920x1080.jpg" }
+             relativePath: { eq: "Zelena oblast - EN EFIKASNOST 1519x438.jpg" }
            ) {
              childImageSharp {
                fluid(quality: 90, maxWidth: 4160) {
