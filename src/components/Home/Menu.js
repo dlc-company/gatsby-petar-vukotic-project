@@ -1,9 +1,10 @@
 import React, { Component } from "react"
 import Title from '../Title'
 import Img from "gatsby-image"
-import styles from '../../css/blog-card.module.css'
+import styles from '../../css/blog-card-project.module.css'
 import { Link } from 'gatsby'
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import AniLink from "gatsby-plugin-transition-link/AniLink" 
 
 const getCategories = items => {
  let tempItems = items.map(items => {
@@ -70,32 +71,28 @@ export default class Menu extends Component {
        </div>
       </div>
       {/* items */}
-      <div className="row">
+      <div className={styles.blogCards}>
        {this.state.projectItems.map(({ node }) => {
         return (
-         <div
-          key={node.id}
-          className="col-11 col-md-6 my-3  mx-auto"//d-flex deleted
-         >
-          <div className={styles.imgContainer}>
-           <Img fluid={node.image.fluid} className={styles.img} />
-           <Link className={styles.link} to={`/projekat/${node.slug}`}>
-            procitajte vise
-          </Link>
+          <div
+            key={node.id}
+            className={styles.blog} 
+          >
+            <div className={styles.imgContainer}>
+              <Img fluid={node.image.fluid} className={styles.img} />
+              <AniLink
+                fade
+                className={styles.link}
+                to={`/projekat/${node.slug}`}
+              >
+                procitajte vise
+              </AniLink>
+              <h6 className={styles.date}>{node.published}</h6>
+            </div>
+            <div className={styles.footer}>
+              <h4>{node.title}</h4>
+            </div>
           </div>
-          
-          {/* item text */}
-          <div className="flex-grow-1 px-3">
-           <div className="d-flex justify-content-between">
-            <h6 className="mb-0">
-             <small>{node.title}</small>
-            </h6>
-            
-           </div>
-
-           
-          </div>
-         </div>
         )
        })}
       </div>
