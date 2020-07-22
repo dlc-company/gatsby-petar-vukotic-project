@@ -4,6 +4,10 @@ export default [
     //     text: 'projekti'
     // },
     {
+        path: '/pojmovnik',
+        text: 'pojmovnik'
+    },
+    {
         path: '/radnaGrupaZaBiomasu',
         text: 'radna grupa za biomasu'
     },
