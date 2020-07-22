@@ -80,7 +80,7 @@ krajnjeg korisnika.</p>
 to usitnjeno ogrevno drvo, krupni i sitni šumski ostaci, drvni
 ostaci iz procesa prerade drveta i slično. Usled svoje forme, prikladna je kao gorivo za velike sisteme (toplane i kogeneracijska
 postrojenja) zbog mogućnosti automatskog punjenja ložišta.</p>
-      <p>Dekarbonizacija<span></span> kao pojam koji se koristi u energetici odnosi se na smanjenje intenziteta procesa u smislu emisije uglјenika, odnosno
+      <p><span>Dekarbonizacija</span> kao pojam koji se koristi u energetici odnosi se na smanjenje intenziteta procesa u smislu emisije uglјenika, odnosno
 smanjenje emisije ugljenika po jedinici proizvedene električne
 energije, najčešće izraženo u gramima ugljen-dioksida po kilovat-času (gCO2/kWh). U širem smislu, dekarbonizacija znači
 smanjenje emisije gasova staklene bašte nastalih kao posledice
