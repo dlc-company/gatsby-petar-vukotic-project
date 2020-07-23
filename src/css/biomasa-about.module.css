@@ -10,4 +10,11 @@
     text-transform: capitalize;
     text-align: left;
 }
-
+.about-info p {
+  font-size: 1rem;
+  text-transform: none;
+  text-align: center;
+}
+.about-info span {
+ color: dodgerblue;
+}

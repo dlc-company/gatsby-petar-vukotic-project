@@ -11,17 +11,14 @@ const About = () => {
             <div className={styles.aboutCenter}>
                
                 <article className={styles.aboutInfo}>
-                <Title title="text o" subtitle="biomasi"/>
+                <Title title="" subtitle="biomasa"/>
                     <p>
-                        Cum horribilem resurgere de sepulcris creaturis, sicut de iride et serpens.
-                        Pestilentia, ipsa screams. Pestilentia est haec ambulabat mortuos. Sicut malus voodoo.
+                        <span>Biomasa</span> je biorazgradivi deo proizvoda, otpada i ostataka biološkog porekla iz polјoprivrede 
+                        (uklјučujući bilјne i životinjske materije), 
+                        šumarstva i povezanih industrija, kao i biorazgradivi deo industrijskog i komunalnog otpada
                     </p>
 
-                    <p>
-                        Aenean a dolor vulnerum aperire accedunt, mortui iam vivam.
-                        Qui tardius moveri, sed in magna copia sint terribiles legionis.
-                        Alii missing oculis aliorum sicut serpere crabs nostram. Putridi odores aere implent.
-                    </p>
+                    
                    
                     
                         
