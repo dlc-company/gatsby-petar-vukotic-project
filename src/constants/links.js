@@ -5,7 +5,7 @@ export default [
   },
   {
     path: "/projekat",
-    text: "projekat",
+    text: "projekti",
   },
   {
     path: "/biomasa",
