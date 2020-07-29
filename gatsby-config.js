@@ -13,6 +13,13 @@ module.exports = {
   /* Your site config here */
   plugins: [
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+        trackingId: "UA-173980942-1",
+      },
+    },
+    {
       resolve: `leaflet-sidebar-v2`
     },
     {
