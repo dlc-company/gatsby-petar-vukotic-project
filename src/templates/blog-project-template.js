@@ -10,6 +10,9 @@ import { FaClone } from "react-icons/fa"
 import { FaFilePdf } from "react-icons/fa"
 import { FaDownload } from "react-icons/fa"
 import { FaFile } from "react-icons/fa"
+// import ReadMoreReact from 'read-more-react';
+// import ReadMore from '@bisvarup/react-read-more'
+
 
 
 
@@ -149,8 +152,8 @@ const BlogProject = ({data}) => {
    <section className={styles.blog}>
     <div className={styles.center}>
      <h1>{title}</h1>
-     <h4>published at : {published}</h4>
-     <article className={styles.post}>
+     <h4>objavljeno : {published}</h4>
+     <article className={styles.post}>        
       {documentToReactComponents(json, options)}
      </article>
      <div className={styles.allBlogsButton}>

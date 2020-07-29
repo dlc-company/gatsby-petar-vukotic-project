@@ -19,6 +19,7 @@
 
 .title{
   text-align: center;
+  
 }
 
 .published{
@@ -162,7 +163,10 @@
   justify-content: center;
 }
 
-.blog h1,
+.blog h1{
+  text-transform: none;
+  text-align: center;
+}
 .blog h4 {
   text-transform: capitalize;
 }
