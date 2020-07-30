@@ -48,13 +48,14 @@ export default function projekat(props) {
                            img={data.projectbcg.childImageSharp.fluid}
                          />
                          <Menu items={data.menu} selectedCategory={prevPage} />
-                         <div className={styles.title}>
-                           <Title
-                             title="vodič za finansiranje"
-                             subtitle="bioenergetskih projekata"
-                           />
-                         </div>
+
                          <section className={styles.about}>
+                           <div className={styles.title}>
+                             <Title
+                               title="vodič za finansiranje"
+                               subtitle="bioenergetskih projekata"
+                             />
+                           </div>                           
                            <div className={styles.aboutCenter}>
                              <article className={styles.aboutInfo}>
                                <h4>Osnovni saveti</h4>
@@ -497,8 +498,7 @@ export default function projekat(props) {
                                </p>
                              </article>
                            </div>
-                         </section>
-                         <section className={styles.about}></section>
+                         </section>                         
                        </Layout>
                      )}
                    />
