@@ -156,8 +156,10 @@ const BlogProject = ({data}) => {
    <Layout>
      <section className={styles.blog}>
        <div className={styles.center}>
-         <h2 className={styles.title}>{title}</h2>
+         <p className={styles.title}>{title}</p>
+         <hr></hr>
          <p className={styles.published}>objavljeno : {published}</p>
+         <hr></hr>
          <article className={styles.post}>
            {documentToReactComponents(
              data.projectitempost.apstract.json,
@@ -170,7 +172,8 @@ const BlogProject = ({data}) => {
                ? `${styles.show} ${styles.readMoreButton}`
                : `${styles.hide}`
            }
-           onClick={toggleReadMore}>
+           onClick={toggleReadMore}
+         >
            {isOpen ? "Procitaj vise" : "Prikazi manje"}
          </button>
          <div className={isOpen ? `${styles.hide}` : `${styles.show}`}>

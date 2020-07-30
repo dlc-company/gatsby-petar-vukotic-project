@@ -19,10 +19,12 @@
 
 .title{
   text-align: center;  
+  font-size: xx-large;
 }
 
 .published{
   text-align: center;
+  font-size: large;
 }
 
 .image{
