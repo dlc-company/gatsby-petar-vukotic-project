@@ -47,7 +47,7 @@ const Navbar = () => {
                 <li key={index}>
                   {" "}
                   {/* u return odredjujemo u kom html elementu zelimo da renderujemo(prikazemo) podatke, u nasem slucaju nav linkove */}
-                  <AniLink fade to={item.path} state={{ prevPath: "sve" }}>
+                  <AniLink fade to={item.path} >
                     {/* Link je objekat i objekat ima property path - pogledaj u link.js fajlu */}
                     {item.text}{" "}
                     {/* ista logika, pristupamo drugom property -> text - pogledaj u link.js fajlu */}
