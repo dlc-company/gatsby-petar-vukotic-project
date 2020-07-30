@@ -1,41 +1,79 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React, { Component } from "react"
+import L from "leaflet"
 import { Map, TileLayer, Marker, Popup } from "react-leaflet"
 import "./leafletmap.css"
 
-class LeafletMap extends React.Component {
- static propTypes = {
-  /** Latitude and Longitude of the map centre in an array, eg [51, -1] **/
-  position: PropTypes.array,
+class LeafletMap extends Component {
+  state = {
+    ADKopaonikBeogradOgranakUzice: {
+      lat: 43.847659,
+      lng: 19.858912,
+    },
+    NOVIOKOV: {
+      lat: 43.847171,
+      lng: 19.852399,
+    },
+    Metalfon:{
+     lat: 43.821758,
+     lng: 19.927519,
+    },
+    SUMADIJA:{
+     lat: 43.847286,
+     lng: 19.601173
+    },
+    StovaristeDanicic:{
+     lat: 43.865741,
+     lng: 19.819728,
+    },
 
-  /** Initial zoom level for the map (default 13) **/
-  zoom: PropTypes.number,
+    zoom: 11,
+  }
 
-  /** If set, will display a marker, which when clicked will display this text **/
-  markerText: PropTypes.string,
- }
-
- static defaultProps = {
-  position: [51, -1],
-  zoom: 13,
-  markerText: "",
- }
-
- render() {
-  return (
-   <Map center={this.props.position} zoom={this.props.zoom}>
-    <TileLayer
-     url="https://{s}.tile.osm.org/{z}/{x}/{y}.png"
-     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-    />
-    {this.props.markerText !== "" && (
-     <Marker position={this.props.position}>
-      <Popup>{this.props.markerText}</Popup>
-     </Marker>
-    )}
-   </Map>
-  )
- }
+  render() {
+    const positionADKopaonikBeogradOgranakUzice = [
+      this.state.ADKopaonikBeogradOgranakUzice.lat,
+      this.state.ADKopaonikBeogradOgranakUzice.lng,
+    ]
+    const positionNOVIOKOV = [
+     this.state.NOVIOKOV.lat, 
+     this.state.NOVIOKOV.lng
+    ]
+    const positionMetalfon = [
+     this.state.Metalfon.lat, 
+     this.state.Metalfon.lng
+    ]
+    const positionSUMADIJA = [
+     this.state.SUMADIJA.lat, 
+     this.state.SUMADIJA.lng
+    ]
+    const positionStovaristeDanicic = [
+      this.state.StovaristeDanicic.lat,
+      this.state.StovaristeDanicic.lng,
+    ]
+    return (
+      <Map className="map" center={positionNOVIOKOV} zoom={this.state.zoom}>
+        <TileLayer
+          attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        <Marker position={positionNOVIOKOV}>
+          <Popup>NOVI OKOV d.o.o.</Popup>
+        </Marker>
+        <Marker position={positionADKopaonikBeogradOgranakUzice}>
+          <Popup>AD Kopaonik Beograd – Ogranak Užice</Popup>
+        </Marker>
+        <Marker position={positionMetalfon}>
+          <Popup>Metalfon d.o.o.</Popup>
+        </Marker>
+        <Marker position={positionSUMADIJA}>
+          <Popup>Metalfon d.o.o.</Popup>
+        </Marker>
+        <Marker position={positionStovaristeDanicic}>
+          <Popup>Stovarište “Daničić “</Popup>
+        </Marker>
+      </Map>
+    )
+  }
 }
 
-export default LeafletMap
+export default LeafletMap 
