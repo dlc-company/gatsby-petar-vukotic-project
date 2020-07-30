@@ -33,8 +33,7 @@ const Audio = () => {
               </audio>
             </div>
           )
-        })}
-        <hr></hr>
+        })}       
       </div>
     </section>
   )

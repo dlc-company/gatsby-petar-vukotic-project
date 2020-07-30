@@ -5,15 +5,15 @@ import Audio from '../components/Publication/Audio'
 import Video from '../components/Publication/Video'
 import StyledHero from "../components/StyledHero"
 import BiomasAbout from "../components/NavbarBiomasa"
+import Services from "../components/Home/Services"
+import services from "../constants/publication-services"
 
 const publikacije = ({data}) => {
  return (
    <Layout>
      <StyledHero img={data.blogBcg.childImageSharp.fluid} />
-     <BiomasAbout/>
-     <Pdf />
-     <Audio />
-     <Video />
+     <BiomasAbout />
+     <Services services = {services}/>   
    </Layout>
  )
 }

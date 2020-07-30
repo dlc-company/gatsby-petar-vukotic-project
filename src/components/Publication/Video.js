@@ -33,8 +33,7 @@ const Video = () => {
               ></iframe>
             </div>
           )
-        })}
-        <hr></hr>
+        })}        
       </div>
     </section>
   )

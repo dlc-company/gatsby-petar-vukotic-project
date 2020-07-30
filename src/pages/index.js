@@ -7,6 +7,7 @@ import PartnerLogos from '../components/Home/PartnerLogos'
 import StyledHero from '../components/StyledHero'
 import {graphql} from 'gatsby'
 import AniLink from "gatsby-plugin-transition-link/AniLink";
+import services from "../constants/services"
 
 import Survey from '../components/Home/Survey'
 
@@ -20,7 +21,7 @@ export default ({data}) => (
             </Banner>
         </StyledHero>
        
-        <Services/>
+        <Services services = {services}/>
       
         <Survey />
     

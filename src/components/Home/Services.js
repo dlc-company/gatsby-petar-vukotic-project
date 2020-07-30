@@ -3,13 +3,13 @@ import Title from '../Title'
 import styles from '../../css/services.module.css'
 import services from '../../constants/services'
 
-const Services = () => {
+const Services = (props) => {
     return (
         <section className={styles.services}>
             
             <div className={styles.center}>
                 {
-                    services.map((item,index)=>{
+                    props.services.map((item,index)=>{
                         return (
                         <a href={item.href}>
                             <article key={index} className={styles.service}>
