@@ -8,14 +8,12 @@ import styles from '../css/projekat.module.css'
 import Title from '../components/Title'
 
 export default function projekat(props) {
-  var prevPage = "sve";
-  console.log(props.location.state);
-  if (props.location.state !== null)
-  {
-    
-  prevPage = props.location.state.prevPath !== undefined
-    ? props.location.state.prevPath
-    : "sve"  
+  var prevPage = "sve";  
+  if (props.location.state !== null && props.location.state !== undefined) {
+    prevPage =
+      props.location.state.prevPath !== undefined
+        ? props.location.state.prevPath
+        : "sve"
   }
     
                  return (
