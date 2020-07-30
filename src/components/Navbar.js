@@ -11,7 +11,7 @@ const Navbar = () => {
     const toggleNav = () => {
         setNav(isOpen => !isOpen) // ako je toggle bio false (zatvoren) onda ce funkcija setNav promeniti vrednost u true(otvoren) preko !isOpen sto vraca true
     }
-    console.log(isOpen); // testiramo u Chrome Inspect(CTRL+Shift+I) da li je isOpen(true||false)
+    // console.log(isOpen); // testiramo u Chrome Inspect(CTRL+Shift+I) da li je isOpen(true||false)
     
       //  const url = 
       //  console.log(url)
@@ -47,7 +47,7 @@ const Navbar = () => {
                 <li key={index}>
                   {" "}
                   {/* u return odredjujemo u kom html elementu zelimo da renderujemo(prikazemo) podatke, u nasem slucaju nav linkove */}
-                  <AniLink fade to={item.path}>
+                  <AniLink fade to={item.path} >
                     {/* Link je objekat i objekat ima property path - pogledaj u link.js fajlu */}
                     {item.text}{" "}
                     {/* ista logika, pristupamo drugom property -> text - pogledaj u link.js fajlu */}

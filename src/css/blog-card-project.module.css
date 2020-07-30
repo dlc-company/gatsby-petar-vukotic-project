@@ -9,7 +9,9 @@
 .blog {
   box-shadow: var(--lightShadow);
   transition: var(--mainTransition);
-  margin: 10px;  
+  margin: 10px; 
+  width: 300px;
+  height: 400px; 
 }
 .blog:hover {
   box-shadow: var(--darkShadow);
@@ -55,9 +57,9 @@
   padding: 1rem;
   text-align: left;
 }
-.footer h4 {
-  text-transform: capitalize;
-  margin-bottom: 0;
+.footer p {
+  text-transform: capitalize;  
+    font-size: large;
 }
 .date {
   position: absolute;

@@ -17,14 +17,14 @@ const getCategories = items => {
 }
 
 export default class Menu extends Component {
- constructor(props) {
-  super(props)
-  this.state = {
-   items: props.items.edges,
-   projectItems: props.items.edges,
-   categories: getCategories(props.items.edges),
-   selectedCategory:"sve",
-  }
+ constructor(props) {  
+  super(props)   
+    this.state = {
+      items: props.items.edges,
+      projectItems: props.items.edges,
+      categories: getCategories(props.items.edges),
+      selectedCategory: props.selectedCategory,
+    }
  }
   
  handleItems = category => {     
@@ -90,7 +90,7 @@ export default class Menu extends Component {
               <h6 className={styles.date}>{node.published}</h6>
             </div>
             <div className={styles.footer}>
-              <h4>{node.title}</h4>
+              <p>{node.title}</p>
             </div>
           </div>
         )
