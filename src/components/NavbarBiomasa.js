@@ -21,7 +21,7 @@ const Navbar = () => {
                             <AniLink
                               fade
                               to={item.path}
-                              state={{ prevPath: window.location.pathname }}
+                              state={{ prevPath: "biomasa" }}
                             >
                               {/* Link je objekat i objekat ima property path - pogledaj u link.js fajlu */}
                               {item.text}{" "}

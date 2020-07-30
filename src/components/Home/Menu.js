@@ -17,15 +17,9 @@ const getCategories = items => {
 }
 
 export default class Menu extends Component {
- constructor(props) {  
-   var selector = '';
-  super(props)   
-  if (props.selectedCategory == "energetskaEfikasnost") {
-    selector = "energetska efikasnost"
-  }
-  else{
-    selector = props.selectedCategory;
-  }
+ constructor(props) {   
+   var selector = props.selectedCategory
+  super(props)    
     this.state = {
       items: props.items.edges,
       projectItems: this.getInitialItems(selector, props.items.edges),

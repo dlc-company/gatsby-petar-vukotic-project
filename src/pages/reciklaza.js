@@ -19,7 +19,8 @@ const reciklaza = ({data}) => {
           text="Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Laudantium, fugiat."
           subtext=""
-          img = {img}
+          img={img}
+          prevPath = "reciklaza"
         ></ProjectsSection>
       </Layout>
     )

@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const ProjectsSection = (props) => {
+  console.log(props.prevPath);
     return (
       <section className={styles.about}>
         <Title title={props.title} subtitle={props.subtitle} />
@@ -21,7 +22,7 @@ const ProjectsSection = (props) => {
             <AniLink
               fade
               to="/projekat"
-              state={{ prevPath: window.location.pathname }}
+              state={{ prevPath: props.prevPath }}
               className="btn-primary"
             >
               pogledaj projekte
