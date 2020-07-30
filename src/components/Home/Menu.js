@@ -18,15 +18,32 @@ const getCategories = items => {
 
 export default class Menu extends Component {
  constructor(props) {  
+   var selector = '';
   super(props)   
+  if (props.selectedCategory == "energetskaEfikasnost") {
+    selector = "energetska efikasnost"
+  }
+  else{
+    selector = props.selectedCategory;
+  }
     this.state = {
       items: props.items.edges,
-      projectItems: props.items.edges,
+      projectItems: this.getInitialItems(selector, props.items.edges),
       categories: getCategories(props.items.edges),
-      selectedCategory: props.selectedCategory,
-    }
+      selectedCategory: selector,
+    }    
  }
   
+ getInitialItems = (category, items) => {     
+  let tempItems = items;
+  if (category === "sve") {  
+    return tempItems;
+  } else {    
+   let items = tempItems.filter(({ node }) => node.category === category)
+    return items;
+  }
+ }
+
  handleItems = category => {     
   let tempItems = [...this.state.items]
   if (category === "sve") {
@@ -34,13 +51,15 @@ export default class Menu extends Component {
     return { projectItems: tempItems, selectedCategory:category}
    })
   } else {
+    console.log('test');
    let items = tempItems.filter(({ node }) => node.category === category)
    this.setState(() => {
     return { projectItems: items, selectedCategory: category }
    })
   }
  }
- render() {
+ 
+ render() {   
   if (this.state.items.length > 0) {
    return (
     <section className="menu py-5">

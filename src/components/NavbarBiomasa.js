@@ -6,8 +6,7 @@ const Navbar = () => {
     const [isOpen, setNav] = (useState(true)) // useState(React Hook) prima dva params: 1. true/false (false je default) 2. funkciju koja upravlja sa toggle
     const toggleNav = () => {
         setNav(isOpen => isOpen) // ako je toggle bio false (zatvoren) onda ce funkcija setNav promeniti vrednost u true(otvoren) preko !isOpen sto vraca true
-    }
-    console.log(isOpen); // testiramo u Chrome Inspect(CTRL+Shift+I) da li je isOpen(true||false)
+    }   
     
     return (
         <nav className={styles.navbar}>

@@ -3,15 +3,25 @@ import Layout from "../components/Layout"
 import BlogListEnergyEfficiency from '../components/BlogEnergyEfficiency/BlogListEnergyEfficiency'
 import EEAbout from '../components/Home/EEAbout'
 import StyledHero from '../components/StyledHero'
+import ProjectsSection from "../components/Home/ProjectsSection"
+import img from "../images/Energetska efikasnost 1920x1080.jpg"
 import {graphql} from 'gatsby'
 
 const energetskaEfikasnost = ({data}) => {
     return (
-        <Layout>
-        <StyledHero img={data.blogBcg.childImageSharp.fluid} /> 
-        <EEAbout/>
-        <BlogListEnergyEfficiency/>
-        </Layout>
+      <Layout>
+        <StyledHero img={data.blogBcg.childImageSharp.fluid} />
+        <EEAbout />
+        <BlogListEnergyEfficiency />
+        <ProjectsSection
+          title="projekti"
+          subtitle="energetska efikasnost"
+          text="Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laudantium, fugiat."
+          subtext=""
+          img = {img}
+        ></ProjectsSection>
+      </Layout>
     )
 }
 
