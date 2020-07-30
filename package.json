@@ -41,6 +41,7 @@
     "react-icons": "^3.9.0",
     "react-leaflet": "^2.7.0",
     "react-modal": "^3.11.2",
+    "react-router-hash-link": "^2.0.0",
     "read-more-react": "^1.0.10",
     "styled-components": "^5.1.0",
     "survey-react": "^1.7.5"
