@@ -4,13 +4,24 @@ import StyledHero from '../components/StyledHero'
 import {graphql} from 'gatsby'
 import BloglistRecycle from '../components/BlogRecycle/BlogListRecycle'
 import ReciklazaAbout from '../components/Home/ReciklazaAbout'
+import ProjectsSection from "../components/Home/ProjectsSection"
+import img from "../images/Reciklaza 1920x1080.jpg"
+
 const reciklaza = ({data}) => {
     return (
-        <Layout>
-             <StyledHero img={data.blogBcg.childImageSharp.fluid} />
-             <ReciklazaAbout />
-             <BloglistRecycle />
-        </Layout>
+      <Layout>
+        <StyledHero img={data.blogBcg.childImageSharp.fluid} />
+        <ReciklazaAbout />
+        <BloglistRecycle />
+        <ProjectsSection
+          title="projekti"
+          subtitle="upravljanje otpadom"
+          text="Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laudantium, fugiat."
+          subtext=""
+          img = {img}
+        ></ProjectsSection>
+      </Layout>
     )
 }
 

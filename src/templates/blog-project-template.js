@@ -13,11 +13,12 @@ import { FaFile } from "react-icons/fa"
 // import ReadMoreReact from 'read-more-react';
 // import ReadMore from '@bisvarup/react-read-more'
 
-
-
-
 const BlogProject = ({data}) => {
- const { title, published, text: { json } } = data.projectitempost
+ const {
+   title,
+   published,
+   text: { json },   
+ } = data.projectitempost
  const [showDocument, setShowDocument] = React.useState("")
  const showHideDocument = id => {
    if (showDocument == id) {
@@ -26,6 +27,10 @@ const BlogProject = ({data}) => {
    setShowDocument(showDocument => id)
  }
 
+ const [isOpen, setReadMore] = React.useState(true) // useState(React Hook) prima dva params: 1. true/false (false je default) 2. funkciju koja upravlja sa toggle
+ const toggleReadMore = () => {
+   setReadMore(isOpen => !isOpen) // ako je toggle bio false (zatvoren) onda ce funkcija setNav promeniti vrednost u true(otvoren) preko !isOpen sto vraca true
+ }
  ///MAIN OPTIONS
  const options = {
    renderNode: {
@@ -148,22 +153,42 @@ const BlogProject = ({data}) => {
  }
 
  return (
-  <Layout>
-   <section className={styles.blog}>
-    <div className={styles.center}>
-     <h1>{title}</h1>
-     <h4>objavljeno : {published}</h4>
-     <article className={styles.post}>        
-      {documentToReactComponents(json, options)}
-     </article>
-     <div className={styles.allBlogsButton}>
-     <AniLink fade to='/projekat' className="btn-primary">
-      svi projekti
-     </AniLink>
-     </div>
-    </div>
-   </section>
-  </Layout>
+   <Layout>
+     <section className={styles.blog}>
+       <div className={styles.center}>
+         <p className={styles.title}>{title}</p>
+         <hr></hr>
+         <p className={styles.published}>objavljeno : {published}</p>
+         <hr></hr>
+         <article className={styles.post}>
+           {documentToReactComponents(
+             data.projectitempost.apstract.json,
+             options
+           )}
+         </article>
+         <button
+           className={
+             isOpen
+               ? `${styles.show} ${styles.readMoreButton}`
+               : `${styles.hide}`
+           }
+           onClick={toggleReadMore}
+         >
+           {isOpen ? "Procitaj vise" : "Prikazi manje"}
+         </button>
+         <div className={isOpen ? `${styles.hide}` : `${styles.show}`}>
+           <article className={styles.projectDetails}>
+             {documentToReactComponents(json, options)}
+           </article>
+         </div>
+         <div className={styles.allBlogsButton}>
+           <AniLink fade to="/projekat" className="btn-primary">
+             svi projekti
+           </AniLink>
+         </div>
+       </div>
+     </section>
+   </Layout>
  )
 }
 
@@ -172,6 +197,9 @@ export const query = graphql`
            projectitempost: contentfulProjectItem(slug: { eq: $slug }) {
              title
              published(formatString: "DD.MM.YYYY")
+             apstract {
+               json
+             }
              text {
                json
                content {

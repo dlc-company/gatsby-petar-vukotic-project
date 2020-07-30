@@ -18,12 +18,13 @@
 }
 
 .title{
-  text-align: center;
-  
+  text-align: center;  
+  font-size: xx-large;
 }
 
 .published{
   text-align: center;
+  font-size: large;
 }
 
 .image{
@@ -161,6 +162,7 @@
   display: flex;
   align-content: center;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .blog h1{
@@ -171,10 +173,19 @@
   text-transform: capitalize;
 }
 .post {
-  margin: 2rem 0;  
+  margin: 2rem 0; 
+  padding: 5px; 
 }
 .post img {
   max-width: 70vw;
+}
+
+.post ul,ol{
+  padding-left: 25px;
+}
+
+.post li{
+  padding: 0px;
 }
 
 .embedded-blog{
@@ -256,3 +267,42 @@
     }
 }
 
+.hide{
+  display: none;
+}
+
+.show{
+  display: flex;
+}
+
+.read-more-button {
+  margin:0 auto;
+  display:block;
+  background-color: teal; /* Green */
+  border: none;
+  color: white;
+  padding: 7px 15px;
+  text-align: center;
+  text-decoration: none;  
+  cursor: pointer;  
+}
+
+.read-more-button:hover{
+  color: wheat;
+}
+
+
+.project-details { 
+  padding: 5px; 
+}
+.project-details img {
+  max-width: 70vw;
+}
+
+.project-details ul,ol{
+  padding-left: 25px;
+}
+
+.project-details li{
+  padding: 0px;
+}

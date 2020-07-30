@@ -17,16 +17,33 @@ const getCategories = items => {
 }
 
 export default class Menu extends Component {
- constructor(props) {
-  super(props)
-  this.state = {
-   items: props.items.edges,
-   projectItems: props.items.edges,
-   categories: getCategories(props.items.edges),
-   selectedCategory:"sve",
+ constructor(props) {  
+   var selector = '';
+  super(props)   
+  if (props.selectedCategory == "energetskaEfikasnost") {
+    selector = "energetska efikasnost"
   }
+  else{
+    selector = props.selectedCategory;
+  }
+    this.state = {
+      items: props.items.edges,
+      projectItems: this.getInitialItems(selector, props.items.edges),
+      categories: getCategories(props.items.edges),
+      selectedCategory: selector,
+    }    
  }
   
+ getInitialItems = (category, items) => {     
+  let tempItems = items;
+  if (category === "sve") {  
+    return tempItems;
+  } else {    
+   let items = tempItems.filter(({ node }) => node.category === category)
+    return items;
+  }
+ }
+
  handleItems = category => {     
   let tempItems = [...this.state.items]
   if (category === "sve") {
@@ -34,13 +51,15 @@ export default class Menu extends Component {
     return { projectItems: tempItems, selectedCategory:category}
    })
   } else {
+    console.log('test');
    let items = tempItems.filter(({ node }) => node.category === category)
    this.setState(() => {
     return { projectItems: items, selectedCategory: category }
    })
   }
  }
- render() {
+ 
+ render() {   
   if (this.state.items.length > 0) {
    return (
     <section className="menu py-5">
@@ -90,7 +109,7 @@ export default class Menu extends Component {
               <h6 className={styles.date}>{node.published}</h6>
             </div>
             <div className={styles.footer}>
-              <h4>{node.title}</h4>
+              <p>{node.title}</p>
             </div>
           </div>
         )
