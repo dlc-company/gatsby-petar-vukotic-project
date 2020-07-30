@@ -45,7 +45,7 @@
 
 .nav-links a {
  display: block;
- padding: 0.7rem 1.25rem;
+ padding: 0.37rem 1rem;
  text-decoration: none;
  text-transform: capitalize;
  color: var(--mainWhite);
