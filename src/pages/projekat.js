@@ -8,7 +8,7 @@ import styles from '../css/projekat.module.css'
 import Title from '../components/Title'
 
 export default function projekat(props) {
-  const prevPage = (props.location.state.prevPath !== undefined)? props.location.state.prevPath: "sve";  
+  const prevPage = props.location.state.prevPath;  
                  return (
                    <StaticQuery
                      query={graphql`
