@@ -50,8 +50,7 @@
  text-transform: capitalize;
  color: var(--mainWhite);
  transition: var(--mainTransition);
- font-weight: bold;
- letter-spacing: var(--mainSpacing);
+ font-weight: bold; 
 }
 
 .nav-links a:hover {
