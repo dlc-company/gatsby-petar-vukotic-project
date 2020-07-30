@@ -32,7 +32,15 @@ const projekat = ({data}) => {
            </p>
            <ul>
              <li>
-               Prelistajte naš vodič – potrudili smo se da u njega ubacimo sve
+               Prelistajte naš
+               <span> </span>
+               <a
+                 href="https://downloads.ctfassets.net/oyhajly20a7m/7fbYzW4ge2GazA2r9UsHk3/91dd98ef91a629ec8cd1cc473dff5f0a/Prirucnik_za_trenere_priprema_projekata.pdf"
+                 target="_blank"
+               >
+                 vodič
+               </a>
+               <span> </span> – potrudili smo se da u njega ubacimo sve
                relevantne izvore finansiranja, tako da na jednom mestu damo
                pregled svega onoga što može biti relevantno. Pored pregleda
                raspoloživih izvora finansiranja i javnih poziva za finansiranje
@@ -270,8 +278,15 @@ const projekat = ({data}) => {
            </ul>
            <p>
              Za detalje o svim ovim izvorima finansiranja pogledajte vodič
-             „Izvori finansiranja bioenergetskih projekata za javni sektor“ u
-             kome možete pronaći detaljne informacije o svakom od njih.
+             <span> </span>
+             <a
+               href="https://assets.ctfassets.net/oyhajly20a7m/7m3rhwfqVSq46OvkwgV3xd/38b57d7eefd0e8b714f41f7662745b72/Izvori_finansiranja_bioenergetskih_projekata_za_javni_sektor_final.pdf"
+               target="_blank"
+             >
+               „Izvori finansiranja bioenergetskih projekata za javni sektor“
+             </a>
+             <span> </span>u kome možete pronaći detaljne informacije o svakom
+             od njih.
            </p>
            <p>
              <span>8. Najznačajniji izvori finansiranja za biznis sektor</span>
@@ -298,8 +313,15 @@ const projekat = ({data}) => {
            </ul>
            <p>
              Za detalje o svim ovim izvorima finansiranja pogledajte vodič
-             „Izvori finansiranja bioenergetskih projekata za biznis sektor“ u
-             kome možete pronaći detaljne informacije o svakom od njih.
+             <span> </span>
+             <a
+               href="https://assets.ctfassets.net/oyhajly20a7m/1zF31IFJTHxwbqY3danarc/78f0b3b0f86b11cbeffc071633afb4cf/Izvori_finansiranja_bioenergetskih_projekata_za_biznis_sektor_final.pdf"
+               target="_blank"
+             >
+               „Izvori finansiranja bioenergetskih projekata za biznis sektor“
+             </a>
+             <span> </span>u kome možete pronaći detaljne informacije o svakom
+             od njih.
            </p>
            <p>
              <span>
@@ -328,8 +350,23 @@ const projekat = ({data}) => {
            </ul>
            <p>
              Za detalje o svim ovim izvorima finansiranja pogledajte vodič
-             „Izvori finansiranja bioenergetskih projekata za civilni sektor“ u
-             kome možete pronaći detaljne informacije o svakom od njih.
+             <span> </span>
+             <a
+               href="https://assets.ctfassets.net/oyhajly20a7m/5PbtIiRdJFuIMt66o3tpWJ/5d1926aee0da166379a5d740a8e27d9f/Izvori_finansiranja_bioenergetskih_projekata_za_civilni_sektor_final.pdf"
+               target="_blank"
+             >
+               „Izvori finansiranja bioenergetskih projekata za civilni sektor“
+             </a>
+             <span> </span>u kome možete pronaći detaljne informacije o svakom
+             od njih.
+           </p>
+           <p>
+             Sve relevantne dokumente možete pogledati na strani
+             <span> </span>
+             <a href="https://energetskiodrzivregion.rrazlatibor.rs/publikacije">
+               Publikacije.
+             </a>
+             <span> </span>
            </p>
          </article>
        </div>
