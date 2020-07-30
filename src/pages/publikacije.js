@@ -4,10 +4,13 @@ import Pdf from '../components/Publication/Pdf'
 import Audio from '../components/Publication/Audio'
 import Video from '../components/Publication/Video'
 import StyledHero from "../components/StyledHero"
+import BiomasAbout from "../components/NavbarBiomasa"
+
 const publikacije = ({data}) => {
  return (
    <Layout>
      <StyledHero img={data.blogBcg.childImageSharp.fluid} />
+     <BiomasAbout/>
      <Pdf />
      <Audio />
      <Video />

@@ -3,10 +3,13 @@ import Layout from "../components/Layout"
 import StyledHero from "../components/StyledHero"
 import styles from '../css/pojmovnik.module.css'
 import Title from '../components/Title'
+import BiomasAbout from "../components/NavbarBiomasa"
+
 const pojmovnik = ({data}) => {
  return (
   <Layout>
    <StyledHero img={data.blogBcg.childImageSharp.fluid} />
+   <BiomasAbout/>
              <div className={styles.title}><Title title='pojmovnik' subtitle='termina' /></div>
    <section className={styles.about}>
          
