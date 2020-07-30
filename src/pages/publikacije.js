@@ -20,7 +20,7 @@ const publikacije = ({data}) => {
 
 export const query = graphql`
   query {
-    blogBcg: file(relativePath: { eq: "publication.jpg" }) {
+    blogBcg: file(relativePath: { eq: "publication_cover.png" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp
