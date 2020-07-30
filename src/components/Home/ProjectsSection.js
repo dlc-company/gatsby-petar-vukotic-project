@@ -4,8 +4,7 @@ import styles from '../../css/about.module.css'
 import styled from 'styled-components'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-const ProjectsSection = (props) => {
-  console.log(props.prevPath);
+const ProjectsSection = (props) => {  
     return (
       <section className={styles.about}>
         <Title title={props.title} subtitle={props.subtitle} />

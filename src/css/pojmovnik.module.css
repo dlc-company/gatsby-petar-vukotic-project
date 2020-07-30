@@ -9,7 +9,7 @@
     text-align: left;
 }
 .about-center {
-  width: 80vw;
+  width: 50vw;
   margin: 0 auto;
 }
 .about-info {
@@ -33,6 +33,7 @@
   padding: 2rem 1rem;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -40,9 +41,22 @@
   padding: 2rem 1rem;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   
+}
+
+.letters h4{
+  display: flex;
+  padding: 0.3rem;
+}
+
+@media only screen and (max-width: 600px) {
+ .about-center {
+  width: 80vw;
+  margin: 0 auto;
+}
 }
 
 /* @media screen and (min-width: 768px) {

@@ -20,7 +20,7 @@ const reciklaza = ({data}) => {
               Laudantium, fugiat."
           subtext=""
           img={img}
-          prevPath = "reciklaza"
+          prevPath="upravljanje otpadom"
         ></ProjectsSection>
       </Layout>
     )
