@@ -25,30 +25,30 @@ const Pdf = () => {
   `)
 
  return (
-  <section className={styles.main}>
-   <div className={styles.center}>
-    <Title subtitle="PDF Dokumenta" />
-    {data.pdf.edges.map((article, index) => {
-     return (
-      <div className={styles.document}>
-       <div className={styles.documentControls}>
-        <FaFilePdf size={35} className={styles.pdfIcon} />
-        <p className={styles.documentName}>{article.node.title}</p>
-        <button type="button" className={styles.openButton}>
-         <a
-          className={styles.documentButton}
-          href={article.node.pdf.file.url}
-          target="_blank"
-         >
-          Otvori
-                  </a>
-        </button>
-       </div>
-      </div>
-     )
-    })}
-   </div>
-  </section>
+   <section className={styles.main}>
+     <div className={styles.center}>
+       <Title title="pdf" subtitle="dokumenta" />
+       {data.pdf.edges.map((article, index) => {
+         return (
+           <div className={styles.document}>
+             <div className={styles.documentControls}>
+               <FaFilePdf size={35} className={styles.pdfIcon} />
+               <p className={styles.documentName}>{article.node.title}</p>
+               <button type="button" className={styles.openButton}>
+                 <a
+                   className={styles.documentButton}
+                   href={article.node.pdf.file.url}
+                   target="_blank"
+                 >
+                   Otvori
+                 </a>
+               </button>
+             </div>
+           </div>
+         )
+       })}
+     </div>
+   </section>
  )
 }
 

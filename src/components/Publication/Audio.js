@@ -23,7 +23,7 @@ const Audio = () => {
   return (
     <section className={styles.main}>
       <div className={styles.center}>
-        <Title subtitle="Radio emisije" />        
+        <Title title="Radio" subtitle="emisije" />        
         {data.audio.edges.map((article, index) => {
           return (
             <div>
@@ -31,6 +31,7 @@ const Audio = () => {
               <audio controls="controls">
                 <source src={article.node.audio.file.url}></source>
               </audio>
+              <hr></hr>
             </div>
           )
         })}       

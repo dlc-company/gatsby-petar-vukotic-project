@@ -19,21 +19,23 @@ const Video = () => {
   return (
     <section className={styles.main}>
       <div className={styles.center}>
-        <Title subtitle="TV emisije" />
+        <Title title="tv" subtitle="emisije" />
         {data.video.edges.map((article, index) => {
           return (
             <div>
-              <p>{article.node.title}</p>
-              <iframe 
-                className={styles.embeddedVideo}                             
+              <p>
+                <b>{article.node.title}</b></p>
+              <iframe
+                className={styles.embeddedVideo}
                 src={article.node.videoEmbeddUrl}
                 frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
               ></iframe>
+              <hr></hr>
             </div>
           )
-        })}        
+        })}
       </div>
     </section>
   )
