@@ -23,7 +23,7 @@ export default ({data}) => (
        
         <Services services = {services}/>
       
-        <Survey />
+        {/* <Survey /> */}
     
         <PartnerLogos/>
   
