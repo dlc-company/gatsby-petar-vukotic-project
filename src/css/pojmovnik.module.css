@@ -8,6 +8,7 @@
     text-transform: capitalize;
     text-align: left;
 }
+
 .about-center {
   width: 50vw;
   margin: 0 auto;
@@ -16,7 +17,7 @@
   margin-top: 3rem;
 }
 .about-info h4 {
- color: dodgerblue;
+ color: #039be5;
   font-size: 1.9rem;
   text-transform: uppercase;
   text-align: left;
@@ -27,7 +28,7 @@
   text-align: left;
 }
 .about-info span {
- color: dodgerblue;
+ color: #039be5;
 }
 .title{
   padding: 2rem 1rem;
@@ -47,9 +48,14 @@
   
 }
 
+.letters a{
+color: #039be5;
+}
+
 .letters h4{
   display: flex;
   padding: 0.3rem;
+  
 }
 
 @media only screen and (max-width: 600px) {

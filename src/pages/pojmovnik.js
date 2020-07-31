@@ -4,8 +4,6 @@ import StyledHero from "../components/StyledHero"
 import styles from '../css/pojmovnik.module.css'
 import Title from '../components/Title'
 import BiomasAbout from "../components/NavbarBiomasa"
-// import { HashLink as Link } from "react-router-hash-link"
-// import { navigate } from "@reach/router"
 import {Link} from "gatsby"
 
 const pojmovnik = ({data}) => {
