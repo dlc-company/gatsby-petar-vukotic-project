@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Layout from "../components/Layout"
 import StyledHero from "../components/StyledHero"
 import { graphql } from 'gatsby'
-import BlogListRadnaGrupa from '../components/BlogRadnaGrupa/BlogListRadnaGrupa'
+import BlogListRadnaGrupa from "../components/BlogRadnaGrupa/BlogListRadnaGrupa"
 import RadnaGrupaAbout from '../components/Home/RadnaGrupaAbout'
 import NavbarBiomasa from '../components/NavbarBiomasa'
 const radnaGrupaZaBiomasu = ({data}) => {
