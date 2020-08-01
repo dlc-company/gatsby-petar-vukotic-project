@@ -25,45 +25,99 @@ const options = {
     renderNode:{
         "embedded-asset-block":(node)=>{
             //Image
-            if (node.data.target.fields.file['en-US'].contentType === 'image/jpeg') {
-                return <div className = {styles.image}>                    
-                    <img width="490" src={node.data.target.fields.file['en-US'].url} />
+            if (
+              node.data.target.fields.file["en-US"].contentType ===
+                "image/jpeg" ||
+              node.data.target.fields.file["en-US"].contentType === "image/png"
+            ) {
+              return (
+                <div className={styles.image}>
+                  <img
+                    width="490"
+                    src={node.data.target.fields.file["en-US"].url}
+                  />
                 </div>
+              )
             }
             //PDF
-            else if (node.data.target.fields.file['en-US'].contentType === 'application/pdf') { 
-                const documentUrl = node.data.target.fields.file['en-US'].url;             
-                return (
-                <div className={styles.document}>                    
-                    <div className = {styles.documentControls}>
-                            <FaFilePdf size={35} className={styles.pdfIcon}/>
-                            <p className={styles.documentName}>{node.data.target.fields.title['en-US']}</p>  
-                            <button type="button" className={styles.roundedButton} onClick={() => showHideDocument(documentUrl)} >
-                                {showDocument == documentUrl ? <FaChevronUp /> : <FaChevronDown />}
-                            </button>  
-                            <button type="button" className={styles.roundedButton} >
-                                <a className={styles.documentButton} href={documentUrl} target="_blank" rel="noopener noreferrer"><FaClone /></a>                                
-                            </button>                      
-                    </div>
-                        <div className={showDocument == documentUrl ? `${styles.documentWindow}`:`${styles.documentWindowHidden}`}>
-                            <object className={styles.objectPdf} data={documentUrl} type="application/pdf"></object>                           
-                        </div>                                                                     
-                </div>)
-            }
-            else if (node.data.target.fields.file['en-US'].contentType === 'application/CDFV2')  {
-                const documentUrl = node.data.target.fields.file['en-US'].url;  
-                return(
-                    <div className={styles.documentWord}>
-                        <div className={styles.documentControls}>
-                            <FaFile size={35} className={styles.wordIcon} />
-                            <p className={styles.documentName}>{node.data.target.fields.title['en-US']}</p>                            
-                            <button type="button" className={styles.roundedButton} >
-                                <a className={styles.documentButton} href={documentUrl} ><FaDownload /></a>
-                            </button>
-                        </div>
-                    </div>
-                )
-            }                                
+            else if (
+              node.data.target.fields.file["en-US"].contentType ===
+              "application/pdf"
+            ) {
+              const documentUrl = node.data.target.fields.file["en-US"].url
+              return (
+                <div className={styles.document}>
+                  <div className={styles.documentControls}>
+                    <FaFilePdf size={35} className={styles.pdfIcon} />
+                    <p className={styles.documentName}>
+                      {node.data.target.fields.title["en-US"]}
+                    </p>
+                    <button
+                      type="button"
+                      className={styles.roundedButton}
+                      onClick={() => showHideDocument(documentUrl)}
+                    >
+                      {showDocument == documentUrl ? (
+                        <FaChevronUp />
+                      ) : (
+                        <FaChevronDown />
+                      )}
+                    </button>
+                    <button type="button" className={styles.roundedButton}>
+                      <a
+                        className={styles.documentButton}
+                        href={documentUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaClone />
+                      </a>
+                    </button>
+                  </div>
+                  <div
+                    className={
+                      showDocument == documentUrl
+                        ? `${styles.documentWindow}`
+                        : `${styles.documentWindowHidden}`
+                    }
+                  >
+                    <object
+                      className={styles.objectPdf}
+                      data={documentUrl}
+                      type="application/pdf"
+                    ></object>
+                  </div>
+                </div>
+              )
+            } else if (
+                     node.data.target.fields.file["en-US"].contentType ===
+                       "application/CDFV2" ||node.data.target.fields.file["en-US"].contentType ===
+                       "application/zip"                     
+                   ) {
+                     const documentUrl =
+                       node.data.target.fields.file["en-US"].url
+                     return (
+                       <div className={styles.documentWord}>
+                         <div className={styles.documentControls}>
+                           <FaFile size={35} className={styles.wordIcon} />
+                           <p className={styles.documentName}>
+                             {node.data.target.fields.title["en-US"]}
+                           </p>
+                           <button
+                             type="button"
+                             className={styles.roundedButton}
+                           >
+                             <a
+                               className={styles.documentButton}
+                               href={documentUrl}
+                             >
+                               <FaDownload />
+                             </a>
+                           </button>
+                         </div>
+                       </div>
+                     )
+                   }                                
         },
         // EMBEDDED VIDEO
         "hyperlink": (node) => {  
@@ -79,22 +133,24 @@ const options = {
     }
 }
     return (
-        <Layout>
-            <section className={styles.blog}>
-                <div className={styles.center}>
-                    <h1 className={styles.title}>{title}</h1>
-                    <h5 className={styles.published}>Objavljeno : {published}</h5>
-                    <article className={styles.post}>
-                        {documentToReactComponents(json, options)}
-                    </article>
-                    <div className={styles.allBlogsButton}>
-                        <AniLink fade to='/biomasa' className='btn-primary'>
-                            svi clanci
-                    </AniLink>
-                    </div>                   
-                </div>
-            </section>
-        </Layout>
+      <Layout>
+        <section className={styles.blog}>
+          <div className={styles.center}>
+            <h1 className={styles.title}>{title}</h1>
+            <hr></hr>
+            <h5 className={styles.published}>objavljeno : {published}</h5>
+            <hr></hr>
+            <article className={styles.post}>
+              {documentToReactComponents(json, options)}
+            </article>
+            <div className={styles.allBlogsButton}>
+              <AniLink fade to="/biomasa" className="btn-primary">
+                svi clanci
+              </AniLink>
+            </div>
+          </div>
+        </section>
+      </Layout>
     )
 }
 

@@ -36,7 +36,10 @@ const BlogProject = ({data}) => {
    renderNode: {
      "embedded-asset-block": node => {
        //Image
-       if (node.data.target.fields.file["en-US"].contentType === "image/jpeg") {
+       if (
+         node.data.target.fields.file["en-US"].contentType === "image/jpeg" ||
+         node.data.target.fields.file["en-US"].contentType === "image/png"
+       ) {
          return (
            <div className={styles.image}>
              <img width="490" src={node.data.target.fields.file["en-US"].url} />
@@ -92,26 +95,28 @@ const BlogProject = ({data}) => {
            </div>
          )
        } else if (
-         node.data.target.fields.file["en-US"].contentType ===
-         "application/CDFV2"
-       ) {
-         const documentUrl = node.data.target.fields.file["en-US"].url
-         return (
-           <div className={styles.document}>
-             <div className={styles.documentControls}>
-               <FaFile size={35} className={styles.wordIcon} />
-               <p className={styles.documentName}>
-                 {node.data.target.fields.title["en-US"]}
-               </p>
-               <button type="button" className={styles.roundedButton}>
-                 <a className={styles.documentButton} href={documentUrl}>
-                   <FaDownload />
-                 </a>
-               </button>
-             </div>
-           </div>
-         )
-       }
+                node.data.target.fields.file["en-US"].contentType ===
+                  "application/CDFV2" ||
+                node.data.target.fields.file["en-US"].contentType ===
+                  "application/zip"
+              ) {
+                const documentUrl = node.data.target.fields.file["en-US"].url
+                return (
+                  <div className={styles.document}>
+                    <div className={styles.documentControls}>
+                      <FaFile size={35} className={styles.wordIcon} />
+                      <p className={styles.documentName}>
+                        {node.data.target.fields.title["en-US"]}
+                      </p>
+                      <button type="button" className={styles.roundedButton}>
+                        <a className={styles.documentButton} href={documentUrl}>
+                          <FaDownload />
+                        </a>
+                      </button>
+                    </div>
+                  </div>
+                )
+              }
      },
      hyperlink: node => {
        if (node.data.uri.includes("https://www.youtube.com/embed/")) {
