@@ -24,7 +24,9 @@ const BlogRadnaGrupa = ({data}) => {
   renderNode: {
    "embedded-asset-block": (node) => {
     //Image
-    if (node.data.target.fields.file['en-US'].contentType.includes("image/")) {
+      if (node.data.target.fields.file["en-US"].contentType ===
+        "image/jpeg" ||
+        node.data.target.fields.file["en-US"].contentType === "image/png") {
      return <div className={styles.image}>
       <img width="490" src={node.data.target.fields.file['en-US'].url} />
      </div>
