@@ -6,7 +6,8 @@ import styles from '../../css/blog.module.css'
 
 const getPosts = graphql`
   query {
-    posts: allContentfulBiomasa(sort: { fields: published, order: DESC }) {
+    posts: allContentfulBiomasa(sort:
+       { fields: published, order: DESC }) {
       edges {
         node {
           published(formatString: "DD.MM.YYYY")
@@ -29,7 +30,6 @@ const BlogList = () => {
     
     return (
         <section className={styles.blog}>
-            
             <div className={styles.center}>
                 {posts.edges.map(({ node }) =>{
                     return <BlogCard key={node.id} blog={node} />

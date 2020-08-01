@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram, FaYoutubeSquare } from 'react-icons/fa'
 export default [
   {
     icon: <FaFacebook />,
-    url: "#",
+    url: "https://www.facebook.com/RDAZlatibor",
   },
   {
     icon: <FaInstagram />,
@@ -12,6 +12,6 @@ export default [
   },
   {
     icon: <FaYoutubeSquare />,
-    url: "#",
+    url: "https://www.youtube.com/user/RRAZlatiborTV",
   },
 ]

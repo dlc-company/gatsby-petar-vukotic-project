@@ -4,9 +4,9 @@ import Title from '../Title'
 import { useStaticQuery, graphql } from 'gatsby'
 import styles from '../../css/blog.module.css'
 
-const getProjectItemPosts = graphql`
+const getRadnaGrupaPosts = graphql`
 query{
-  projectitemposts:allContentfulRadnaGrupaPost(sort:
+  radnagrupaposts:allContentfulRadnaGrupaPost(sort:
     {fields:published, order:DESC}){
     edges{
       node{
@@ -25,11 +25,11 @@ query{
 }
 `
 const BlogListRadnaGrupa = () => {
- const { projectitemposts } = useStaticQuery(getProjectItemPosts)
+  const { radnagrupaposts } = useStaticQuery(getRadnaGrupaPosts)
 return(
  <section className={styles.blog}>
   <div className={styles.center}>
-   {projectitemposts.edges.map(({ node }) => {
+      {radnagrupaposts.edges.map(({ node }) => {
     return <BlogCardRadnaGrupa key={node.id} blog={node} />
    })}
   </div>
