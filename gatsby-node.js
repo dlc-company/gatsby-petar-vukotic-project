@@ -33,7 +33,13 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
- 
+    RadnaGrupaPost:allContentfulRadnaGrupaPost {
+    edges {
+      node {
+        slug
+      }
+    }
+  }
   }
   `)
 
@@ -76,7 +82,15 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     })
   })
-  
+  data.RadnaGrupaPost.edges.forEach(({ node }) => {
+    createPage({
+      path: `radnaGrupaZaBiomasu/${node.slug}`,
+      component: path.resolve("./src/templates/blog-radnaGrupa-template.js"),
+      context: {
+        slug: node.slug
+      }
+    })
+  })
 
  
 
