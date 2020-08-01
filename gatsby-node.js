@@ -33,13 +33,7 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
-  //   RadnaGrupaPost:allContentfulRadnaGrupaPost {
-  //   edges {
-  //     node {
-  //       slug
-  //     }
-  //   }
-  // }
+ 
   }
   `)
 
@@ -79,33 +73,9 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     })
   })
-  // data.RadnaGrupaPost.edges.forEach(({ node }) => {
-  //   createPage({
-  //     path: `radnaGrupaZaBiomasu/${node.slug}`,
-  //     component: path.resolve("./src/templates/blog-radnaGrupa-template.js"),
-  //     context: {
-  //       slug: node.slug
-  //     }
-  //   })
-  // })
+  
 
-  // amount of posts
-  // const pdf = data.pdf.edges
-  // posts per page
-  // const postsPerPage = 5
-  // how many pages
-  // const numPages = Math.ceil(pdf.length / postsPerPage)
+ 
 
-  // Array.from({ length: numPages }).forEach((_, i) => {
-  //   createPage({
-  //     path: i === 0 ? `/publikacije` : `/publikacije/${i + 1}`,
-  //     component: path.resolve("./src/components/Publication/Pdf.js"),
-  //     context: {
-  //       limit: postsPerPage,
-  //       skip: i * postsPerPage,
-  //       numPages,
-  //       currentPage: i + 1,
-  //     },
-  //   })
-  // })
+  
 }
