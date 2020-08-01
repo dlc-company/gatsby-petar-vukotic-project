@@ -64,6 +64,9 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     })
   })
+
+
+  
   data.EEposts.edges.forEach(({ node }) => {
     createPage({
       path: `energetskaEfikasnost/${node.slug}`,
