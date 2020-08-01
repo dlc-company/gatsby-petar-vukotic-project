@@ -4,6 +4,7 @@ import Title from '../Title'
 import { useStaticQuery, graphql } from 'gatsby'
 import styles from '../../css/blog.module.css'
 
+
 const getRadnaGrupaPosts = graphql`
 query{
   radnagrupaposts:allContentfulRadnaGrupaPost(sort:
