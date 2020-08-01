@@ -24,6 +24,7 @@ query{
   }
 }
 `
+
 const BlogListRadnaGrupa = () => {
   const { radnagrupaposts } = useStaticQuery(getRadnaGrupaPosts)
 return(
