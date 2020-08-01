@@ -40,6 +40,13 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   }
+  UdruzenjaSumovlasnikaPost:allContentfulUdruzenjeSumovlasnikaPost{
+    edges{
+      node{
+        slug
+      }
+    }
+  }
   }
   `)
 
@@ -91,7 +98,15 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     })
   })
-
+  data.UdruzenjaSumovlasnikaPost.edges.forEach(({ node }) => {
+    createPage({
+      path: `udruzenjaSumovlasnika/${node.slug}`,
+      component: path.resolve("./src/templates/blog-udruzenjaSumovlasnika-template.js"),
+      context: {
+        slug: node.slug
+      }
+    })
+  })
  
 
   
