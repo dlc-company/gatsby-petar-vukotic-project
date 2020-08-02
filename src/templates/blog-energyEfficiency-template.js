@@ -147,16 +147,16 @@ const BlogEnergyEfficiency = ({ data }) => {
 
 
 export const query = graphql`
-query getEEPost($slug: String!) {
-  post: contentfulEnergetskaEfikasnost(slug: {eq: $slug}) {
-    title
-    published(formatString: "MMMM Do, YYYY")
-    text {
-      json
-    }
-  }
-}
-`
+         query getEEPost($slug: String!) {
+           post: contentfulEnergetskaEfikasnost(slug: { eq: $slug }) {
+             title
+             published(formatString: "DD.MM.YYYY")
+             text {
+               json
+             }
+           }
+         }
+       `
 
 
 export default BlogEnergyEfficiency

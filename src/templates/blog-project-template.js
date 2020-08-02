@@ -207,25 +207,6 @@ export const query = graphql`
              }
              text {
                json
-               content {
-                 data {
-                   target {
-                     fields {
-                       image {
-                         en_US {
-                           fields {
-                             file {
-                               en_US {
-                                 url
-                               }
-                             }
-                           }
-                         }
-                       }
-                     }
-                   }
-                 }
-               }
              }
            }
          }
