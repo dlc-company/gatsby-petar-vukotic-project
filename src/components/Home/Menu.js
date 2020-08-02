@@ -2,7 +2,6 @@ import React, { Component } from "react"
 import Title from '../Title'
 import Img from "gatsby-image"
 import styles from '../../css/blog-card-project.module.css'
-import { Link } from 'gatsby'
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import AniLink from "gatsby-plugin-transition-link/AniLink" 
 

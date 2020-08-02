@@ -16,11 +16,10 @@ const energetskaEfikasnost = ({data}) => {
         <ProjectsSection
           title="projekti"
           subtitle="energetska efikasnost"
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laudantium, fugiat."
+          text="Pogledajte naše projekte iz oblasti Energetske Efikasnosti."
           subtext=""
           img={img}
-          prevPath = "energetska efikasnost"
+          prevPath="energetska efikasnost"
         ></ProjectsSection>
       </Layout>
     )

@@ -18,8 +18,7 @@ const biomasa = ({ data }) => {
         <ProjectsSection
           title="projekti"
           subtitle="biomasa"
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laudantium, fugiat."
+          text="Pogledajte naše projekte iz oblasti Biomase."
           subtext=""
           img={img}
           prevPath="biomasa"

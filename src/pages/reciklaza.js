@@ -16,8 +16,7 @@ const reciklaza = ({data}) => {
         <ProjectsSection
           title="projekti"
           subtitle="upravljanje otpadom"
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laudantium, fugiat."
+          text="Pogledajte naše projekte iz oblasti Upravljanja Otpadom."
           subtext=""
           img={img}
           prevPath="upravljanje otpadom"
