@@ -87,14 +87,11 @@ export default class Menu extends Component {
       <div className={styles.blogCards}>
        {this.state.projectItems.map(({ node }) => {
         return (
-          <div
-            key={node.id}
-            className={styles.blog} 
-          >
+          <div key={node.id} className={styles.blog}>
             <div className={styles.imgContainer}>
               <Img fluid={node.image.fluid} className={styles.img} />
               <AniLink
-                fade
+              fade               
                 className={styles.link}
                 to={`/projekat/${node.slug}`}
               >

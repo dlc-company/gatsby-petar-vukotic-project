@@ -21,7 +21,6 @@ const BlogEnergyEfficiency = ({ data }) => {
   }
   setShowDocument(showDocument => id)
  }
- console.log(showDocument);
  const options = {
   renderNode: {
    "embedded-asset-block": (node) => {
@@ -117,6 +116,9 @@ const BlogEnergyEfficiency = ({ data }) => {
        <p>{node.content[0].value}</p>
        <iframe className={styles.video} src={node.data.uri} frameBorder="0" allowFullScreen></iframe>
       </div>)
+    }
+    else{
+      return <a href={node.data.uri}>{node.content[0].value}</a>
     }
    }
 

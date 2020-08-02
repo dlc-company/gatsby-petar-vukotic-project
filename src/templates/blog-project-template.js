@@ -131,6 +131,8 @@ const BlogProject = ({data}) => {
              ></iframe>
            </div>
          )
+       } else {
+         return <a href={node.data.uri}>{node.content[0].value}</a>
        }
      },
      "embedded-entry-block": node => {      

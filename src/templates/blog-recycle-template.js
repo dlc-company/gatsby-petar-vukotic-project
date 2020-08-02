@@ -121,6 +121,8 @@ const options = {
             ></iframe>
           </div>
         )
+      } else {
+        return <a href={node.data.uri}>{node.content[0].value}</a>
       }
     },
   },

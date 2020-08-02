@@ -121,12 +121,20 @@ const options = {
         },
         // EMBEDDED VIDEO
         "hyperlink": (node) => {  
-            if (node.data.uri.includes('https://www.youtube.com/embed/')){
-                    return(
-                        <div className={styles.questionSection}>
-                            <p>{node.content[0].value}</p>
-                            <iframe className ={styles.video} src={node.data.uri} frameBorder="0" allowFullScreen></iframe>
-                        </div> )
+            if (node.data.uri.includes("https://www.youtube.com/embed/")) {
+              return (
+                <div className={styles.questionSection}>
+                  <p>{node.content[0].value}</p>
+                  <iframe
+                    className={styles.video}
+                    src={node.data.uri}
+                    frameBorder="0"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              )
+            } else {
+              return <a href={node.data.uri}>{node.content[0].value}</a>
             }
         }                   
         
