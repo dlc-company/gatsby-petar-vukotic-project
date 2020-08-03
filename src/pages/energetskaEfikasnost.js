@@ -4,7 +4,7 @@ import BlogListEnergyEfficiency from '../components/BlogEnergyEfficiency/BlogLis
 import EEAbout from '../components/Home/EEAbout'
 import StyledHero from '../components/StyledHero'
 import ProjectsSection from "../components/Home/ProjectsSection"
-import img from "../images/Energetska efikasnost 1920x1080.jpg"
+import img from "../images/services_ee.jpg"
 import {graphql} from 'gatsby'
 
 const energetskaEfikasnost = ({data}) => {

@@ -6,7 +6,7 @@ import BlogList from '../components/Blog/BlogList'
 import BiomasAbout from '../components/Home/BiomasaAbout'
 import ProjectsSection from "../components/Home/ProjectsSection"
 import NavbarBiomasa from '../components/NavbarBiomasa'
-import img from "../images/Bio masa 1920x1080.jpg"
+import img from "../images/services_biomasa.jpg"
 
 const biomasa = ({ data }) => {
     return (

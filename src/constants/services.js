@@ -20,7 +20,7 @@ export default [
     href: "/biomasa",
     image: (
       <img
-        src={require("../images/Bio masa 1920x1080.jpg")}
+        src={require("../images/services_biomasa.jpg")}
         style={{ width: "100%" }}
       />
     ),
@@ -40,7 +40,7 @@ export default [
     href: "/reciklaza",
     image: (
       <img
-        src={require("../images/Reciklaza 1920x1080.jpg")}
+        src={require("../images/services_recycle.jpg")}
         style={{ width: "100%" }}
       />
     ),
@@ -57,7 +57,7 @@ energetska efikasnost      </AniLink>
     href: "/contact",
     image: (
       <img
-        src={require("../images/Energetska efikasnost 1920x1080.jpg")}
+        src={require("../images/services_ee.jpg")}
         style={{ width: "100%" }}
       />
     ),
