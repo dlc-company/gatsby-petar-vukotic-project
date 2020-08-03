@@ -5,7 +5,7 @@ import {graphql} from 'gatsby'
 import BloglistRecycle from '../components/BlogRecycle/BlogListRecycle'
 import ReciklazaAbout from '../components/Home/ReciklazaAbout'
 import ProjectsSection from "../components/Home/ProjectsSection"
-import img from "../images/servies_recycle.jpg"
+import img from "../images/services_recycle.jpg"
 
 const reciklaza = ({data}) => {
     return (
