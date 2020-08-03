@@ -5,24 +5,25 @@ import { useStaticQuery, graphql } from 'gatsby'
 import styles from '../../css/blog.module.css'
 
 const getProjectItemPosts = graphql`
-query{
-  projectitemposts:allContentfulProjectItem(sort:
-    {fields:published, order:DESC}){
-    edges{
-      node{
-        published(formatString:"MMMM Do, YYYY")
-        title
-        slug
-        id:contentful_id
-        image{
-          fluid{
-            ...GatsbyContentfulFluid
+  query {
+    projectitemposts: allContentfulProjectItem(
+      sort: { fields: published, order: DESC }
+    ) {
+      edges {
+        node {
+          published(formatString: "DD.MM.YYYY")
+          title
+          slug
+          id: contentful_id
+          image {
+            fluid {
+              ...GatsbyContentfulFluid
+            }
           }
         }
       }
     }
   }
-}
 `
 const BlogListProject = () => {
  const { projectitemposts } = useStaticQuery(getProjectItemPosts)

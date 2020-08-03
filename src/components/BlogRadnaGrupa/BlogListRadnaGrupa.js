@@ -5,24 +5,25 @@ import { useStaticQuery, graphql } from 'gatsby'
 import styles from '../../css/blog.module.css'
 
 const getRadnaGrupaPosts = graphql`
-query{
-  radnagrupaposts:allContentfulRadnaGrupaPost(sort:
-    {fields:published, order:DESC}){
-    edges{
-      node{
-        published(formatString:"MMMM Do, YYYY")
-        title
-        slug
-        id:contentful_id
-        image{
-          fluid{
-            ...GatsbyContentfulFluid
+  query {
+    radnagrupaposts: allContentfulRadnaGrupaPost(
+      sort: { fields: published, order: DESC }
+    ) {
+      edges {
+        node {
+          published(formatString: "DD.MM.YYYY")
+          title
+          slug
+          id: contentful_id
+          image {
+            fluid {
+              ...GatsbyContentfulFluid
+            }
           }
         }
       }
     }
   }
-}
 `
 
 const BlogListRadnaGrupa = () => {
