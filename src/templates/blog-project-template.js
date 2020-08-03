@@ -6,6 +6,7 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { FaChevronDown } from "react-icons/fa"
 import { FaChevronUp } from "react-icons/fa"
+import { FaChevronRight } from "react-icons/fa"
 import { FaClone } from "react-icons/fa"
 import { FaFilePdf } from "react-icons/fa"
 import { FaDownload } from "react-icons/fa"
@@ -122,7 +123,7 @@ const BlogProject = ({data}) => {
        if (node.data.uri.includes("https://www.youtube.com/embed/")) {
          return (
            <div className={styles.questionSection}>
-             <p>{node.content[0].value}</p>
+             <p className={styles.centerBoldText}>{node.content[0].value}</p>
              <iframe
                className={styles.video}
                src={node.data.uri}
@@ -149,8 +150,8 @@ const BlogProject = ({data}) => {
                alt=""
              />
              <p className={styles.embeddedBlogName}>{title["en-US"]}</p>             
-             <AniLink target="_blank" fade to={slug} className="btn-primary small">
-               procitaj vise
+             <AniLink target="_blank" fade to={slug} className={styles.openBlogButton}>
+               <FaChevronRight/>
               </AniLink>           
            </div>
          </div>   

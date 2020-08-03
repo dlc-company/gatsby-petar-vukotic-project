@@ -87,7 +87,9 @@ const options = {
                node.data.target.fields.file["en-US"].contentType ===
                  "application/CDFV2" ||
                node.data.target.fields.file["en-US"].contentType ===
-                 "application/zip"
+                 "application/zip" ||
+               node.data.target.fields.file["en-US"].contentType ===
+                 "application/vnd.openxmlformats-officedocument.presentationml.presentation"
              ) {
                const documentUrl = node.data.target.fields.file["en-US"].url
                return (
@@ -112,7 +114,7 @@ const options = {
       if (node.data.uri.includes("https://www.youtube.com/embed/")) {
         return (
           <div className={styles.questionSection}>
-            <p>{node.content[0].value}</p>
+            <p className={styles.centerBoldText}>{node.content[0].value}</p>
             <iframe
               className={styles.video}
               src={node.data.uri}

@@ -17,6 +17,11 @@
   width: 700px; 
 }
 
+.center-bold-text{
+  text-align: center;
+  font-weight: bold;
+}
+
 .title{
   text-align: center;  
   font-size: xx-large;
@@ -195,7 +200,7 @@
   border-radius: 0px;
   background-color: whitesmoke;  
   padding: 5px; 
-  text-align: center;
+  text-align: left;
   margin-left: 20px; 
   margin-right: 20px;
   margin-bottom: 5px;
@@ -274,6 +279,24 @@
 .show{
   display: flex;
 }
+
+.open-blog-button{
+  display: flex;
+  align-self: center;
+  padding: 10px;  
+  color: white;
+  background: #1e88e5;
+  text-align: center;
+  cursor: pointer;  
+  border: none;  
+  border-radius: 50%;
+}
+
+.open-blog-button:hover{
+color: white;
+  background: teal;
+}
+
 
 .read-more-button {
   margin:0 auto;

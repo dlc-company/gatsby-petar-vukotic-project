@@ -71,7 +71,7 @@ const BlogUdruzenjaSumovlasnika = ({data}) => {
     if (node.data.uri.includes("https://www.youtube.com/embed/")) {
       return (
         <div className={styles.questionSection}>
-          <p>{node.content[0].value}</p>
+          <p className={styles.centerBoldText}>{node.content[0].value}</p>
           <iframe
             className={styles.video}
             src={node.data.uri}
