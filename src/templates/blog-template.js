@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import styles from '../css/single-blog.module.css'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import { Link } from "gatsby"
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { FaChevronDown } from 'react-icons/fa'
 import { FaChevronUp } from 'react-icons/fa'
@@ -154,9 +155,9 @@ const options = {
               {documentToReactComponents(json, options)}
             </article>
             <div className={styles.allBlogsButton}>
-              <AniLink fade to="/biomasa" className="btn-primary">
+              <Link to="/biomasa#blogList" className="btn-primary">
                 svi clanci
-              </AniLink>
+              </Link>
             </div>
           </div>
         </section>

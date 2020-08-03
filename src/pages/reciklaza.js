@@ -12,7 +12,9 @@ const reciklaza = ({data}) => {
       <Layout>
         <StyledHero img={data.blogBcg.childImageSharp.fluid} />
         <ReciklazaAbout />
-        <BloglistRecycle />
+        <div id="blogList">
+          <BloglistRecycle />
+        </div>
         <ProjectsSection
           title="projekti"
           subtitle="upravljanje otpadom"

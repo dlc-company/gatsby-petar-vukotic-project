@@ -14,7 +14,9 @@ const biomasa = ({ data }) => {
         <StyledHero img={data.blogBcg.childImageSharp.fluid} />
         <NavbarBiomasa />
         <BiomasAbout />
-        <BlogList />
+        <div id="blogList">
+          <BlogList />
+        </div>
         <ProjectsSection
           title="projekti"
           subtitle="biomasa"

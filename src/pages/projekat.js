@@ -54,15 +54,19 @@ export default function projekat(props) {
                          <StyledHero
                            img={data.projectbcg.childImageSharp.fluid}
                          />
-                         <Menu items={data.menu} selectedCategory={prevPage} />
-
+                         <div id="projectList">
+                           <Menu
+                             items={data.menu}
+                             selectedCategory={prevPage}
+                           />
+                         </div>
                          <section className={styles.about}>
                            <div className={styles.title}>
                              <Title
                                title="vodič za finansiranje"
                                subtitle="bioenergetskih projekata"
                              />
-                           </div>                           
+                           </div>
                            <div className={styles.aboutCenter}>
                              <article className={styles.aboutInfo}>
                                <h4>Osnovni saveti</h4>
@@ -505,7 +509,7 @@ export default function projekat(props) {
                                </p>
                              </article>
                            </div>
-                         </section>                         
+                         </section>
                        </Layout>
                      )}
                    />

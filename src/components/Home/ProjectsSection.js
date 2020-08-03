@@ -3,6 +3,7 @@ import Title from '../Title'
 import styles from '../../css/about.module.css'
 import styled from 'styled-components'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import {Link} from 'gatsby'
 
 const ProjectsSection = (props) => {  
     return (
@@ -18,14 +19,13 @@ const ProjectsSection = (props) => {
             <h4>{props.title}</h4>
             <p>{props.text}</p>
             <p>{props.subtext}</p>
-            <AniLink
-              fade
-              to="/projekat"
+            <Link              
+              to="/projekat#projectList"
               state={{ prevPath: props.prevPath }}
               className="btn-primary"
             >
               pogledaj projekte
-            </AniLink>
+            </Link>
           </article>
         </div>
       </section>

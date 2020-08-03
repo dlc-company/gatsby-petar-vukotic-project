@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import styles from '../css/single-blog.module.css'
 import AniLink from 'gatsby-plugin-transition-link/AniLink' 
+import {Link} from 'gatsby'
 import { FaChevronDown } from "react-icons/fa"
 import { FaChevronUp } from "react-icons/fa"
 import { FaClone } from "react-icons/fa"
@@ -141,9 +142,9 @@ const options = {
               {documentToReactComponents(json, options)}
             </article>
             <div className={styles.allBlogsButton}>
-              <AniLink fade to="/reciklaza" className="btn-primary">
+              <Link  to="/reciklaza#blogList" className="btn-primary">
                 svi clanci
-              </AniLink>
+              </Link>
             </div>
           </div>
         </section>

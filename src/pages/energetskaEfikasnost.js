@@ -12,7 +12,9 @@ const energetskaEfikasnost = ({data}) => {
       <Layout>
         <StyledHero img={data.blogBcg.childImageSharp.fluid} />
         <EEAbout />
-        <BlogListEnergyEfficiency />
+        <div id="blogList">
+          <BlogListEnergyEfficiency />
+        </div>
         <ProjectsSection
           title="projekti"
           subtitle="energetska efikasnost"
