@@ -26,8 +26,8 @@ const getAbout = graphql`
 
 
 const AboutMapCompanies = () => {
- const { aboutImage } = useStaticQuery(getAbout)
- const { aboutImage1 } = useStaticQuery(getAbout)
+ const { aboutImage, aboutImage1 } = useStaticQuery(getAbout)
+ // const { aboutImage1 } = useStaticQuery(getAbout)
 
  return (
   <div>
