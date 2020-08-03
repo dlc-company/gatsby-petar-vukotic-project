@@ -3,6 +3,8 @@ import L from "leaflet"
 import { Map, TileLayer, Marker, Popup } from "react-leaflet"
 import "./leafletmap.css"
 
+import {Link} from 'gatsby'
+
 class LeafletMap extends Component {
   state = {
     ADKopaonikBeogradOgranakUzice: {
@@ -213,6 +215,7 @@ class LeafletMap extends Component {
     ]
 
     return (
+      
       <Map className="map" 
         center={positionNOVIOKOVZlatibor} 
       zoom={this.state.zoom}>
@@ -222,15 +225,15 @@ class LeafletMap extends Component {
         />
         <Marker position={positionNOVIOKOV}>
           <Popup>NOVI OKOV d.o.o.
-          Adresa: E-763, 31000 Užice
-          Telefon: 031/565 880
-Email:noviokov@gmail.com</Popup>
+            <br/>
+          <Link to="/map#NOVIOKOV">Kliknite ovde za detalje</Link>
+          </Popup>
         </Marker>
         <Marker position={positionADKopaonikBeogradOgranakUzice}>
           <Popup>AD Kopaonik Beograd – Ogranak Užice
-          Adresa: Pekarska bb, 31000 Užice
-          Telefon: 031/564 215
-Email:kopaonik.ue@gmail.com</Popup>
+          <br/>
+            <Link to="/map#ADKopaonikBeogradOgranakUzice">Kliknite ovde za detalje</Link>
+        </Popup>
         </Marker>
         <Marker position={positionMetalfon}>
           <Popup>METALFON d.o.o.
@@ -359,11 +362,15 @@ Email: plavipriboj1@gmail.com</Popup>
         </Marker>
         <Marker position={positionJELASTAR}>
           <Popup>JELA STAR d.o.o.
-          Adresa: Bjelopoljski put bb, 31300 Prijepolje
+          {/* Adresa: Bjelopoljski put bb, 31300 Prijepolje
           Telefon: 033/782-777
-Email:info@jelastar.rs</Popup>
+          Email:info@jelastar.rs */}
+          
+</Popup>
         </Marker>
       </Map>
+        
+      
     )
   }
 }
