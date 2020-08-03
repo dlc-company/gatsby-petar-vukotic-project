@@ -17,7 +17,7 @@ export default [
     href: "/pdf",
     image: (
       <img
-        src={require("../images/Zelena oblast - PDF 1519x438.jpg")}
+        src={require("../images/publication_docs.jpg")}
         style={{ width: "100%" }}
       />
     ),
@@ -37,7 +37,7 @@ export default [
     href: "/tv",
     image: (
       <img
-        src={require("../images/Zelena oblast - TV 1519x438.jpg")}
+        src={require("../images/publication_tv.jpg")}
         style={{ width: "100%" }}
       />
     ),
@@ -55,7 +55,7 @@ export default [
     href: "/radio",
     image: (
       <img
-        src={require("../images/Zelena oblast - RADIO 1519x438.jpg")}
+        src={require("../images/publication_radio.jpg")}
         style={{ width: "100%" }}
       />
     ),
