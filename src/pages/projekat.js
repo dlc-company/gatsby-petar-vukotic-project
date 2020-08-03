@@ -22,7 +22,7 @@ export default function projekat(props) {
                        query {
                          projectbcg: file(
                            relativePath: {
-                             eq: "octavian-dan-b21Ty33CqVs-unsplash.jpg"
+                             eq: "Zelena oblast - projekti 1519x438.jpg"
                            }
                          ) {
                            childImageSharp {

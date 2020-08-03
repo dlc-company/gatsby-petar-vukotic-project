@@ -15,7 +15,7 @@ const tv = ({ data }) => {
 
 export const query = graphql`
   query {
-    blogBcg: file(relativePath: { eq: "tv_cover.png" }) {
+    blogBcg: file(relativePath: { eq: "Zelena oblast - TV 1519x438.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp

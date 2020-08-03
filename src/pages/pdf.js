@@ -15,7 +15,7 @@ const pdf = ({ data }) => {
 
 export const query = graphql`
   query {
-    blogBcg: file(relativePath: { eq: "cover_pdf.png" }) {
+    blogBcg: file(relativePath: { eq: "Zelena oblast - PDF 1519x438.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp
