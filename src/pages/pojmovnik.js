@@ -870,7 +870,7 @@ const pojmovnik = ({data}) => {
 
 export const query = graphql`
   query {
-    blogBcg: file(relativePath: { eq: "aaron-burden-fgmf2Eyrwm4-unsplash.jpg" }) {
+    blogBcg: file(relativePath: { eq: "Zelena oblast - Pojmovnik 1519x438.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp

@@ -20,7 +20,7 @@ const publikacije = ({data}) => {
 
 export const query = graphql`
   query {
-    blogBcg: file(relativePath: { eq: "publication_cover.png" }) {
+    blogBcg: file(relativePath: { eq: "Zelena oblast - publikacije 1519x438.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp
