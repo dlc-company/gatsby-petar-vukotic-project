@@ -111,3 +111,7 @@
 *:focus {
     outline: 0 !important;
 }
+
+button {
+  text-transform: capitalize!important;
+}
