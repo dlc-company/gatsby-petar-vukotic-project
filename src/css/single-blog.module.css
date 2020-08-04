@@ -25,6 +25,7 @@
 .title{
   text-align: center;  
   font-size: xx-large;
+  text-transform: capitalize;
 }
 
 .published{

@@ -142,7 +142,7 @@ const options = {
               {documentToReactComponents(json, options)}
             </article>
             <div className={styles.allBlogsButton}>
-              <Link  to="/reciklaza#blogList" className="btn-primary">
+              <Link to="/reciklaza#blogList" className="btn-primary">
                 svi clanci
               </Link>
             </div>
