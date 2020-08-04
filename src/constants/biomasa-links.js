@@ -13,7 +13,7 @@ export default [
   },
   {
     path: "/udruzenjaSumovlasnika",
-    text: "udruzenja sumovlasnika",
+    text: "udruzenja šumovlasnika",
   },
   {
     path: "/map",
