@@ -29,26 +29,29 @@ export default class Menu extends Component {
   
  getInitialItems = (category, items) => {     
   let tempItems = items;
-   if (category === "svi projekti") {  
-    return tempItems;
-  } else {    
-   let items = tempItems.filter(({ node }) => node.category === category)
-    return items;
-  }
+   if (category.toLowerCase() === "svi projekti") {
+     return tempItems
+   } else {
+     let items = tempItems.filter(
+       ({ node }) => node.category.toLowerCase() === category.toLowerCase()
+     )
+     return items
+   }
  }
 
  handleItems = category => {     
   let tempItems = [...this.state.items]
-  if (category === "svi projekti") {
-   this.setState(() => {
-    return { projectItems: tempItems, selectedCategory:category}
-   })
+  if (category.toLowerCase() === "svi projekti") {
+    this.setState(() => {
+      return { projectItems: tempItems, selectedCategory: category }
+    })
   } else {
-    console.log('test');
-   let items = tempItems.filter(({ node }) => node.category === category)
-   this.setState(() => {
-    return { projectItems: items, selectedCategory: category }
-   })
+    let items = tempItems.filter(
+      ({ node }) => node.category.toLowerCase() === category.toLowerCase()
+    )
+    this.setState(() => {
+      return { projectItems: items, selectedCategory: category }
+    })
   }
  }
  
