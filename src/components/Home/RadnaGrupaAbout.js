@@ -4,19 +4,18 @@ import styles from '../../css/biomasa-about.module.css'
 
 const RadnaGrupaAbout = () => {
  return (
-  <section className={styles.about}>
-
-   <div className={styles.aboutCenter}>
-
-    <article className={styles.aboutInfo}>
-     <Title title="text o" subtitle="radnoj grupi za biomasu" />
-     <p>
-      Cum horribilem resurgere de sepulcris creaturis, sicut de iride et serpens.
-      Pestilentia, ipsa screams. Pestilentia est haec ambulabat mortuos. Sicut malus voodoo.
-     </p>
-    </article>
-   </div>
-  </section>
+   <section className={styles.about}>
+     <div className={styles.aboutCenter}>
+       <article className={styles.aboutInfo}>
+         <Title title="radna grupa" subtitle="za biomasu" />
+         <p>
+           Ovo regionalno telo, koje je osnovano sa ciljem razmatranja pitanja
+           od značaja za održivu upotrebu biomase i održivo sprovođenje mera
+           energetske efikasnosti u javnim objektima u Zlatiborskoj oblasti
+         </p>
+       </article>
+     </div>
+   </section>
  )
 }
 
