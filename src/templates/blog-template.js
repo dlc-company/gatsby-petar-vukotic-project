@@ -40,85 +40,98 @@ const options = {
                 </div>
               )
             }
-            //PDF
+            //Audio
             else if (
-              node.data.target.fields.file["en-US"].contentType ===
-              "application/pdf"
-            ) {
-              const documentUrl = node.data.target.fields.file["en-US"].url
-              return (
-                <div className={styles.document}>
-                  <div className={styles.documentControls}>
-                    <FaFilePdf size={35} className={styles.pdfIcon} />
-                    <p className={styles.documentName}>
-                      {node.data.target.fields.title["en-US"]}
-                    </p>
-                    <button
-                      type="button"
-                      className={styles.roundedButton}
-                      onClick={() => showHideDocument(documentUrl)}
-                    >
-                      {showDocument == documentUrl ? (
-                        <FaChevronUp />
-                      ) : (
-                        <FaChevronDown />
-                      )}
-                    </button>
-                    <button type="button" className={styles.roundedButton}>
-                      <a
-                        className={styles.documentButton}
-                        href={documentUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <FaClone />
-                      </a>
-                    </button>
-                  </div>
-                  <div
-                    className={
-                      showDocument == documentUrl
-                        ? `${styles.documentWindow}`
-                        : `${styles.documentWindowHidden}`
-                    }
-                  >
-                    <object
-                      className={styles.objectPdf}
-                      data={documentUrl}
-                      type="application/pdf"
-                    ></object>
-                  </div>
-                </div>
-              )
-            } else if (
-                     node.data.target.fields.file["en-US"].contentType ===
-                       "application/CDFV2" ||node.data.target.fields.file["en-US"].contentType ===
-                       "application/zip"                     
-                   ) {
-                     const documentUrl =
-                       node.data.target.fields.file["en-US"].url
-                     return (
-                       <div className={styles.documentWord}>
-                         <div className={styles.documentControls}>
-                           <FaFile size={35} className={styles.wordIcon} />
-                           <p className={styles.documentName}>
-                             {node.data.target.fields.title["en-US"]}
-                           </p>
-                           <button
-                             type="button"
-                             className={styles.roundedButton}
+                   node.data.target.fields.file["en-US"].contentType ===
+                   "audio/mpeg"
+                 ) {
+                    return (
+                      <div className={styles.audioSection}>
+                        <p>{node.data.target.fields.title["en-US"]}</p>
+                        <audio controls="controls">
+                          <source
+                            src={node.data.target.fields.file["en-US"].url}
+                          ></source>
+                        </audio>
+                      </div>
+                    )
+                 }
+                 //PDF
+                 else if (
+                   node.data.target.fields.file["en-US"].contentType ===
+                   "application/pdf"
+                 ) {
+                   const documentUrl = node.data.target.fields.file["en-US"].url
+                   return (
+                     <div className={styles.document}>
+                       <div className={styles.documentControls}>
+                         <FaFilePdf size={35} className={styles.pdfIcon} />
+                         <p className={styles.documentName}>
+                           {node.data.target.fields.title["en-US"]}
+                         </p>
+                         <button
+                           type="button"
+                           className={styles.roundedButton}
+                           onClick={() => showHideDocument(documentUrl)}
+                         >
+                           {showDocument == documentUrl ? (
+                             <FaChevronUp />
+                           ) : (
+                             <FaChevronDown />
+                           )}
+                         </button>
+                         <button type="button" className={styles.roundedButton}>
+                           <a
+                             className={styles.documentButton}
+                             href={documentUrl}
+                             target="_blank"
+                             rel="noopener noreferrer"
                            >
-                             <a
-                               className={styles.documentButton}
-                               href={documentUrl}
-                             >
-                               <FaDownload />
-                             </a>
-                           </button>
-                         </div>
+                             <FaClone />
+                           </a>
+                         </button>
                        </div>
-                     )
-                   }                                
+                       <div
+                         className={
+                           showDocument == documentUrl
+                             ? `${styles.documentWindow}`
+                             : `${styles.documentWindowHidden}`
+                         }
+                       >
+                         <object
+                           className={styles.objectPdf}
+                           data={documentUrl}
+                           type="application/pdf"
+                         ></object>
+                       </div>
+                     </div>
+                   )
+                 } else if (
+                   node.data.target.fields.file["en-US"].contentType ===
+                     "application/CDFV2" ||
+                   node.data.target.fields.file["en-US"].contentType ===
+                     "application/zip"
+                 ) {
+                   const documentUrl = node.data.target.fields.file["en-US"].url
+                   return (
+                     <div className={styles.documentWord}>
+                       <div className={styles.documentControls}>
+                         <FaFile size={35} className={styles.wordIcon} />
+                         <p className={styles.documentName}>
+                           {node.data.target.fields.title["en-US"]}
+                         </p>
+                         <button type="button" className={styles.roundedButton}>
+                           <a
+                             className={styles.documentButton}
+                             href={documentUrl}
+                           >
+                             <FaDownload />
+                           </a>
+                         </button>
+                       </div>
+                     </div>
+                   )
+                 }                                
         },
         // EMBEDDED VIDEO
         "hyperlink": (node) => {  

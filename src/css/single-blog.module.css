@@ -329,3 +329,12 @@ color: white;
 .project-details li{
   padding: 0px;
 }
+
+.audio-section{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+    font-weight: bold;
+}
