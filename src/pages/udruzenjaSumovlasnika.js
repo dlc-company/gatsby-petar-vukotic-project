@@ -7,12 +7,14 @@ import UdruzenjaSumovlasnikaAbout from '../components/Home/UdruzenjaSumovlasnika
 import NavbarBiomasa from '../components/NavbarBiomasa'
 const udruzenjaSumovlasnika = ({ data }) => {
  return (
-  <Layout>
-   <StyledHero img={data.blogBcg.childImageSharp.fluid} />
-   <NavbarBiomasa />
-   <UdruzenjaSumovlasnikaAbout />
-   <BlogListUdruzenjaSumovlasnika />
-  </Layout>
+   <Layout>
+     <StyledHero img={data.blogBcg.childImageSharp.fluid} />
+     <NavbarBiomasa />
+     <UdruzenjaSumovlasnikaAbout />
+     <div id="blogList">
+       <BlogListUdruzenjaSumovlasnika />
+     </div>
+   </Layout>
  )
 }
 

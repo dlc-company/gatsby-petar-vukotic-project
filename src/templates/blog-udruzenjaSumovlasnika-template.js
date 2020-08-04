@@ -10,6 +10,7 @@ import { FaClone } from "react-icons/fa"
 import { FaFilePdf } from "react-icons/fa"
 import { FaDownload } from "react-icons/fa"
 import { FaFile } from "react-icons/fa"
+import {Link} from 'gatsby'
 
 const BlogUdruzenjaSumovlasnika = ({data}) => {
  const { title, published, text: { json } } = data.post
@@ -88,22 +89,22 @@ const BlogUdruzenjaSumovlasnika = ({data}) => {
   }
  }
  return (
-  <Layout>
-   <section className={styles.blog}>
-    <div className={styles.center}>
-     <h1 className={styles.title}>{title}</h1>
-     <h5 className={styles.published}>Objavljeno : {published}</h5>
-     <article className={styles.post}>
-      {documentToReactComponents(json, options)}
-     </article>
-     <div className={styles.allBlogsButton}>
-      <AniLink fade to='/udruzenjaSumovlasnika' className='btn-primary'>
-       svi clanci
-      </AniLink>
-     </div>
-    </div>
-   </section>
-  </Layout>
+   <Layout>
+     <section className={styles.blog}>
+       <div className={styles.center}>
+         <h1 className={styles.title}>{title}</h1>
+         <h5 className={styles.published}>Objavljeno : {published}</h5>
+         <article className={styles.post}>
+           {documentToReactComponents(json, options)}
+         </article>
+         <div className={styles.allBlogsButton}>
+           <Link to="/udruzenjaSumovlasnika#blogList" className="btn-primary">
+             svi clanci
+           </Link>
+         </div>
+       </div>
+     </section>
+   </Layout>
  )
 }
 
