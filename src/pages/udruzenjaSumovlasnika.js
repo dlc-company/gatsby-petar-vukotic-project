@@ -7,18 +7,20 @@ import UdruzenjaSumovlasnikaAbout from '../components/Home/UdruzenjaSumovlasnika
 import NavbarBiomasa from '../components/NavbarBiomasa'
 const udruzenjaSumovlasnika = ({ data }) => {
  return (
-  <Layout>
-   <StyledHero img={data.blogBcg.childImageSharp.fluid} />
-   <NavbarBiomasa />
-   <UdruzenjaSumovlasnikaAbout />
-   <BlogListUdruzenjaSumovlasnika />
-  </Layout>
+   <Layout>
+     <StyledHero img={data.blogBcg.childImageSharp.fluid} />
+     <NavbarBiomasa />
+     <UdruzenjaSumovlasnikaAbout />
+     <div id="blogList">
+       <BlogListUdruzenjaSumovlasnika />
+     </div>
+   </Layout>
  )
 }
 
 export const query = graphql`
          query {
-           blogBcg: file(relativePath: { eq: "Zelena oblast - OBNOVLJIVI IE 1519x438.jpg" }) {
+           blogBcg: file(relativePath: { eq: "udruzenje_sumovlasnika_cover.jpg" }) {
              childImageSharp {
                fluid(quality: 90, maxWidth: 4160) {
                  ...GatsbyImageSharpFluid_withWebp
