@@ -19,7 +19,7 @@ const radnaGrupaZaBiomasu = ({ data }) => {
 export const query = graphql`
          query {
            blogBcg: file(relativePath: { eq: 
-            "placeholder_img.jpg" }) {
+            "Zelena oblast - OBNOVLJIVI IE 1519x438.jpg" }) {
              childImageSharp {
                fluid(quality: 90, maxWidth: 4160) {
                  ...GatsbyImageSharpFluid_withWebp
