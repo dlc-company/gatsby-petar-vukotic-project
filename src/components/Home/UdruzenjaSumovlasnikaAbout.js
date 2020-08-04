@@ -9,7 +9,7 @@ const UdruzenjaSumovlasnikaAbout = () => {
    <section className={styles.about}>
      <div className={styles.aboutCenter}>
        <article className={styles.aboutInfo}>
-         <Title title="udruženja" subtitle="sumovlasnika" />
+         <Title title="udruženja" subtitle="šumovlasnika" />
          <p>
            Najoptimalnije i najfunkcionalnije
            rešavanje svih (ili većine) problema u privatnim šumama (posebno onih
