@@ -18,8 +18,7 @@ const udruzenjaSumovlasnika = ({ data }) => {
 
 export const query = graphql`
          query {
-           blogBcg: file(relativePath: { eq: 
-            "placeholder_img.jpg" }) {
+           blogBcg: file(relativePath: { eq: "udruzenje_sumovlasnika_cover.jpg" }) {
              childImageSharp {
                fluid(quality: 90, maxWidth: 4160) {
                  ...GatsbyImageSharpFluid_withWebp
