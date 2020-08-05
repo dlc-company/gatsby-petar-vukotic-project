@@ -55,7 +55,19 @@
   position: absolute;
   left: 0;
   top: 75%;
+  opacity: 0.9;
   background: var(--primaryColor);
+  padding: 0.3rem 0.5rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.tag{
+  position: absolute;
+  left: 0;
+  top: 86%;
+  opacity: 0.9;
+  background: #42a5f5;
   padding: 0.3rem 0.5rem;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;

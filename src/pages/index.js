@@ -9,6 +9,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 import services from "../constants/services"
 import styles from "../css/index.module.css"
 import Survey from '../components/Home/Survey'
+import LatestBlogList from "../components/LastestBlogs/LatestBlogList"
 
 // import Map from '../components/Map'
 var projectsLink = (
@@ -26,7 +27,7 @@ export default ({ data }) => (
 
     <Services services={services} />
     {/* <Survey /> */}
-
+    <LatestBlogList></LatestBlogList>
     <PartnerLogos />
   </Layout>
 )
