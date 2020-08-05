@@ -51,10 +51,12 @@
   text-transform: capitalize;
   margin-bottom: 0;
 }
+
 .date {
   position: absolute;
   left: 0;
-  top: 75%;
+  height: 29px;
+  bottom: 41px;
   opacity: 0.9;
   background: var(--primaryColor);
   padding: 0.3rem 0.5rem;
@@ -65,7 +67,8 @@
 .tag{
   position: absolute;
   left: 0;
-  top: 86%;
+  height: 29px;
+  bottom: 10px;  
   opacity: 0.9;
   background: #42a5f5;
   padding: 0.3rem 0.5rem;
@@ -112,3 +115,4 @@
 *:focus {
     outline: 0 !important;
 }
+

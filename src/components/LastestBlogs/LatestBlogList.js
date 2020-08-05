@@ -64,8 +64,7 @@ const getPosts = graphql`
 `
 
 const BlogList = () => {
-  const posts  = useStaticQuery(getPosts)
-  console.log(posts)
+  const posts  = useStaticQuery(getPosts)  
   return (
     <section className={styles.blogSecondaryBackground}>
       <Title title="Poslednji" subtitle="članci" />
