@@ -1,18 +1,13 @@
 import React from "react"
-import { FaTree, FaRecycle } from "react-icons/fa"
+import { FaFilePdf, FaTv, FaMicrophoneAlt } from "react-icons/fa"
 import { TiTree } from "react-icons/ti"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 export default [
   {
-    link: (
-      <AniLink fade to="/pdf" className="btn-white">
-        Dokumenta
-      </AniLink>
-    ),
-    icon: <TiTree />,
+    icon: <FaFilePdf />,
     title: "Dokumenta",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    text: "Pogledajte dokmenta iz oblasti Biomase.",
     button: "read more",
     href: "/pdf",
     image: (
@@ -21,18 +16,13 @@ export default [
         style={{ width: "100%" }}
       />
     ),
-    // image:  background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.5)),
-    // url("../images/adobestock_108028733_billionphotos.jpeg") center/cover no-repeat;
+    primaryActionTitle: "otvori",
+    secondaryActionTitle: "",
   },
   {
-    link: (
-      <AniLink fade to="/tv" className="btn-white">
-        TV emisije
-      </AniLink>
-    ),
-    icon: <FaRecycle />,
+    icon: <FaTv />,
     title: "TV emisije",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    text: "Pogledajte TV emisije iz oblasti Biomase.",
     button: "read more",
     href: "/tv",
     image: (
@@ -41,16 +31,13 @@ export default [
         style={{ width: "100%" }}
       />
     ),
+    primaryActionTitle: "otvori",
+    secondaryActionTitle: "",
   },
   {
-    link: (
-      <AniLink fade to="/radio" className="btn-white">
-        Radio emisije
-      </AniLink>
-    ),
-    icon: <FaTree />,
+    icon: <FaMicrophoneAlt />,
     title: "Radio emisije",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    text: "Pošlušajte radio emisije iz oblasti Biomase.",
     button: "read more",
     href: "/radio",
     image: (
@@ -59,5 +46,7 @@ export default [
         style={{ width: "100%" }}
       />
     ),
+    primaryActionTitle: "otvori",
+    secondaryActionTitle: "",
   },
 ]

@@ -23,9 +23,8 @@ export default ({ data }) => (
       home="true"
       img={data.defaultBcg.childImageSharp.fluid}
       children={projectsLink}
-    ></StyledHero>
-
-    <Services services={services} />
+    ></StyledHero>    
+    <Services services={services} title="" subtitle="oblasti"/>
     {/* <Survey /> */}
     <LatestBlogList></LatestBlogList>
     <PartnerLogos />
