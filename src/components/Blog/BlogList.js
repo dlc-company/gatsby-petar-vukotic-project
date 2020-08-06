@@ -6,8 +6,10 @@ import styles from '../../css/blog.module.css'
 
 const getPosts = graphql`
   query {
-    posts: allContentfulBiomasa(sort:
-       { fields: published, order: DESC }) {
+    posts: allContentfulBiomasa(
+      sort: { fields: published, order: DESC }
+      filter: { highlight: { eq: false } }
+    ) {
       edges {
         node {
           published(formatString: "DD.MM.YYYY")
@@ -29,13 +31,14 @@ const BlogList = () => {
     const {posts} = useStaticQuery(getPosts);
     
     return (
-        <section className={styles.blog}>
-            <div className={styles.center}>
-                {posts.edges.map(({ node }) =>{
-                    return <BlogCard key={node.id} blog={node} />
-                })}
-            </div>
-        </section>
+      <section className={styles.blog}>
+        <Title title="ostali" subtitle="članci" />
+        <div className={styles.center}>
+          {posts.edges.map(({ node }) => {
+            return <BlogCard key={node.id} blog={node} />
+          })}
+        </div>
+      </section>
     )
 }
 

@@ -3,6 +3,7 @@ import Layout from "../components/Layout"
 import StyledHero from '../components/StyledHero'
 import { graphql } from 'gatsby'
 import BlogList from '../components/Blog/BlogList'
+import BlogListHighlight from "../components/Blog/BlogListHighlight"
 import BiomasAbout from '../components/Home/BiomasaAbout'
 import ProjectsSection from "../components/Home/ProjectsSection"
 import NavbarBiomasa from '../components/NavbarBiomasa'
@@ -15,6 +16,9 @@ const biomasa = ({ data }) => {
         <NavbarBiomasa />
         <BiomasAbout />
         <div id="blogList">
+          <BlogListHighlight />
+        </div>
+        <div >
           <BlogList />
         </div>
         <ProjectsSection
