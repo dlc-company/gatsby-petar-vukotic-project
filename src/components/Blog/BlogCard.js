@@ -14,7 +14,7 @@ const BlogCard = ({blog}) => {
           <Link className={styles.link} to={`/biomasa/${slug}`}>
             procitajte vise
           </Link>
-          <h6 className={styles.date}>{published}</h6>
+          {/* <h6 className={styles.date}>{published}</h6> */}
         </div>
         <div className={styles.footer}>
           <h4>{title}</h4>
