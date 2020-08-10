@@ -3,7 +3,7 @@ import Layout from "../components/Layout"
 import StyledHero from '../components/StyledHero'
 import { graphql } from 'gatsby'
 import BlogList from '../components/Blog/BlogList'
-import BlogListHighlight from "../components/Blog/BlogListHighlight"
+import BlogListThemes from "../components/Blog/BlogListThemes"
 import BiomasAbout from '../components/Home/BiomasaAbout'
 import ProjectsSection from "../components/Home/ProjectsSection"
 import NavbarBiomasa from '../components/NavbarBiomasa'
@@ -15,11 +15,11 @@ const biomasa = ({ data }) => {
         <StyledHero img={data.blogBcg.childImageSharp.fluid} />
         <NavbarBiomasa />
         <BiomasAbout />
-        <div id="blogList">
-          <BlogListHighlight />
-        </div>
-        <div >
+        <div>
           <BlogList />
+        </div>
+        <div id="blogList">
+          <BlogListThemes />
         </div>
         <ProjectsSection
           title="projekti"

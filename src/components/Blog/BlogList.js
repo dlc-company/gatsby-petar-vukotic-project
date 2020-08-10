@@ -3,6 +3,9 @@ import BlogCard from './BlogCard'
 import Title from '../Title'
 import { useStaticQuery, graphql } from 'gatsby'
 import styles from '../../css/blog.module.css'
+import OwlCarousel from "react-owl-carousel"
+import "owl.carousel/dist/assets/owl.carousel.css"
+import "owl.carousel/dist/assets/owl.theme.default.css"
 
 const getPosts = graphql`
   query {
@@ -27,17 +30,46 @@ const getPosts = graphql`
   }
 `
 
+const options = {
+   
+    responsiveClass: true,
+    loop:true,
+          margin:5,
+          items:5,           
+          dotsEach:true,
+          autoplay:true,
+          autoplayTimeout:5000,
+    responsive: {
+        0: {
+            items: 1,
+        },
+        400: {
+            items: 1,
+        },
+        600: {
+            items: 2,
+        },
+        700: {
+            items: 3,
+        },
+        1000: {
+            items: 5,
+
+        }
+    },
+};
+
 const BlogList = () => {
     const {posts} = useStaticQuery(getPosts);
     
     return (
       <section className={styles.blog}>
-        <Title title="ostali" subtitle="članci" />
-        <div className={styles.center}>
-          {posts.edges.map(({ node }) => {
-            return <BlogCard key={node.id} blog={node} />
+        <Title title="najnovije" subtitle="vesti" />
+        <OwlCarousel className="owl-theme" {...options}>
+          {posts.edges.map(({ node }) => {            
+            return <BlogCard  key={node.id} blog={node} />
           })}
-        </div>
+        </OwlCarousel>
       </section>
     )
 }

@@ -1,5 +1,5 @@
 import React from "react"
-import BlogCard from "./BlogCard"
+import BlogCardThemes from "./BlogCardThemes"
 import { useStaticQuery, graphql } from "gatsby"
 import styles from "../../css/blog.module.css"
 import Title from "../Title"
@@ -27,19 +27,19 @@ const getHighlightPosts = graphql`
   }
 `
 
-const BlogListHighlight = () => {
+const BlogListThemes = () => {
   const { posts } = useStaticQuery(getHighlightPosts)
 
   return (
     <section className={styles.blogSecondaryBackground}>
-     <Title title="istaknuti" subtitle="članci"/>
+     <Title title="" subtitle="teme"/>
       <div className={styles.center}>
         {posts.edges.map(({ node }) => {
-          return <BlogCard key={node.id} blog={node} />
+          return <BlogCardThemes key={node.id} blog={node} />
         })}
       </div>
     </section>
   )
 }
 
-export default BlogListHighlight
+export default BlogListThemes

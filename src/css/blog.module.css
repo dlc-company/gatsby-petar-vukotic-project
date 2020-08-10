@@ -1,6 +1,11 @@
+
+
 .blog {
   padding: 4rem 0;
+  margin-left: 15px;
+  margin-right: 15px;
 }
+
 .center {
   width: 80vw;
   margin: 3rem auto;
