@@ -3,9 +3,11 @@ import BlogCard from './BlogCard'
 import Title from '../Title'
 import { useStaticQuery, graphql } from 'gatsby'
 import styles from '../../css/blog.module.css'
-import OwlCarousel from "react-owl-carousel"
 import "owl.carousel/dist/assets/owl.carousel.css"
 import "owl.carousel/dist/assets/owl.theme.default.css"
+import loadable from "@loadable/component"
+
+const OwlCarousel = loadable(() => import("react-owl-carousel"))
 
 const getPosts = graphql`
   query {
