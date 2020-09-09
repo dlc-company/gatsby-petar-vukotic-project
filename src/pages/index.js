@@ -26,7 +26,7 @@ export default ({ data }) => (
     ></StyledHero>    
     <Services services={services} title="" subtitle="oblasti"/>
     {/* <Survey /> */}
-    <LatestBlogList></LatestBlogList>
+    {/* <LatestBlogList></LatestBlogList> */}
     <PartnerLogos />
   </Layout>
 )

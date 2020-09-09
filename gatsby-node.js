@@ -1,5 +1,27 @@
 const path = require("path")
 
+exports.onCreateWebpackConfig = ({ loaders, stage, actions }) => {
+  const { setWebpackConfig } = actions
+  if (stage === "build-html") {
+    setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /bad-module/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    })
+  } else {
+    setWebpackConfig({
+      externals: {
+        jquery: "jQuery", // important: 'Q' capitalized
+      },
+    })
+  }
+}
+
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
