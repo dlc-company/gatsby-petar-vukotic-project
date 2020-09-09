@@ -215,162 +215,186 @@ class LeafletMap extends Component {
     ]
 
     return (
-      
-      <Map className="map" 
-        center={positionNOVIOKOVZlatibor} 
-      zoom={this.state.zoom}>
+      <Map
+        className="map"
+        center={positionNOVIOKOVZlatibor}
+        zoom={this.state.zoom}
+      >
         <TileLayer
           attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <Marker position={positionNOVIOKOV}>
-          <Popup>NOVI OKOV d.o.o.
-            <br/>
-          <Link to="/map#NOVIOKOV">Kliknite ovde za detalje</Link>
+          <Popup>
+            NOVI OKOV d.o.o.
+            <br />
+            <Link to="/map#NOVIOKOV">Kliknite ovde za detalje</Link>
           </Popup>
         </Marker>
         <Marker position={positionADKopaonikBeogradOgranakUzice}>
-          <Popup>AD Kopaonik Beograd – Ogranak Užice
-          <br/>
-            <Link to="/map#ADKopaonikBeogradOgranakUzice">Kliknite ovde za detalje</Link>
-        </Popup>
+          <Popup>
+            AD Kopaonik Beograd – Ogranak Užice
+            <br />
+            <Link to="/map#ADKopaonikBeogradOgranakUzice">
+              Kliknite ovde za detalje
+            </Link>
+          </Popup>
         </Marker>
         <Marker position={positionMetalfon}>
-          <Popup>METALFON d.o.o.
-            <br/>
+          <Popup>
+            METALFON d.o.o.
+            <br />
             <Link to="/map#METALFON">Kliknite ovde za detalje</Link>
           </Popup>
         </Marker>
         <Marker position={positionSUMADIJA}>
-          <Popup>ŠUMADIJA d.o.o.
-            <br/>
-            <Link to="/map#SUMADIJA">Kliknite ovde za detalje</Link>           
+          <Popup>
+            ŠUMADIJA d.o.o.
+            <br />
+            <Link to="/map#SUMADIJA">Kliknite ovde za detalje</Link>
           </Popup>
         </Marker>
         <Marker position={positionStovaristeDanicic}>
-          <Popup>Stovarište “Daničić“
-            <br/>
-            <Link to="/map#DANICIC">Kliknite ovde za detalje</Link>           
+          <Popup>
+            Stovarište “Daničić“
+            <br />
+            <Link to="/map#DANICIC">Kliknite ovde za detalje</Link>
           </Popup>
         </Marker>
         <Marker position={positionAGROGRK}>
-          <Popup>AGRO GRK t.a.r.
-          Adresa: Bogojevići bb, 31230 Arilje
-          Telefon: 062/235 286
-Email: radmilgrkovic@yahoo.com</Popup>
+          <Popup>
+            AGRO GRK T.A.R.
+            <br />
+            <Link to="/map#AGROGRK">Kliknite ovde za detalje</Link>
+          </Popup>
         </Marker>
         <Marker position={positionRPPG3MKOM}>
-          <Popup>RPPG “3M-KOM”
-          Adresa: Bušinsko polje bb, 31250 Bajina Bašta
-          Telefon: 065/863 30 57
-Email: goranbbasta@open.telekom.rs</Popup>
+          <Popup>
+            RPPG “3M-KOM”
+            <br />
+            <Link to="/map#RPPG3MKOM">Kliknite ovde za detalje</Link>
+          </Popup>
         </Marker>
         <Marker position={positionRPPUMALIŠEVAC}>
-          <Popup>RPPU “MALIŠEVAC”
-          Adresa: Beserovina bb, 31250 Bajina Bašta
-          Telefon: 064/185 90 10
-Email: malisevac@yahoo.com</Popup>
+          <Popup>
+            RPPU “MALIŠEVAC”
+            <br />
+            <Link to="/map#RPPUMALISEVAC">Kliknite ovde za detalje</Link>
+          </Popup>
         </Marker>
         <Marker position={positionINFLAMEPELLETS}>
-          <Popup>INFLAME-PELLETS d.o.o.
-          Adresa: Milutina Uskokovića 19, 31250 Bajina Bašta
-Telefon: 066/467 319</Popup>
+          <Popup>
+            INFLAME-PELLETS d.o.o.
+            <br />
+            <Link to="/map#INFLAMEPELLETS">Kliknite ovde za detalje</Link>
+          </Popup>
         </Marker>
         <Marker position={positionRASPELLETS}>
-          <Popup>RAS&PELLETS
-          Adresa: Braće Dragutina i Rada čučkovića 3, 31250 Bajina Bašta
-Telefon: 064/843 09 23</Popup>
+          <Popup>
+            RAS&PELLETS
+            <br />
+            <Link to="/map#RASPELLETS">Kliknite ovde za detalje</Link>
+          </Popup>
         </Marker>
         <Marker position={positionMICROTRI}>
-          <Popup>MICRO TRI d.o.o.
-          Adresa: Milenka Topalovića bb, 31250 Bajina Bašta
-          Telefon: 031/864-389
-Email:office@microtri.rs</Popup>
+          <Popup>
+            MICRO TRI d.o.o.
+            <br />
+            <Link to="/map#MICROTRI">Kliknite ovde za detalje</Link>
+          </Popup>
         </Marker>
         <Marker position={positionŠevar}>
-          <Popup>Ševar d.o.o.
-          Adresa: Milićevo selo, 31210 Požega
-          Telefon: 031/894 066, 065/200 4600
-Email: office@sevar.rs</Popup>
+          <Popup>
+            Ševar d.o.o.
+            <br />
+            <Link to="/map#SEVAR">Kliknite ovde za detalje</Link>
+          </Popup>
         </Marker>
         <Marker position={positionSMEcoPelet}>
-          <Popup>SM Eco pelet
-          Adresa: Zdravčići bb, 31210 Požega
-Telefon: 064/139 93 37</Popup>
+          <Popup>
+            SM Eco PELET
+            <br />
+            <Link to="/map#SMECO">Kliknite ovde za detalje</Link>
+          </Popup>
         </Marker>
         <Marker position={positionNOVIOKOVKosjerić}>
-          <Popup>NOVI OKOV d.o.o. – Kosjerić
-          Adresa: Miće Zarića 2, 31260 Kosjerić
-          Telefon: 031/315 22 24
-Email:kosjeric@noviokov.com</Popup>
+          <Popup>
+            NOVI OKOV d.o.o. – Kosjerić
+            <br />
+            <Link to="/map#NOVIOKOVKOSJERIC">Kliknite ovde za detalje</Link>
+          </Popup>
         </Marker>
         <Marker position={positionGorštak}>
-          <Popup>Gorštak d.o.o.
-          Adresa: Braneško polje bb, 31310 Čajetina
-Telefon: 031/832 299, 064/847 36 02</Popup>
+          <Popup>
+            Gorštak d.o.o.
+            <br />
+            <Link to="/map#GORSTAK">Kliknite ovde za detalje</Link>
+          </Popup>
         </Marker>
         <Marker position={positionNOVIOKOVZlatibor}>
-          <Popup>NOVI OKOV d.o.o. – Zlatibor
-          Adresa: Ulica sportova bb, 31315 Zlatibor
-          Telefon: 031/315 01 05
-Email:zlatibor@noviokov.com</Popup>
+          <Popup>
+            NOVI OKOV d.o.o. - Zlatibor
+            <br />
+            <Link to="/map#NOVIOKOVZlatibor">Kliknite ovde za detalje</Link>
+          </Popup>
         </Marker>
         <Marker position={positionIKONIĆ}>
-          <Popup>IKONIĆ  d.o.o.
-          Adresa: Ćaldov put bb, 31310 Čajetina
-Telefon: 031/832-082</Popup>
+          <Popup>
+            IKONIĆ d.o.o.
+            <br />
+            <Link to="/map#IKONIC">Kliknite ovde za detalje</Link>
+          </Popup>
         </Marker>
         <Marker position={positionNANIXWOOD}>
-          <Popup>NANIX WOOD D.O.O.
-          Adresa: Magistralni put 5/a, 31320 Nova Varoš
-          Telefon: 033/62 080, 060/08 444 54
-Email: office@nanixwood.com</Popup>
+          <Popup>
+            NANIX WOOD D.O.O. Adresa: Magistralni put 5/a, 31320 Nova Varoš
+            Telefon: 033/62 080, 060/08 444 54 Email: office@nanixwood.com
+          </Popup>
         </Marker>
         <Marker position={positionZLATARŠPED}>
-          <Popup>ZLATAR ŠPED d.o.o.
-          Adresa: Vraneša bb, 31320 Nova Varoš
-          Telefon: 064/823-3042
-Email:danko@zlatarsped.com</Popup>
+          <Popup>
+            ZLATAR ŠPED d.o.o. Adresa: Vraneša bb, 31320 Nova Varoš Telefon:
+            064/823-3042 Email:danko@zlatarsped.com
+          </Popup>
         </Marker>
         <Marker position={positionOMOPROM}>
-          <Popup>sztr OMO-PROM
-          Adresa: Bistrica bb, 31320 Nova Varoš
-          Telefon: 064/640-9077
-Email:omoprom@gmail.com</Popup>
+          <Popup>
+            sztr OMO-PROM Adresa: Bistrica bb, 31320 Nova Varoš Telefon:
+            064/640-9077 Email:omoprom@gmail.com
+          </Popup>
         </Marker>
         <Marker position={positionZLOŠNICA}>
-          <Popup>sztr ZLOŠNICA
-          Adresa: Brdo bb, 31320 Nova Varoš
-          Telefon: 065/887-8101
-Email:duskoman84@gmail.com</Popup>
+          <Popup>
+            sztr ZLOŠNICA Adresa: Brdo bb, 31320 Nova Varoš Telefon:
+            065/887-8101 Email:duskoman84@gmail.com
+          </Popup>
         </Marker>
         <Marker position={positionDMBBABIĆ}>
-          <Popup>DMB “BABIĆ”
-          Adresa: Brdo bb, 31320 Nova Varoš
-Telefon: 064/955-2085</Popup>
+          <Popup>
+            DMB “BABIĆ” Adresa: Brdo bb, 31320 Nova Varoš Telefon: 064/955-2085
+          </Popup>
         </Marker>
         <Marker position={positionMILPELETPriboj}>
-          <Popup>MIL PELET Priboj
-          Adresa: IV Sandžačke brigade 52, 31330 Priboj
-Telefon: 033/244 8100, 064/130 99 60</Popup>
+          <Popup>
+            MIL PELET Priboj Adresa: IV Sandžačke brigade 52, 31330 Priboj
+            Telefon: 033/244 8100, 064/130 99 60
+          </Popup>
         </Marker>
         <Marker position={positionDŽELILOVIĆ}>
-          <Popup>SZTR DŽELILOVIĆ
-          Adresa: Dragoljuba Savića 50, 31330 Priboj
-          Telefon: 060/ 352 69 48
-Email: plavipriboj1@gmail.com</Popup>
+          <Popup>
+            SZTR DŽELILOVIĆ Adresa: Dragoljuba Savića 50, 31330 Priboj Telefon:
+            060/ 352 69 48 Email: plavipriboj1@gmail.com
+          </Popup>
         </Marker>
         <Marker position={positionJELASTAR}>
-          <Popup>JELA STAR d.o.o.
-          {/* Adresa: Bjelopoljski put bb, 31300 Prijepolje
+          <Popup>
+            JELA STAR d.o.o.
+            {/* Adresa: Bjelopoljski put bb, 31300 Prijepolje
           Telefon: 033/782-777
           Email:info@jelastar.rs */}
-          
-</Popup>
+          </Popup>
         </Marker>
       </Map>
-        
-      
     )
   }
 }
