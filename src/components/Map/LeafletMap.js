@@ -237,21 +237,21 @@ class LeafletMap extends Component {
         </Marker>
         <Marker position={positionMetalfon}>
           <Popup>METALFON d.o.o.
-          Adresa: Gorjani bb, 31000 Užice 
-          Telefon: 031/549 009, 065/200 41 61
-Email:metalfon.doo@mts.rs</Popup>
+            <br/>
+            <Link to="/map#METALFON">Kliknite ovde za detalje</Link>
+          </Popup>
         </Marker>
         <Marker position={positionSUMADIJA}>
           <Popup>ŠUMADIJA d.o.o.
-          Adresa: Kremna bb, 31000 Užice
-          Telefon: 064/270 72 64
-Email:simsic.m@open.telekom.rs</Popup>
+            <br/>
+            <Link to="/map#SUMADIJA">Kliknite ovde za detalje</Link>           
+          </Popup>
         </Marker>
         <Marker position={positionStovaristeDanicic}>
-          <Popup>Stovarište “Daničić “
-          Adresa: Kralja Dragutina 1 Užice
-          Telefon: 064/137-01-83, 060/0-553-036
-Email:darko.danicic@gmail.com</Popup>
+          <Popup>Stovarište “Daničić“
+            <br/>
+            <Link to="/map#DANICIC">Kliknite ovde za detalje</Link>           
+          </Popup>
         </Marker>
         <Marker position={positionAGROGRK}>
           <Popup>AGRO GRK t.a.r.
