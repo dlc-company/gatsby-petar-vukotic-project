@@ -347,51 +347,58 @@ class LeafletMap extends Component {
         </Marker>
         <Marker position={positionNANIXWOOD}>
           <Popup>
-            NANIX WOOD D.O.O. Adresa: Magistralni put 5/a, 31320 Nova Varoš
-            Telefon: 033/62 080, 060/08 444 54 Email: office@nanixwood.com
+            NANIX WOOD D.O.O.
+            <br />
+            <Link to="/map#NANIXWOOD">Kliknite ovde za detalje</Link>
           </Popup>
         </Marker>
         <Marker position={positionZLATARŠPED}>
           <Popup>
-            ZLATAR ŠPED d.o.o. Adresa: Vraneša bb, 31320 Nova Varoš Telefon:
-            064/823-3042 Email:danko@zlatarsped.com
+            ZLATAR ŠPED d.o.o.
+            <br />
+            <Link to="/map#ZLATARSPED">Kliknite ovde za detalje</Link>
           </Popup>
         </Marker>
         <Marker position={positionOMOPROM}>
           <Popup>
-            sztr OMO-PROM Adresa: Bistrica bb, 31320 Nova Varoš Telefon:
-            064/640-9077 Email:omoprom@gmail.com
+            sztr OMO-PROM
+            <br />
+            <Link to="/map#OMOPROM">Kliknite ovde za detalje</Link>
           </Popup>
         </Marker>
         <Marker position={positionZLOŠNICA}>
           <Popup>
-            sztr ZLOŠNICA Adresa: Brdo bb, 31320 Nova Varoš Telefon:
-            065/887-8101 Email:duskoman84@gmail.com
+            sztr ZLOŠNICA
+            <br />
+            <Link to="/map#ZLOSNICA">Kliknite ovde za detalje</Link>
           </Popup>
         </Marker>
         <Marker position={positionDMBBABIĆ}>
           <Popup>
-            DMB “BABIĆ” Adresa: Brdo bb, 31320 Nova Varoš Telefon: 064/955-2085
+            DMB “BABIĆ”
+            <br />
+            <Link to="/map#DMBBABIC">Kliknite ovde za detalje</Link>
           </Popup>
         </Marker>
         <Marker position={positionMILPELETPriboj}>
           <Popup>
-            MIL PELET Priboj Adresa: IV Sandžačke brigade 52, 31330 Priboj
-            Telefon: 033/244 8100, 064/130 99 60
+            MIL PELET Priboj
+            <br />
+            <Link to="/map#MILPELET">Kliknite ovde za detalje</Link>
           </Popup>
         </Marker>
         <Marker position={positionDŽELILOVIĆ}>
           <Popup>
-            SZTR DŽELILOVIĆ Adresa: Dragoljuba Savića 50, 31330 Priboj Telefon:
-            060/ 352 69 48 Email: plavipriboj1@gmail.com
+            SZTR DŽELILOVIĆ
+            <br />
+            <Link to="/map#DZELILOVIC">Kliknite ovde za detalje</Link>
           </Popup>
         </Marker>
         <Marker position={positionJELASTAR}>
           <Popup>
             JELA STAR d.o.o.
-            {/* Adresa: Bjelopoljski put bb, 31300 Prijepolje
-          Telefon: 033/782-777
-          Email:info@jelastar.rs */}
+            <br />
+            <Link to="/map#JELASTAR">Kliknite ovde za detalje</Link>
           </Popup>
         </Marker>
       </Map>
