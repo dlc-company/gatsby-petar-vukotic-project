@@ -3,6 +3,7 @@ import Layout from "../components/Layout"
 import StyledHero from '../components/StyledHero'
 import {graphql} from 'gatsby'
 import BloglistRecycle from '../components/BlogRecycle/BlogListRecycle'
+import BlogListRecycleThemes from '../components/BlogRecycle/BlogListRecycleThemes'
 import ReciklazaAbout from '../components/Home/ReciklazaAbout'
 import ProjectsSection from "../components/Home/ProjectsSection"
 import img from "../images/services_recycle.jpg"
@@ -14,6 +15,9 @@ const reciklaza = ({data}) => {
         <ReciklazaAbout />
         <div id="blogList">
           <BloglistRecycle />
+        </div>
+        <div id="blogList">
+          <BlogListRecycleThemes />
         </div>
         <ProjectsSection
           title="projekti"
