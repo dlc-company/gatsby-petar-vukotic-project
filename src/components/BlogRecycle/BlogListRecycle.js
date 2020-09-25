@@ -10,10 +10,10 @@ import loadable from "@loadable/component"
 const OwlCarousel = loadable(() => import("react-owl-carousel"))
 
 const getRecyclePosts = graphql`
-
   query {
     recycleposts: allContentfulReciklaza(
       sort: { fields: published, order: DESC }
+      filter: { highlight: { eq: false } }
     ) {
       edges {
         node {
