@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from "../components/Layout"
 import BlogListEnergyEfficiency from '../components/BlogEnergyEfficiency/BlogListEnergyEfficiency'
+import BlogListEnergyEfficiencyThemes from '../components/BlogEnergyEfficiency/BlogListEnergyEfficiencyThemes'
 import EEAbout from '../components/Home/EEAbout'
 import StyledHero from '../components/StyledHero'
 import ProjectsSection from "../components/Home/ProjectsSection"
@@ -12,8 +13,11 @@ const energetskaEfikasnost = ({data}) => {
       <Layout>
         <StyledHero img={data.blogBcg.childImageSharp.fluid} />
         <EEAbout />
-        <div id="blogList">
+        <div>
           <BlogListEnergyEfficiency />
+        </div>
+        <div id="blogList">
+          <BlogListEnergyEfficiencyThemes />
         </div>
         <ProjectsSection
           title="projekti"

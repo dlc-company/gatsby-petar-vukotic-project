@@ -10,7 +10,8 @@ const BlogCard = ({blog}) => {
     return (
       <article className={styles.news}>
         <div className={styles.newsImageContainer}>
-          <Image fluid={image.fluid} className={styles.newsImage} alt="single post" />
+          <Image fluid={image.fluid} 
+          className={styles.newsImage} alt="single post" />
           <Link className={styles.newsLink} to={`/biomasa/${slug}`}>
             procitajte vise
           </Link>
